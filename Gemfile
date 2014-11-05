@@ -44,3 +44,4 @@ gem 'mongo'
 gem 'mongoid'
 gem 'mongoid_slug'
 
+gem 'devise'
