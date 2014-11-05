@@ -48,3 +48,6 @@ gem 'devise'
 
 #gem for heroku assets in production
 gem 'rails_12factor', group: :production
+
+
+gem 'rails_admin'
