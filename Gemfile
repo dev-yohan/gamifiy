@@ -36,7 +36,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "slim"
+gem "haml"
 
 #mongo gems
 
