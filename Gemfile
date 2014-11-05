@@ -45,3 +45,6 @@ gem 'mongoid'
 gem 'mongoid_slug'
 
 gem 'devise'
+
+#gem for heroku assets in production
+gem 'rails_12factor', group: :production
