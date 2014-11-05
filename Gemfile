@@ -36,3 +36,11 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem "slim"
+
+#mongo gems
+
+gem 'mongo'
+gem 'mongoid'
+gem 'mongoid_slug'
+
