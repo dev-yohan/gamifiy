@@ -6,6 +6,15 @@ es:
       password_field: "Contraseña"
       remember_field: "Recordarme"
       submit_field: "Ingresar"
+
+    sign_up:  
+      title: "Registrarse"
+      email_field: "Correo electrónico"
+      password_field: "Contraseña"
+      password_confirmation_field: "Confirmar contraseña"
+      submit_field: "Ingresar"
+
     shared:
       sign_up: "Registrarse" 
+      sign_in: "Iniciar sesión"
       forgot_password: "Olvido su contraseña" 

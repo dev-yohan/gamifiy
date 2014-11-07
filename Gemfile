@@ -51,3 +51,5 @@ gem 'rails_12factor', group: :production
 
 
 gem 'rails_admin'
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
