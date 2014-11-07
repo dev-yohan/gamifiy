@@ -14,6 +14,14 @@ es:
       password_confirmation_field: "Confirmar contraseña"
       submit_field: "Ingresar"
 
+    edit_profile:
+      title: "Editar perfil"  
+      leave_blank: "Dejar en blanco si no se quiere editar"
+      current_password: "Contraseña actual para confirmar los cambios"
+      current_password_field: "Contraseña actual"
+      submit_field: "Actualizar"
+      back_link: "Regresar"
+
     shared:
       sign_up: "Registrarse" 
       sign_in: "Iniciar sesión"
