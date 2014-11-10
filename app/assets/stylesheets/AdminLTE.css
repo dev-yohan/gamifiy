@@ -528,10 +528,11 @@ body > .header .logo {
   text-align: center;
   padding: 0 10px;
   width: 220px;
-  font-family: 'Kaushan Script', cursive;
+  /*font-family: 'Kaushan Script', cursive;*/
   font-weight: 500;
   height: 50px;
   display: block;
+  text-decoration: none;
 }
 body > .header .logo .icon {
   margin-right: 10px;
@@ -2306,7 +2307,7 @@ Component: timeline
 */
 /* ADD THIS CLASS TO THE <HTML> TAG */
 .lockscreen {
-  background: url(../img/blur-background09.jpg) repeat center center fixed;
+  background: url(../images/blur-background09.jpg) repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -3588,4 +3589,133 @@ border-radius: 4px;
 -ms-user-select: none;
 -o-user-select: none;
 user-select: none;
+}
+
+.sr-only {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0,0,0,0);
+border: 0;
+}
+
+.navbar-right {
+float: right!important;
+}
+
+.navbar-nav {
+float: left;
+margin: 0;
+}
+
+.navbar-nav {
+margin: 7.5px -15px;
+}
+
+
+.navbar-nav>li {
+float: left;
+}
+
+.nav>li {
+position: relative;
+display: block;
+}
+
+.dropdown {
+position: relative;
+}
+
+.nav {
+padding-left: 0;
+/* margin-bottom: 0; */
+list-style: none;
+}
+
+.navbar-nav>li>a {
+padding-top: 15px;
+padding-bottom: 15px;
+}
+
+.navbar-nav>li>a {
+padding-top: 10px;
+padding-bottom: 10px;
+line-height: 20px;
+}
+.nav>li>a {
+position: relative;
+display: block;
+padding: 10px 15px;
+}
+
+a {
+color: #428bca;
+text-decoration: none;
+}
+
+*, *:before, *:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.navbar-nav>li>.dropdown-menu {
+margin-top: 0;
+border-top-right-radius: 0;
+border-top-left-radius: 0;
+}
+
+.navbar-right .dropdown-menu {
+right: 0;
+left: auto;
+}
+
+.dropdown-menu {
+position: absolute;
+top: 100%;
+left: 0;
+z-index: 1000;
+display: none;
+float: left;
+min-width: 160px;
+padding: 5px 0;
+margin: 2px 0 0;
+font-size: 14px;
+list-style: none;
+background-color: #fff;
+border: 1px solid #ccc;
+border: 1px solid rgba(0,0,0,0.15);
+border-radius: 4px;
+-webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+background-clip: padding-box;
+}
+
+.glyphicon:empty {
+width: 1em;
+}
+.glyphicon {
+position: relative;
+top: 1px;
+display: inline-block;
+font-family: 'Glyphicons Halflings';
+-webkit-font-smoothing: antialiased;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.caret {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 2px;
+vertical-align: middle;
+border-top: 4px solid;
+border-right: 4px solid transparent;
+border-left: 4px solid transparent;
 }
