@@ -4,6 +4,7 @@ class HomeController < ApplicationController
 
   def index
     
+    @user_sites = Sites::Site.where(:user => current_user).count
     
   end 
  
