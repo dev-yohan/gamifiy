@@ -2,3 +2,5 @@ es:
   main_menu:
     dashboard:
       title: "Dashboard"
+    applications:
+      title: "Aplicaciones"

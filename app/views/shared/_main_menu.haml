@@ -2,7 +2,13 @@
   %section.sidebar
     %ul.sidebar-menu
       %li
-        %a
+        %a{:href => "/"}
           %i.fa.fa-dashboard
           %span
             = t("main_menu.dashboard.title")
+
+      %li
+        %a{:href => applications_list_path}
+          %i.fa.fa-code
+          %span
+            = t("main_menu.applications.title")

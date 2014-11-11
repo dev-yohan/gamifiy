@@ -10,5 +10,6 @@ class Sites::Site
   mount_uploader :logo, SiteImageUploader
 
   belongs_to :user, :class_name => "User"
+  
 
 end
