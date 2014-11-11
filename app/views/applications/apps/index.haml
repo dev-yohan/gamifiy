@@ -1,2 +1,12 @@
 = render "shared/main_menu"
 %aside.right-side
+  .content-header
+    %h1
+      = t("apps.title")
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li.active Dashboard
+        
