@@ -54,7 +54,10 @@ gem 'rails_admin'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
-gem "cloudinary"
+#gems to manage images
 gem "carrierwave"
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem "cloudinary"
+
 
 

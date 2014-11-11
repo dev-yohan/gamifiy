@@ -3651,6 +3651,16 @@ display: block;
 padding: 10px 15px;
 }
 
+.navbar-nav {
+float: left;
+margin: 0;
+}
+
+.navbar-nav>li>a {
+padding-top: 15px;
+padding-bottom: 15px;
+}
+
 a {
 color: #428bca;
 text-decoration: none;
@@ -3718,4 +3728,20 @@ vertical-align: middle;
 border-top: 4px solid;
 border-right: 4px solid transparent;
 border-left: 4px solid transparent;
+}
+
+.fa {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+element.style {
+}
+.sidebar .sidebar-menu > li > a > .fa, .sidebar .sidebar-menu > li > a > .glyphicon, .sidebar .sidebar-menu > li > a > .ion {
+width: 20px;
 }

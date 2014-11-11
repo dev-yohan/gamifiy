@@ -7,6 +7,7 @@ es:
       remember_field: "Recordarme"
       submit_field: "Ingresar"
 
+
     sign_up:  
       title: "Registrarse"
       email_field: "Correo electrónico"
@@ -26,3 +27,4 @@ es:
       sign_up: "Registrarse" 
       sign_in: "Iniciar sesión"
       forgot_password: "Olvido su contraseña" 
+      confirmation: "No ha recibido las instrucciones de confirmación?"

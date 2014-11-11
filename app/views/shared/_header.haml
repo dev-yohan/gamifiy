@@ -13,31 +13,15 @@
 
     .navbar-right  
       %ul.nav.navbar-nav
-        %li.dropdown.user.user-menu
-          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-            %i.glyphicon.glyphicon-user
-            %span
-              Jane Doe
-              %i.caret
-          %ul.dropdown-menu
-            / User image
-            %li.user-header.bg-light-blue
-              %img.img-circle{:alt => "User Image", :src => "assets/avatar3.png"}/
-              %p
-                Jane Doe - Web Developer
-                %small Member since Nov. 2012
-            / Menu Body
-            %li.user-body
-              .col-xs-4.text-center
-                %a{:href => "#"} Followers
-              .col-xs-4.text-center
-                %a{:href => "#"} Sales
-              .col-xs-4.text-center
-                %a{:href => "#"} Friends
-            / Menu Footer
-            %li.user-footer
-              .pull-left
-                %a.btn.btn-default.btn-flat{:href => "#"} Profile
-              .pull-right
-                %a.btn.btn-default.btn-flat{:href => "#"} Sign out
-    
+        - if !current_user.nil?
+          %li
+            %a{:href => "users/edit"}
+              %span
+                = t("shared.user.welcome", :user => current_user.email)
+          %li
+            %a{:href => "users/sign_out"}
+              %span
+                = t("shared.user.sign_out")
+              
+
+        

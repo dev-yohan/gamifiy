@@ -1,10 +1,20 @@
 RailsAdmin.config do |config|
 
 
-   config.authenticate_with do
+  config.authenticate_with do
      warden.authenticate! scope: :admin
-   end
-   config.current_user_method(&:current_admin)
+  end
+  config.current_user_method(&:current_admin)
+
+    
+  config.model 'Badge' do 
+    
+  end 
+
+  config.model 'Sites::Site' do 
+    
+  end 
+
 
   config.actions do
     dashboard                     # mandatory
