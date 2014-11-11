@@ -9,4 +9,6 @@ class Badge
   field :image, type: String
   mount_uploader :image, ImageUploader
 
+  has_many :events
+
 end
