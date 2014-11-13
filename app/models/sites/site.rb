@@ -10,6 +10,7 @@ class Sites::Site
   mount_uploader :logo, SiteImageUploader
 
   belongs_to :user, :class_name => "User"
+  has_many :activities, :class_name => "Activity", :dependent => "destroy"
   
 
 end

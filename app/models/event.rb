@@ -4,7 +4,6 @@ class Event
   field :value, type: Integer
   field :count, type: Integer
   field :activity_id, type: Integer
-  field :badge_id, type: Integer
 
-  belongs_to :badge
+  belongs_to :badge, :class_name => "Badge"
 end
