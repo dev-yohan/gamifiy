@@ -4,7 +4,10 @@ class Applications::AppsController < ApplicationController
 
   def index
     
-   
+    page = 1
+    page_size = 10
+
+    @user_sites = Sites::Site.where(:user => current_user).page(page).per(page_size)
     
   end 
  

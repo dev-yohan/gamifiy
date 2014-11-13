@@ -1,3 +1,7 @@
 es: 
   apps:
     title: "Aplicaciones"
+    home_breadcrumb: "Home"
+
+  app_teaser:
+    more_link: "Ver más"  

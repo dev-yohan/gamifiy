@@ -5,8 +5,13 @@
       = t("apps.title")
     %ol.breadcrumb
       %li
-        %a{:href => "#"}
-          %i.fa.fa-dashboard
-          Home
-      %li.active Dashboard
+        %a{:href => applications_list_path}
+          %i.fa.fa-code
+          = t("apps.title")
+      %li.active 
+        = t("apps.home_breadcrumb")
+
+  .content
+    .row
+      =  render :partial => 'applications/apps/partials/app_teasers', :locals => { :user_sites => @user_sites }       
         
