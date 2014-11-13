@@ -1,0 +1,16 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      = cl_image_tag(@app.logo, :width => 60, :height => 40, :crop => :scale) 
+      = @app.name
+    %ol.breadcrumb
+      %li
+        %a{:href => applications_list_path}
+          %i.fa.fa-code
+          = t("apps.title")
+      %li.active 
+        = t("apps.home_breadcrumb")
+
+  .content
+    .row

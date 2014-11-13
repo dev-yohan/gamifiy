@@ -10,6 +10,12 @@ class Applications::AppsController < ApplicationController
     @user_sites = Sites::Site.where(:user => current_user).page(page).per(page_size)
     
   end 
+
+  def show
+
+    @app = Sites::Site.find(params[:id])
+
+  end  
  
 
 end

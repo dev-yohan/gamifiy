@@ -59,5 +59,7 @@ gem "carrierwave"
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem "cloudinary"
 
+#gem to manage pagination
+gem 'kaminari'
 
 

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   match 'applications' => 'applications/apps#index', :as => :applications_list, :via => :get
+  match 'application/:id' => 'applications/apps#show', :as => :application_show, :via => :get
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
