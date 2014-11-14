@@ -24,6 +24,19 @@ class Applications::AppsController < ApplicationController
     @app = Sites::Site.new
 
   end  
+
+  def new
+
+      @app = Sites::Site.new()
+      @app.name = params[:app_data][:name]
+      @app.description = params[:app_data][:description]
+      @app.logo = params[:app_data][:logo]
+      @app.user = current_user
+      @app.save
+
+      redirect_to applications_list_path
+
+  end  
  
 
 end

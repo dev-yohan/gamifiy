@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   match 'applications' => 'applications/apps#index', :as => :applications_list, :via => :get
   match 'application/:id' => 'applications/apps#show', :as => :application_show, :via => :get
   match 'applications/create' => 'applications/apps#create', :as => :application_create, :via => :get
+  match 'applications/new' => 'applications/apps#new', :as => :application_new, :via => :post
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
