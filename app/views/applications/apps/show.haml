@@ -14,3 +14,6 @@
 
   .content
     .row
+      = paginate @activities    
+    .row
+      =  render :partial => 'activity/partials/activity_teasers', :locals => { :activities => @activities }

@@ -13,5 +13,8 @@
 
   .content
     .row
-      =  render :partial => 'applications/apps/partials/app_teasers', :locals => { :user_sites => @user_sites }       
+      = paginate @user_sites    
+    .row
+      =  render :partial => 'applications/apps/partials/app_teasers', :locals => { :user_sites => @user_sites }  
+     
         
