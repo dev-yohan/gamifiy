@@ -2,6 +2,14 @@ es:
   apps:
     title: "Aplicaciones"
     home_breadcrumb: "Home"
+    add_link: "Crear nueva"
+    add_title: "Crear nueva aplicación"
 
   app_teaser:
-    more_link: "Ver más"  
+    more_link: "Ver más" 
+
+  create_app:
+    name_lbl: "Nombre de la aplicación" 
+    description_lbl: "Descripción de la aplicación"  
+    logo_lbl: "Logo"
+    submit_btn: "Guardar" 

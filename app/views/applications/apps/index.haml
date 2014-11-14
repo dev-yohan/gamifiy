@@ -3,6 +3,9 @@
   .content-header
     %h1
       = t("apps.title")
+      %small
+        %a{:href => application_create_path}
+          =  t("apps.add_link")
     %ol.breadcrumb
       %li
         %a{:href => applications_list_path}

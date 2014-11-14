@@ -1,0 +1,34 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      = t("apps.add_title")
+    %ol.breadcrumb
+      %li
+        %a{:href => applications_list_path}
+          %i.fa.fa-code
+          = t("apps.title")
+      %li.active 
+        = t("apps.add_title")
+
+  .content
+    .row
+      .col-md-12
+        .box.box-primary
+          .box-header  
+          = form_for @app, :as => "app_data", :url => "", :html => { :multipart => true } do |f|
+            .box-body
+              .form-group
+                = f.label  t("create_app.name_lbl")
+                = f.text_field :name, autofocus: true, :class => "form-control", :placeholder => t("create_app.name_lbl")
+
+              .form-group
+                = f.label  t("create_app.description_lbl")
+                = f.text_area :description,  :class => "form-control", :placeholder => t("create_app.description_lbl")  
+
+              .form-group
+                = f.label  t("create_app.logo_lbl")  
+                = f.file_field :logo,  :class => "form-control", :placeholder => t("create_app.logo_lbl")
+
+            .box-footer
+              = f.submit t('create_app.submit_btn'), :class => "btn btn-primary"    

@@ -18,6 +18,12 @@ class Applications::AppsController < ApplicationController
     @activities = Activity.where(:site => @app).page(params[:page]).per(page_size)
 
   end  
+
+  def create
+
+    @app = Sites::Site.new
+
+  end  
  
 
 end

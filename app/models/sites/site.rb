@@ -6,6 +6,8 @@ class Sites::Site
   field :name, type: String
   slug :name
 
+  field :description, type: String
+
   field :logo, type: String
   mount_uploader :logo, SiteImageUploader
 
