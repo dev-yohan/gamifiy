@@ -13,3 +13,5 @@ es:
     description_lbl: "Descripción de la aplicación"  
     logo_lbl: "Logo"
     submit_btn: "Guardar" 
+    save_success: "Aplicación guardada éxitosamente"
+    save_error: "La aplicación no pudo ser guardada"

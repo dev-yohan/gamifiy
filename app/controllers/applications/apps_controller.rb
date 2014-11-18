@@ -6,7 +6,7 @@ class Applications::AppsController < ApplicationController
     
     page_size = 10
 
-    @user_sites = Sites::Site.where(:user => current_user).page(params[:page]).per(page_size)
+    @user_sites = Sites::Site.where(:user => current_user).desc(:created_at).page(params[:page]).per(page_size)
     
   end 
 
@@ -32,9 +32,12 @@ class Applications::AppsController < ApplicationController
       @app.description = params[:app_data][:description]
       @app.logo = params[:app_data][:logo]
       @app.user = current_user
-      @app.save
-
-      redirect_to applications_list_path
+     
+      if @app.save
+        redirect_to applications_list_path, :flash => {:success => I18n.t("create_app.save_success")}
+      else
+        redirect_to applications_list_path, :flash => {:success => I18n.t("create_app.save_error")}
+      end  
 
   end  
  

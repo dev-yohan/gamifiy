@@ -20,15 +20,15 @@
             .box-body
               .form-group
                 = f.label  t("create_app.name_lbl")
-                = f.text_field :name, autofocus: true, :class => "form-control", :placeholder => t("create_app.name_lbl")
+                = f.text_field :name, autofocus: true, :class => "form-control", :placeholder => t("create_app.name_lbl"), :required => true
 
               .form-group
                 = f.label  t("create_app.description_lbl")
-                = f.text_area :description,  :class => "form-control", :placeholder => t("create_app.description_lbl")  
+                = f.text_area :description,  :class => "form-control", :placeholder => t("create_app.description_lbl"), :required => true  
 
               .form-group
                 = f.label  t("create_app.logo_lbl")  
-                = f.file_field :logo,  :class => "form-control", :placeholder => t("create_app.logo_lbl")
+                = f.file_field :logo,  :class => "form-control", :placeholder => t("create_app.logo_lbl"), :required => true
 
             .box-footer
               = f.submit t('create_app.submit_btn'), :class => "btn btn-primary"    
