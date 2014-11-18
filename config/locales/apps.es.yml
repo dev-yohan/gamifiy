@@ -15,3 +15,8 @@ es:
     submit_btn: "Guardar" 
     save_success: "Aplicación guardada éxitosamente"
     save_error: "La aplicación no pudo ser guardada"
+
+  edit_app:
+    title: "Editar %{name}"  
+    edit_success: "Aplicación editada éxitosamente"
+    edit_error: "La aplicación no pudo ser editada"

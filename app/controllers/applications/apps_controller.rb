@@ -36,10 +36,38 @@ class Applications::AppsController < ApplicationController
       if @app.save
         redirect_to applications_list_path, :flash => {:success => I18n.t("create_app.save_success")}
       else
-        redirect_to applications_list_path, :flash => {:success => I18n.t("create_app.save_error")}
+        redirect_to applications_list_path, :flash => {:error => I18n.t("create_app.save_error")}
       end  
 
   end  
+
+  def edit
+
+    @app = Sites::Site.find(params[:id])
+
+  end  
+
+  def update
  
+    @app = Sites::Site.find(params[:id])
+
+    if !params[:app_data][:name].nil?
+      @app.name = params[:app_data][:name]
+    end  
+    if !params[:app_data][:description].nil?
+      @app.description = params[:app_data][:description]
+    end
+    if !params[:app_data][:logo].nil?
+      @app.logo = params[:app_data][:logo]
+        #redirect_to applications_list_path, :flash => {:error => params[:app_data][:logo].inspect}
+    end
+
+    if @app.save
+      redirect_to applications_list_path, :flash => {:success => I18n.t("edit_app.edit_success")}
+    else
+      redirect_to applications_list_path, :flash => {:error => I18n.t("edit_app.edit_error")}
+    end    
+
+  end
 
 end
