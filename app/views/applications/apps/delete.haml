@@ -1,0 +1,23 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      = cl_image_tag(@app.logo, :width => 60, :height => 40, :crop => :scale) 
+      = t("delete_app.title", :name => @app.name)
+    %ol.breadcrumb
+      %li
+        %a{:href => applications_list_path}
+          %i.fa.fa-code
+          = t("apps.title")
+      %li.active 
+        = @app.name
+
+  .content
+    .row
+      .col-md-12
+        %p
+          = t("delete_app.delete_message")
+        %a{:href => application_destroy_path(@app), :class => "btn btn-primary"}
+          = t("delete_app.submit_btn")
+
+

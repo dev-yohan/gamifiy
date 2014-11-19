@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   match 'applications/new' => 'applications/apps#new', :as => :application_new, :via => :post
   match 'applications/edit/:id' => 'applications/apps#edit', :as => :application_edit, :via => :get
   match 'applications/update/:id' => 'applications/apps#update', :as => :application_update, :via => :post
+  match 'applications/delete/:id' => 'applications/apps#delete', :as => :application_delete, :via => :get
+  match 'applications/destroy/:id' => 'applications/apps#destroy', :as => :application_destroy, :via => :get
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

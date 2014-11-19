@@ -70,4 +70,26 @@ class Applications::AppsController < ApplicationController
 
   end
 
+  def delete
+
+     @app = Sites::Site.find(params[:id])
+
+  end
+
+  def destroy
+
+      @app = Sites::Site.find(params[:id])
+
+      if @app.user == current_user
+          if @app.delete
+             redirect_to applications_list_path, :flash => {:success => I18n.t("delete_app.delete_success")}
+          else
+            redirect_to applications_list_path, :flash => {:success => I18n.t("delete_app.delete_error")}
+          end  
+      else
+        redirect_to applications_list_path, :flash => {:success => I18n.t("delete_app.wrong_owner")}
+      end  
+
+  end  
+
 end

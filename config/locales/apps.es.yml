@@ -20,3 +20,12 @@ es:
     title: "Editar %{name}"  
     edit_success: "Aplicación editada éxitosamente"
     edit_error: "La aplicación no pudo ser editada"
+
+  delete_app:
+    title: "Eliminar %{name}"  
+    delete_message: "Esta seguro de eliminar esta aplicación?"
+    submit_btn: "Eliminar"
+    delete_success: "Aplicación eliminada éxitosamente"
+    delete_error: "La aplicación no pudo ser eliminada"  
+    wrong_owner: "La aplicación no pudo ser eliminada dado que el usuario actual no es el dueño de la misma"
+
