@@ -1,15 +1,9 @@
 - if !activities.empty?
+  %h4
+    = t("activities.title")
   - activities.each do |activity|
-    .col-md-4
-      .box
-        .box-header
-          %h3.box-title 
-            = activity.name
-          .box-tools.pull-right
-            %button.btn.btn-default.btn-sm{"data-original-title" => "Collapse", "data-toggle" => "tooltip", "data-widget" => "collapse", :title => ""}
-              %i.fa.fa-minus
-        .box-body
-          
-        .box-footer
-          %a.btn.btn-primary{:href => ""}
-            Ver mas
+    .callout
+      %h4
+        = activity.name
+      %p
+        = activity.description

@@ -14,6 +14,14 @@
 
   .content
     .row
-      = paginate @activities    
-    .row
-      =  render :partial => 'activity/partials/activity_teasers', :locals => { :activities => @activities }
+      .col-md-6
+        .box
+          .box-body
+            %p
+              = @app.description   
+
+            =  render :partial => 'activity/partials/activity_teasers', :locals => { :activities => @activities }
+
+      .col-md-6
+        =  render :partial => 'badge/partials/badge_teasers', :locals => { :badges => @badges }
+              

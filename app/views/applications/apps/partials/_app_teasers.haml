@@ -19,10 +19,8 @@
         .box-body
           %center
             = cl_image_tag(app.logo, :width => 300, :height => 220, :crop => :scale) 
-          %p
-            amber, microbrewery abbey hydrometer, brewpub ale lauter tun saccharification oxidized barrel.
-            berliner weisse wort chiller adjunct hydrometer alcohol aau!
-            sour/acidic sour/acidic chocolate malt ipa ipa hydrometer.
+          %p{:style => "margin-top:10px"}
+            = truncate(app.description,  length: 250, separator: '...')
         / /.box-body
         .box-footer
           %a.btn.btn-primary{:href => application_show_path(:id => app.slugs)}

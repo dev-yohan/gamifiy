@@ -25,6 +25,7 @@ es:
     title: "Eliminar %{name}"  
     delete_message: "Esta seguro de eliminar esta aplicación?"
     submit_btn: "Eliminar"
+    cancel_btn: "Cancelar"
     delete_success: "Aplicación eliminada éxitosamente"
     delete_error: "La aplicación no pudo ser eliminada"  
     wrong_owner: "La aplicación no pudo ser eliminada dado que el usuario actual no es el dueño de la misma"

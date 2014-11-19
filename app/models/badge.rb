@@ -10,5 +10,6 @@ class Badge
   mount_uploader :image, ImageUploader
 
   has_many :events, :class_name => "Event"
+  belongs_to :site, :class_name => "Sites::Site"
 
 end
