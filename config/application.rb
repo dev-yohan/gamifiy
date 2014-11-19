@@ -32,6 +32,8 @@ module Gamification
     config.i18n.available_locales = [:es, :en]
     config.i18n.default_locale = :es
 
+    config.serve_static_assets = true
+
     config.to_prepare do
       Devise::SessionsController.layout "login"
       Devise::RegistrationsController.layout "login"
