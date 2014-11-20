@@ -1,0 +1,25 @@
+.col-md-12
+  .box
+    .box-header
+    .box-body.table-responsive-no-padding
+      - if !activities.empty?
+        %table.table.table-hover
+          %tbody
+            %tr
+              %th
+                = t("activities_list.name_column")
+              %th
+                = t("activities_list.app_column")
+              %th
+                = t("activities_list.actions_column")
+
+            - activities.each_with_index do |activity, index|
+              %tr
+                %td
+                  = activity.name    
+                %td
+                  = activity.site.name
+                %td
+                  %a{:href => ""}
+                    %i.fa.fa-eye
+                    = t("activities_list.more_link")

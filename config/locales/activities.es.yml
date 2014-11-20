@@ -1,3 +1,12 @@
 es: 
   activities:
     title: "Actividades"
+    home_breadcrumb: "Home"
+    add_link: "Crear nueva"
+    add_title: "Crear nueva actividad"
+
+  activities_list:
+    name_column: "Nombre"
+    app_column: "Aplicación"
+    actions_column: "Acciones"
+    more_link: "Ver"

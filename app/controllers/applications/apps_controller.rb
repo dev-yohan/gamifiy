@@ -14,9 +14,10 @@ class Applications::AppsController < ApplicationController
 
     page_size = 10 
     badge_page_size = 10 
+    activity_page_size = 5 
 
     @app = Sites::Site.find(params[:id])
-    @activities = Activity.where(:site => @app).desc(:created_at).page(1).per(page_size)
+    @activities = Activity.where(:site => @app).desc(:created_at).page(1).per(activity_page_size)
     @badges = Badge.where(:site => @app).desc(:created_at).page(1).per(badge_page_size)
 
   end  
