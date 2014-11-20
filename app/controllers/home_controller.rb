@@ -4,8 +4,10 @@ class HomeController < ApplicationController
 
   def index
     
-    @user_sites = Sites::Site.where(:user => current_user).count
-    
+    sites = Sites::Site.where(:user => current_user)
+    @user_sites = sites.count
+    @user_activities = Activity.where(:site_id.in => sites.only(:_id).map(&:_id)).count
+
   end 
  
 

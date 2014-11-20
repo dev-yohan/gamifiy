@@ -17,6 +17,9 @@ Rails.application.routes.draw do
 
   #activities namespace
   match 'activities' => 'activities/activity#index', :as => :activities_list, :via => :get
+
+  #badges namespace
+  match 'badges' => 'badges/badge#index', :as => :badges_list, :via => :get
   
 
   #API V1
