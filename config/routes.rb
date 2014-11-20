@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   #activities namespace
   match 'activities' => 'activities/activity#index', :as => :activities_list, :via => :get
   
+
+  #API V1
+  match "api/v1/apps" => "api/v1/apps#index", :as => :api_v1_event_list, :via => :get
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
