@@ -1,0 +1,7 @@
+.box
+  .box-header
+    %h4.box-title
+      = t("events.teasers.title")
+  .box-body
+    - if !events.empty?
+      - events.each_with_index do |event, index|

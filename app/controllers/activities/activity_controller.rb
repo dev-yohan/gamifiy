@@ -14,6 +14,7 @@ class Activities::ActivityController < ApplicationController
   def show
 
     @activity = Activity.find(params[:id])
+    @events = Event.where(:activity => @activity)
 
   end  
 

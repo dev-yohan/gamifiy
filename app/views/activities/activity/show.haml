@@ -29,3 +29,6 @@
               = t("activities.description_title")
             %p
               = @activity.description 
+
+      .col-md-4
+        =  render :partial => 'events/partials/event_teasers', :locals => { :events => @events }
