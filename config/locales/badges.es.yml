@@ -1,3 +1,11 @@
 es: 
   badges:
     title: "Insignias"
+    home_breadcrumb: "Home"
+
+  badges_list:
+    logo_column: "Logo"
+    name_column: "Nombre"
+    app_column: "Aplicación"
+    actions_column: "Acciones"
+    more_link: "Ver"

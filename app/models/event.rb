@@ -8,7 +8,5 @@ class Event
   belongs_to :badge, :class_name => "Badge"
   belongs_to :activity, :class_name => "Activity"
 
-  has_many :event_by_subject, :class_name => "EventBySubject"
-  
 
 end

@@ -3,7 +3,8 @@
     = t("activities.title")
   - activities.each do |activity|
     .callout
-      %h4
-        = activity.name
+      %a{:href => activity_detail_path(:app_id => app.slugs, :id => activity.slugs)}
+        %h4
+          = activity.name
       %p
         = activity.description

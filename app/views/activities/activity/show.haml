@@ -1,0 +1,31 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      %i.fa.fa-rocket
+      = @activity.name
+    %ol.breadcrumb
+      %li
+        %a{:href => application_show_path(:id => @activity.site.slugs)}
+          %i.fa.fa-code
+          = @activity.site.name
+      %li
+        %a{:href => ""}
+          %i.fa.fa-rocket
+          = t("activities.title")
+      %li.active 
+        = @activity.name
+
+  .content
+    .row
+      - flash.each do |name, msg|
+        = content_tag :div, msg, class: flash_class(name.to_s)
+
+    .row
+      .col-md-8
+        .box
+          .box-body
+            %h4
+              = t("activities.description_title")
+            %p
+              = @activity.description 

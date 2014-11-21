@@ -1,0 +1,27 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      = t("badges.title")
+      %small
+        %a{:href => application_create_path}
+          =  t("apps.add_link")
+    %ol.breadcrumb
+      %li
+        %a{:href => applications_list_path}
+          %i.fa.fa-trophy
+          = t("badges.title")
+      %li.active 
+        = t("badges.home_breadcrumb")
+
+  .content
+    .row
+      - flash.each do |name, msg|
+        = content_tag :div, msg, class: flash_class(name.to_s)
+    .row
+      .col-md-12
+        = paginate @badges  
+      
+    .row
+      =  render :partial => 'badges/partials/badges_list', :locals => { :badges => @badges }
+      

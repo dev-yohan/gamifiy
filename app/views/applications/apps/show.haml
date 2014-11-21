@@ -20,7 +20,7 @@
             %p
               = @app.description   
 
-            =  render :partial => 'activities/partials/activity_teasers', :locals => { :activities => @activities }
+            =  render :partial => 'activities/partials/activity_teasers', :locals => { :activities => @activities, :app => @app }
 
       .col-md-6
         =  render :partial => 'badges/partials/badge_teasers', :locals => { :badges => @badges }

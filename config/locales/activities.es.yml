@@ -1,6 +1,7 @@
 es: 
   activities:
     title: "Actividades"
+    description_title: "Descripción"
     home_breadcrumb: "Home"
     add_link: "Crear nueva"
     add_title: "Crear nueva actividad"

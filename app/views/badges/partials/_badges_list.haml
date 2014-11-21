@@ -1,0 +1,29 @@
+.col-md-12
+  .box
+    .box-header
+    .box-body.table-responsive-no-padding
+      - if !badges.empty?
+        %table.table.table-hover
+          %tbody
+            %tr
+              %th
+                = t("badges_list.logo_column")
+              %th
+                = t("badges_list.name_column")
+              %th
+                = t("badges_list.app_column")
+              %th
+                = t("badges_list.actions_column")
+
+            - badges.each_with_index do |badge, index|
+              %tr
+                %td
+                  = cl_image_tag(badge.image, :width => 50, :height => 50, :crop => :scale)
+                %td
+                  = badge.name    
+                %td
+                  = badge.site.name
+                %td
+                  %a{:href => ""}
+                    %i.fa.fa-eye
+                    = t("badges_list.more_link")
