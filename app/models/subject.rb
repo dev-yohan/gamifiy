@@ -5,5 +5,8 @@ class Subject
   field :external_id, type: String
   field :external_email, type: String
   
+  def name
+    external_email
+  end
 
 end  

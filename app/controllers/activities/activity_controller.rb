@@ -14,10 +14,22 @@ class Activities::ActivityController < ApplicationController
   def show
 
     @activity = Activity.find(params[:id])
-    @activity_logs = ActivityLog.where(:activity => @activity).page(1).per(10)
+    @activity_logs = ActivityLog.where(:activity => @activity).desc(:created_at).page(1).per(10)
 
     @events = Event.where(:activity => @activity)
 
+
+  end  
+
+  def behavior_data
+
+    date_fetcher = DateFetcher.new
+    activity_fetcher = ActivityFetcher.new
+    @activity = Activity.find(params[:id])
+
+    behavior_array = activity_fetcher.get_hourly_behavior_data(date_fetcher.get_hourly_array(86400, 0, Date.today.to_time.to_i), @activity)
+
+    render json: behavior_array
 
   end  
 

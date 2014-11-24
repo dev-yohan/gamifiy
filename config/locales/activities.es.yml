@@ -14,6 +14,7 @@ es:
 
   activity_logs:
     last_title: "Últimos logs de actividad"  
+    behavior_title: "Comportamiento"
     subject_column: "Sujeto"
     date_column: "Fecha"
     more_link: "Ver todo"
