@@ -28,6 +28,8 @@
             %h4.box-title
               = t("activities.description_title")
           .box-body  
+            #activity_name{:style => "display:none"} 
+              = @activity.slugs.first
             %p
               = @activity.description 
 
@@ -36,9 +38,15 @@
                 =  render :partial => 'activities/partials/last_logs', :locals => { :activity_logs => @activity_logs }  
 
               .col-md-6
-                =  render :partial => 'activities/partials/logs_behavior'
+                =  render :partial => 'activities/partials/logs_behavior', :locals => {:activity => @activity}
             
 
 
       .col-md-3
         =  render :partial => 'events/partials/event_teasers', :locals => { :events => @events }
+
+
+
+
+
+ 

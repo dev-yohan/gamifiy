@@ -19,7 +19,7 @@ class DateFetcher
            :timestamp => current_timestamp, 
            :datetime => Time.at(current_timestamp), 
            :time_unit => Time.at(current_timestamp).strftime("%H"), 
-           :friendly_date => Time.at(current_timestamp).strftime("%d/%m/%Y %H:%M:%S"), 
+           :friendly_date => Time.at(current_timestamp).strftime("%Y-%m-%d %H:%M:%S"), 
           :day_of_week => Time.at(current_timestamp).strftime("%u"),
           :hour_of_day => Time.at(current_timestamp).strftime("%k")})
       else
@@ -27,7 +27,7 @@ class DateFetcher
           :timestamp => current_timestamp, 
           :datetime => Time.at(current_timestamp),  
           :time_unit => Time.at(current_timestamp).strftime("%H"), 
-          :friendly_date => Time.at(current_timestamp).strftime("%d/%m/%Y %H:%M:%S"), 
+          :friendly_date => Time.at(current_timestamp).strftime("%Y-%m-%d %H:%M:%S"), 
           :day_of_week => Time.at(current_timestamp).strftime("%u"),
           :hour_of_day => Time.at(current_timestamp).strftime("%k")})
       end  

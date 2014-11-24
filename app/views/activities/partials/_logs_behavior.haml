@@ -2,21 +2,31 @@
   = t("activity_logs.behavior_title")
 
 #behavior
-  
 
 :javascript
-  Morris.Area({
-    element: 'behavior',
-    data: [
-      { y: '2006', a: 100 },
-      { y: '2007', a: 75 },
-      { y: '2008', a: 50},
-      { y: '2009', a: 75 },
-      { y: '2010', a: 50 },
-      { y: '2011', a: 75 },
-      { y: '2012', a: 100 }
-    ],
-    xkey: 'y',
-    ykeys: ['a'],
-    labels: ['Series A']
+
+  $( document ).ready(function() {
+
+      var results_url = "/activity-behavior/" + $('#activity_name').text();
+
+     $.getJSON( results_url, function( json_data ) {
+         console.log(json_data);
+
+         var chart_data = new Array(); 
+
+         $.each(json_data, function(key_name, value) {
+            chart_data.push({hour: value.friendly_date , count: value.log_count})
+         });
+
+          Morris.Area({
+            element: 'behavior',
+            data: chart_data,
+            xkey: 'hour',
+            ykeys: ['count'],
+            labels: ['Registros']
+          });
+
+     });
+
   });
+
