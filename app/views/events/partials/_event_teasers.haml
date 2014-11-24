@@ -3,5 +3,13 @@
     %h4.box-title
       = t("events.teasers.title")
   .box-body
-    - if !events.empty?
-      - events.each_with_index do |event, index|
+    %ul.todo-list.ui-sortable
+      - if !events.empty?
+        - events.each_with_index do |event, index|
+          %li
+            %span.text
+              = event.name
+            .tools
+              %i.fa.fa-edit
+              %i.fa.fa-trash-o
+

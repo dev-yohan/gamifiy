@@ -1,10 +1,12 @@
 - if !activities.empty?
   %h4
     = t("activities.title")
-  - activities.each do |activity|
-    .callout
-      %a{:href => activity_detail_path(:app_id => app.slugs, :id => activity.slugs)}
-        %h4
-          = activity.name
-      %p
-        = activity.description
+  %ul.todo-list.ui-sortable
+    - activities.each do |activity|
+      %li
+        %span.text
+          %a{:href => activity_detail_path(:app_id => app.slugs, :id => activity.slugs)}
+            = activity.name
+        .tools
+          %i.fa.fa-edit
+          %i.fa.fa-trash-o
