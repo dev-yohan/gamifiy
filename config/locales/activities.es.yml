@@ -11,3 +11,9 @@ es:
     app_column: "Aplicación"
     actions_column: "Acciones"
     more_link: "Ver"
+
+  activity_logs:
+    last_title: "Últimos logs de actividad"  
+    subject_column: "Sujeto"
+    date_column: "Fecha"
+    more_link: "Ver todo"

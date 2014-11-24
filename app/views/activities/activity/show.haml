@@ -22,13 +22,20 @@
         = content_tag :div, msg, class: flash_class(name.to_s)
 
     .row
-      .col-md-8
+      .col-md-9
         .box
-          .box-body
-            %h4
+          .box-header
+            %h4.box-title
               = t("activities.description_title")
+          .box-body  
             %p
               = @activity.description 
 
-      .col-md-4
+            .row  
+              .col-md-6  
+                =  render :partial => 'activities/partials/last_logs', :locals => { :activity_logs => @activity_logs }  
+            
+
+
+      .col-md-3
         =  render :partial => 'events/partials/event_teasers', :locals => { :events => @events }

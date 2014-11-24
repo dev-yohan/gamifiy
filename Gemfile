@@ -43,6 +43,7 @@ gem "haml"
 gem 'mongo'
 gem 'mongoid'
 gem 'mongoid_slug'
+gem 'mongoid_auto_increment', '0.1.2'
 
 gem 'devise'
 

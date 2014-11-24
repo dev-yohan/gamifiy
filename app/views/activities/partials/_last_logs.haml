@@ -1,0 +1,22 @@
+%h4
+  = t("activity_logs.last_title")
+
+.table-responsive.no-padding
+  %table.table.table-hover
+    %tbody
+      %tr
+        %th
+          = t("activity_logs.subject_column")
+        %th
+          = t("activity_logs.date_column")
+
+      - activity_logs.each_with_index do |log, index|
+        %tr
+          %td
+            = log.subject.external_email
+          %td
+            = log.created_at.strftime("%d/%m/%y %H:%M:%S") 
+
+%a.btn.btn-default            
+  %i.fa.fa-arrow-circle-right
+  = t("activity_logs.more_link")

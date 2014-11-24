@@ -14,7 +14,10 @@ class Activities::ActivityController < ApplicationController
   def show
 
     @activity = Activity.find(params[:id])
+    @activity_logs = ActivityLog.where(:activity => @activity).page(1).per(10)
+
     @events = Event.where(:activity => @activity)
+
 
   end  
 
