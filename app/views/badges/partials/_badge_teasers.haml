@@ -1,12 +1,16 @@
-- if !badges.empty?
-  %h4
-    = t("badges.title")
-
-  - badges.each do |badge|
-    .col-sm-6.col-md-4
-      .thumbnail
-        = cl_image_tag(badge.image, :width => 242, :height => 200, :crop => :scale)
-        .caption
-          %strong 
-            = badge.name
-          
+.box
+  - if !badges.empty?
+    .box-header
+      %h4.box-title
+        %i.fa.fa-trophy
+        = t("badges.title")
+    .box-body   
+      .row 
+        - badges.each do |badge|
+          .col-sm-6.col-md-3
+            .thumbnail
+              = cl_image_tag(badge.image, :width => 242, :height => 200, :crop => :scale)
+              .caption
+                %strong 
+                  = badge.name
+            

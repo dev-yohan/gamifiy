@@ -14,7 +14,7 @@ class Activities::ActivityController < ApplicationController
   def show
 
     @activity = Activity.find(params[:id])
-    @activity_logs = ActivityLog.where(:activity => @activity).desc(:created_at).page(1).per(10)
+    @activity_logs = ActivityLog.where(:activity => @activity).desc(:date).page(1).per(10)
 
     @events = Event.where(:activity => @activity)
 

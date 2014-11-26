@@ -8,8 +8,8 @@ class ActivityFetcher
     dates_array.each do |data|
 
         log_count = ActivityLog.where(:activity => activity, 
-                               :created_at.gte => data[:timestamp], 
-                               :created_at.lte => (data[:timestamp] + 3600)).count
+                               :date.gte => data[:timestamp], 
+                               :date.lte => (data[:timestamp] + 3600)).count
 
        json_data.push({:index => data[:index], 
                        :timestamp => data[:timestamp], 

@@ -1,0 +1,16 @@
+.box
+  - if !users.empty?
+    .box-header
+      %h4.box-title
+        %i.fa.fa-users
+        = t("subjects.title")
+    .box-body   
+      %ul.todo-list.ui-sortable 
+        - users.each do |user|
+          %li
+            %span.text
+              = user.external_email
+            .tools
+              %i.fa.fa-edit
+              %i.fa.fa-trash-o
+          
