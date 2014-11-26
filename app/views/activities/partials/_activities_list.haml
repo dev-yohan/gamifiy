@@ -9,6 +9,8 @@
               %th
                 = t("activities_list.name_column")
               %th
+                = t("subjects_list.status_column")
+              %th
                 = t("activities_list.app_column")
               %th
                 = t("activities_list.actions_column")
@@ -16,7 +18,14 @@
             - activities.each_with_index do |activity, index|
               %tr
                 %td
-                  = activity.name    
+                  = activity.name   
+                %td
+                  - if !activity.is_active?
+                    %span.badge.bg-green
+                      = t("activities_list.active_badge")
+                  - else
+                    %span.badge.bg-red
+                      = t("activities_list.inactive_badge") 
                 %td
                   = activity.site.name
                 %td

@@ -1,0 +1,35 @@
+.col-md-12
+  .box
+    .box-header
+    .box-body.table-responsive-no-padding
+      - if !users.empty?
+        %table.table.table-hover
+          %tbody
+            %tr
+              %th
+                = t("subjects_list.email_column")
+              %th
+                = t("subjects_list.status_column")  
+              %th
+                = t("subjects_list.app_column")
+              %th
+                = t("subjects_list.actions_column")
+
+            - users.each_with_index do |user, index|
+              %tr
+                %td
+                  = user.external_email   
+                %td
+                  - if !user.is_active?
+                    %span.badge.bg-green
+                      = t("subjects_list.active_badge")
+                  - else
+                    %span.badge.bg-red
+                      = t("subjects_list.inactive_badge")
+
+                %td
+                  = user.site.name
+                %td
+                  %a{:href => ""}
+                    %i.fa.fa-eye
+                    = t("subjects_list.more_link")

@@ -2,3 +2,12 @@ es:
   subjects:
     title: "Usuarios"
     home_breadcrumb: "Home"
+
+  subjects_list:
+    email_column: "Nombre"
+    status_column: "Estado"
+    active_badge: "Activo"
+    inactive_badge: "Inactivo"
+    app_column: "Aplicación"
+    actions_column: "Acciones"
+    more_link: "Ver"

@@ -1,0 +1,23 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      %i.fa.fa-users
+      = t("subjects.title")
+    %ol.breadcrumb
+      %li
+        %a{:href => activities_list_path}
+          %i.fa.fa-users
+          = t("subjects.title")
+      %li.active 
+        = t("subjects.home_breadcrumb")
+
+  .content
+    .row
+      - flash.each do |name, msg|
+        = content_tag :div, msg, class: flash_class(name.to_s)
+    .row
+      .col-md-12
+        = paginate @users   
+    .row
+      =  render :partial => 'subjects/partials/subjects_list', :locals => { :users => @users }

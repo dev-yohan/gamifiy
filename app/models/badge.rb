@@ -9,6 +9,8 @@ class Badge
   field :image, type: String
   mount_uploader :image, ImageUploader
 
+  field :is_active, type: Boolean
+
   has_many :events, :class_name => "Event"
   belongs_to :site, :class_name => "Sites::Site"
 

@@ -9,6 +9,8 @@
               %th
                 = t("badges_list.logo_column")
               %th
+                = t("badges_list.status_column")  
+              %th
                 = t("badges_list.name_column")
               %th
                 = t("badges_list.app_column")
@@ -21,6 +23,13 @@
                   = cl_image_tag(badge.image, :width => 50, :height => 50, :crop => :scale)
                 %td
                   = badge.name    
+                %td
+                  - if !badge.is_active?
+                    %span.badge.bg-green
+                      = t("badges_list.active_badge")
+                  - else
+                    %span.badge.bg-red
+                      = t("badges_list.inactive_badge")
                 %td
                   = badge.site.name
                 %td
