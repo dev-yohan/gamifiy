@@ -8,6 +8,9 @@ es:
   app_teaser:
     more_link: "Ver más" 
 
+  app_detail:
+    activity_count_title: "Tasa de actividades"
+
   create_app:
     name_lbl: "Nombre de la aplicación" 
     description_lbl: "Descripción de la aplicación"  

@@ -1,0 +1,36 @@
+.box
+  .box-header
+    %h4.box-title
+      %i.fa.fa-bar-chart-o
+      = t("app_detail.activity_count_title")
+  .box-body
+    #app_name{:style => "display:none"}
+      = app._id
+    #weekly-behavior
+
+:javascript
+
+  $( document ).ready(function() {
+
+      var results_url = "/weekly-activity-behavior/" + $('#app_name').text();
+
+     $.getJSON( results_url, function( json_data ) {
+         console.log(json_data);
+
+         var chart_data = new Array(); 
+
+         $.each(json_data, function(key_name, value) {
+            chart_data.push({hour: value.friendly_date , count: value.log_count})
+         });
+
+          Morris.Area({
+            element: 'weekly-behavior',
+            data: chart_data,
+            xkey: 'hour',
+            ykeys: ['count'],
+            labels: ['Registros']
+          });
+
+     });
+
+  });    
