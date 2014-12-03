@@ -33,4 +33,17 @@ class Activities::ActivityController < ApplicationController
 
   end  
 
+  def weekly_behavior_data
+
+    date_fetcher = DateFetcher.new
+    activity_fetcher = ActivityFetcher.new
+    sites_ids = Sites::Site.where(:user => current_user).only(:_id).map(&:_id)
+    @activities = Activity.where(:site_id.in => sites_ids).only(:_id).map(&:_id)
+
+    behavior_array = activity_fetcher.get_daily_behavior_data(date_fetcher.get_daily_array(604800, 1, Date.today.at_beginning_of_week.to_time.to_i), @activities)
+
+    render json: behavior_array
+
+  end  
+
 end

@@ -1,44 +1,44 @@
-.row
-  .col-lg-3.col-xs-6
-    .small-box.bg-aqua
-      .inner
-        %h3
-          = user_sites
-        %p
-          = t("home.quick_launch.user_sites")    
-      %a.small-box-footer{:href => applications_list_path}
-        = t("home.quick_launch.more_info")
-        %i.fa.fa-arrow-circle-right
 
-  .col-lg-3.col-xs-6
-    .small-box.bg-green
-      .inner
-        %h3
-          = user_activities
-        %p
-          = t("home.quick_launch.user_activities")    
-      %a.small-box-footer{:href => activities_list_path}
-        = t("home.quick_launch.more_info")
-        %i.fa.fa-arrow-circle-right
+.col-lg-3.col-xs-6
+  .small-box.bg-aqua
+    .inner
+      %h3
+        = user_sites
+      %p
+        = t("home.quick_launch.user_sites")       
+    %a.small-box-footer{:href => applications_list_path}
+      = t("home.quick_launch.more_info")
+      %i.fa.fa-arrow-circle-right
 
-  .col-lg-3.col-xs-6
-    .small-box.bg-yellow
-      .inner
-        %h3
-          = user_badges
-        %p
-          = t("home.quick_launch.user_badges")    
-      %a.small-box-footer{:href => badges_list_path}
-        = t("home.quick_launch.more_info")
-        %i.fa.fa-arrow-circle-right
+.col-lg-3.col-xs-6
+  .small-box.bg-green
+    .inner
+      %h3
+        = user_activities
+      %p
+        = t("home.quick_launch.user_activities")    
+    %a.small-box-footer{:href => activities_list_path}
+      = t("home.quick_launch.more_info")
+      %i.fa.fa-arrow-circle-right
 
-  .col-lg-3.col-xs-6
-    .small-box.bg-red   
-      .inner
-        %h3
-          = user_subjects
-        %p
-          = t("home.quick_launch.user_subjects")    
-      %a.small-box-footer{:href => subjects_list_path}
-        = t("home.quick_launch.more_info")
-        %i.fa.fa-arrow-circle-right   
+.col-lg-3.col-xs-6
+  .small-box.bg-yellow
+    .inner
+      %h3
+        = user_badges
+      %p
+        = t("home.quick_launch.user_badges")    
+    %a.small-box-footer{:href => badges_list_path}
+      = t("home.quick_launch.more_info")
+      %i.fa.fa-arrow-circle-right
+
+.col-lg-3.col-xs-6
+  .small-box.bg-red   
+    .inner
+      %h3
+        = user_subjects
+      %p
+        = t("home.quick_launch.user_subjects")    
+    %a.small-box-footer{:href => subjects_list_path}
+      = t("home.quick_launch.more_info")
+      %i.fa.fa-arrow-circle-right   

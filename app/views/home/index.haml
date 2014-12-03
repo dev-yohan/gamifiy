@@ -1,6 +1,22 @@
 = render "shared/main_menu"
 %aside.right-side
-  
+  .content-header
+    %h1
+      = t("home.title")
+      
+    %ol.breadcrumb
+      %li
+        %a{:href => "/"}
+          %i.fa.fa-dashboard
+          = t("home.title")
+      %li.active 
+        = t("home.home_breadcrumb")
+
   %section.content
-    =  render :partial => 'home/partials/quick_launcher', :locals => { :user_sites => @user_sites, :user_activities => @user_activities, :user_badges => @user_badges, :user_subjects => @user_subjects } 
+    .row
+      =  render :partial => 'home/partials/quick_launcher', :locals => { :user_sites => @user_sites, :user_activities => @user_activities, :user_badges => @user_badges, :user_subjects => @user_subjects } 
+    .row
+      %section.col-md-7.connectedSortable.ui-sortable
+        =  render :partial => 'home/partials/charts_tab' 
+        
     

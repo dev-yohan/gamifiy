@@ -21,3 +21,9 @@ es:
     subject_column: "Sujeto"
     date_column: "Fecha"
     more_link: "Ver todo"
+
+  activity_log_chart:
+    title: "Tasa de ejecución" 
+
+  activity_distrib_chart:
+    title: "Distribución"

@@ -1,8 +1,11 @@
 es:
   home:   
+    title: "Panel de Control"
+    home_breadcrumb: "Home"
     quick_launch:
       more_info: "Ver más"
       user_sites: "Aplicaciones"
       user_activities: "Actividades"
       user_badges: "Insignias"
       user_subjects: "Usuarios"
+    
