@@ -9,7 +9,7 @@ es:
     more_link: "Ver más" 
 
   app_detail:
-    activity_count_title: "Tasa de actividades"
+    activity_count_title: "Tasa de ejecución de actividades"
 
   create_app:
     name_lbl: "Nombre de la aplicación" 

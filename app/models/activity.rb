@@ -10,5 +10,9 @@ class Activity
   field :is_active, type: Boolean
 
   belongs_to :site, :class_name => "Sites::Site"
+  has_many :activity_logs, :class_name => "ActivityLog"
+
+  field :activity_logs_count, type: Integer
+
 
 end

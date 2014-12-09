@@ -18,5 +18,10 @@
     .row
       %section.col-md-7.connectedSortable.ui-sortable
         =  render :partial => 'home/partials/charts_tab' 
+      %section.col-md-5.connectedSortable.ui-sortable
+        .box
+          .box-body
+            =  render :partial => 'activities/partials/activity_teasers', :locals => { :activities => @activities, :activities_count => @activities_count, :badgeable => true } 
+
         
     

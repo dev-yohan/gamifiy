@@ -19,7 +19,7 @@ class Applications::AppsController < ApplicationController
 
     @app = Sites::Site.find(params[:id])
     @activities_count = ActivityLog.where(:activity_id.in => Activity.where(:site => @app).all.only(:_id).map(&:_id)).count.to_f
-    @activities = Activity.where(:site => @app).desc(:created_at).page(1).per(activity_page_size)
+    @activities = Activity.where(:site => @app).desc(:activity_logs_count).page(1).per(activity_page_size)
     @badges = Badge.where(:site => @app).desc(:created_at).page(1).per(badge_page_size)
     @users = Subject.where(:site => @app).desc(:created_at).page(1).per(user_page_size)
 

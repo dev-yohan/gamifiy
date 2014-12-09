@@ -6,6 +6,9 @@ es:
     add_link: "Crear nueva"
     add_title: "Crear nueva actividad"
 
+  activity_teasers:
+    title: "Porcentaje de actividades"   
+
   activities_list:
     name_column: "Nombre"
     status_column: "Estado"
