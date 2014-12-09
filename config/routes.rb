@@ -28,7 +28,9 @@ Rails.application.routes.draw do
   match 'subjects' => 'subjects/subject#index', :as => :subjects_list, :via => :get
 
   #API V1
-  match "api/v1/apps" => "api/v1/apps#index", :as => :api_v1_event_list, :via => :get
+  match "api/v1/apps" => "api/v1/apps#index", :as => :api_v1_apps_list, :via => :get
+  match "api/v1/apps/:id" => "api/v1/apps#show", :as => :api_v1_app_detail, :via => :get
+  match "api/v1/app_activities/:id" => "api/v1/app_activities#index", :as => :api_v1_app_activities, :via => :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

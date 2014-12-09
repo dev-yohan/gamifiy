@@ -5,6 +5,17 @@ es:
     add_link: "Crear nueva"
     add_title: "Crear nueva aplicación"
 
+    api:
+      error:
+       code_100: 
+        dev_message: "Applications not found"
+        friendly_message: "Applications not found"
+
+       code_101: 
+        dev_message: "Application with id %{id} not found"
+        friendly_message: "Application with id %{id} not found"
+
+
   app_teaser:
     more_link: "Ver más" 
 
@@ -32,4 +43,6 @@ es:
     delete_success: "Aplicación eliminada éxitosamente"
     delete_error: "La aplicación no pudo ser eliminada"  
     wrong_owner: "La aplicación no pudo ser eliminada dado que el usuario actual no es el dueño de la misma"
+
+
 
