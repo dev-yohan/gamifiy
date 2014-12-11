@@ -20,7 +20,7 @@
                 %td
                   = activity.name   
                 %td
-                  - if !activity.is_active?
+                  - if activity.is_active?
                     %span.badge.bg-green
                       = t("activities_list.active_badge")
                   - else

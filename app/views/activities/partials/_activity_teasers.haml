@@ -19,8 +19,9 @@
                 = #(log_count / activities_count).to_f
                 .progress-bar.progress-bar-primary{:style => "width: #{percentage}%"}
             .col-md-2
-              %span.badge.bg-light-blue
-                = "#{percentage.round(0)}%"
+              - if !percentage.nan?
+                %span.badge.bg-light-blue
+                  = "#{percentage.round(0)}%"
 
           - else
             .col-md-7
@@ -37,6 +38,8 @@
                 = #(log_count / activities_count).to_f
                 .progress-bar.progress-bar-primary{:style => "width: #{percentage}%"}
             .col-md-2
-              %span.badge.bg-light-blue
-                = "#{percentage.round(0)}%"
+              - if !percentage.nan?
+                %span.badge.bg-light-blue
+                  = "#{percentage.round(0)}%"
+
 
