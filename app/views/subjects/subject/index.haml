@@ -4,9 +4,12 @@
     %h1
       %i.fa.fa-users
       = t("subjects.title")
+      %small
+        %a{:href => subject_create_path}
+          =  t("subjects.add_link")
     %ol.breadcrumb
       %li
-        %a{:href => activities_list_path}
+        %a{:href => subjects_list_path}
           %i.fa.fa-users
           = t("subjects.title")
       %li.active 

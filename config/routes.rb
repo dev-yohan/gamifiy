@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   
   #subjects namespace
   match 'subjects' => 'subjects/subject#index', :as => :subjects_list, :via => :get
+  match 'subjects/create' => 'subjects/subject#create', :as => :subject_create, :via => :get
+  match 'subjects/new' => 'subjects/subject#new', :as => :subject_new, :via => :post
 
   #API V1
   match "api/v1/apps" => "api/v1/apps#index", :as => :api_v1_apps_list, :via => :get

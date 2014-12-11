@@ -2,6 +2,8 @@ es:
   subjects:
     title: "Usuarios"
     home_breadcrumb: "Home"
+    add_link: "Crear nuevo"
+    add_title: "Crear usuario nuevo"
 
   subjects_list:
     email_column: "Nombre"
@@ -11,3 +13,13 @@ es:
     app_column: "Aplicación"
     actions_column: "Acciones"
     more_link: "Ver"
+
+  create_subject:
+    id_lbl: "ID externo"
+    email_lbl: "Correo electrónico" 
+    submit_btn: "Guardar" 
+    status_lbl: "Activo"
+    application_lbl: "Aplicación" 
+    application_prompt: "Seleccione una opción"
+    save_success: "Usuario guardado éxitosamente"
+    save_error: "El usuario no pudo ser guardado"
