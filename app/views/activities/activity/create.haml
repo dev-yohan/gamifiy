@@ -1,0 +1,38 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      = t("activities.add_title")
+    %ol.breadcrumb
+      %li
+        %a{:href => activities_list_path}
+          %i.fa.fa-code
+          = t("activities.title")
+      %li.active 
+        = t("activities.add_title")
+
+  .content
+    .row
+      .col-md-12
+        .box.box-primary
+          .box-header  
+          = form_for @activity, :as => "activity_data", :url => activity_new_path, :html => { :multipart => true } do |f|
+            .box-body
+              .form-group
+                = f.label  t("create_activity.name_lbl")
+                = f.text_field :name, autofocus: true, :class => "form-control", :placeholder => t("create_activity.name_lbl"), :required => true
+
+              .form-group
+                = f.label  t("create_activity.description_lbl")
+                = f.text_area :description,  :class => "form-control", :placeholder => t("create_activity.description_lbl"), :required => true  
+
+              .form-group
+                = f.label  t("create_activity.application_lbl")
+                = select_tag :site, options_from_collection_for_select(@sites, "id", "name"), :prompt => t("create_activity.application_prompt"), :class => "form-control", :required => true    
+
+              .form-group
+                = f.label  t("create_activity.status_lbl")
+                = f.check_box :is_active
+
+            .box-footer
+              = f.submit t('create_activity.submit_btn'), :class => "btn btn-primary"         

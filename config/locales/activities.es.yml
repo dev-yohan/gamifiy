@@ -6,6 +6,16 @@ es:
     add_link: "Crear nueva"
     add_title: "Crear nueva actividad"
 
+  create_activity:
+    name_lbl: "Nombre de la actividad" 
+    description_lbl: "Descripción de la actividad"  
+    status_lbl: "Activa"
+    application_lbl: "Aplicación" 
+    application_prompt: "Seleccione una opción"
+    submit_btn: "Guardar" 
+    save_success: "Actividad guardada éxitosamente"
+    save_error: "La actividad no pudo ser guardada"  
+
   activity_teasers:
     title: "Porcentaje de actividades"   
 
@@ -30,3 +40,4 @@ es:
 
   activity_distrib_chart:
     title: "Distribución"
+

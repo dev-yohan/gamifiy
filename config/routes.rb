@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   #activities namespace
   match 'activities' => 'activities/activity#index', :as => :activities_list, :via => :get
   match 'activity/:app_id/:id' => 'activities/activity#show', :as => :activity_detail, :via => :get 
+  match 'activity/create' => 'activities/activity#create', :as => :activity_create, :via => :get
+  match 'activity/new' => 'activities/activity#new', :as => :activity_new, :via => :post
   match 'activity-behavior/:id' => 'activities/activity#behavior_data', :as => :activity_behavior_data, :via => :get 
   match 'weekly-activity-behavior/(:id)' => 'activities/activity#weekly_behavior_data', :as => :weekly_activity_behavior_data, :via => :get
 

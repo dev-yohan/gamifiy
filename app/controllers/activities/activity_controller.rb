@@ -21,6 +21,33 @@ class Activities::ActivityController < ApplicationController
 
   end  
 
+
+  def create
+
+    @sites = Sites::Site.where(:user => current_user)
+    @activity = Activity.new
+
+  end 
+
+  def new
+
+    @activity = Activity.new()
+    @activity.name = params[:activity_data][:name]
+    @activity.description = params[:activity_data][:description]
+    @activity.is_active = params[:activity_data][:is_active]
+    @activity.activity_logs_count = 0
+    site = Sites::Site.find(params[:site])
+    @activity.site = site
+   
+    if @activity.save
+      redirect_to activities_list_path, :flash => {:success => I18n.t("create_activity.save_success")}
+    else
+      redirect_to activity_create_path, :flash => {:error => I18n.t("create_activity.save_error")}
+    end  
+
+  end  
+
+
   def behavior_data
 
     date_fetcher = DateFetcher.new
