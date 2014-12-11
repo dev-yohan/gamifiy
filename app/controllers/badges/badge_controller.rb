@@ -12,4 +12,29 @@ class Badges::BadgeController < ApplicationController
     
   end
 
+
+  def create
+
+    @sites = Sites::Site.where(:user => current_user)
+    @badge = Badge.new
+
+  end
+  
+  def new
+
+    @badge = Badge.new()
+    @badge.name = params[:badge_data][:name]
+    @badge.is_active = params[:badge_data][:is_active]
+    @badge.image = params[:badge_data][:image]
+    site = Sites::Site.find(params[:site])
+    @badge.site = site
+   
+    if @badge.save
+      redirect_to badges_list_path, :flash => {:success => I18n.t("create_badge.save_success")}
+    else
+      redirect_to badge_create_path, :flash => {:error => I18n.t("create_badge.save_error")}
+    end  
+      
+  end  
+
 end

@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 
   #badges namespace
   match 'badges' => 'badges/badge#index', :as => :badges_list, :via => :get
+  match 'badges/create' => 'badges/badge#create', :as => :badge_create, :via => :get
+  match 'badges/new' => 'badges/badge#new', :as => :badge_new, :via => :post
   
   #subjects namespace
   match 'subjects' => 'subjects/subject#index', :as => :subjects_list, :via => :get

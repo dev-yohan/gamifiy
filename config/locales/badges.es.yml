@@ -2,6 +2,18 @@ es:
   badges:
     title: "Insignias"
     home_breadcrumb: "Home"
+    add_link: "Crear nueva"
+    add_title: "Crear nueva insignia"
+
+  create_badge:
+    name_lbl: "Nombre de la insignia"   
+    logo_lbl: "Logo"
+    status_lbl: "Activa"
+    application_lbl: "Aplicación" 
+    application_prompt: "Seleccione una opción"
+    submit_btn: "Guardar" 
+    save_success: "Insignia guardada éxitosamente"
+    save_error: "La insignia no pudo ser guardada"
 
   badges_list:
     logo_column: "Logo"
