@@ -28,8 +28,9 @@
               %span.text
                 %a{:href => activity_detail_path(:app_id => activity.site.slugs, :id => activity.slugs)}
                   = activity.name
-              %small.label.label-success
-                = activity.site.name
+              %a{:href => application_show_path(:id => activity.site.slugs)}   
+                %small.label.label-success
+                  = activity.site.name
             .col-md-3
               .progress.xs
                 = #activities_count
