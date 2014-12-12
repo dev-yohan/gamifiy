@@ -1,4 +1,18 @@
 es:
   events:
+    title: "Eventos"
+    home_breadcrumb: "Home"
+    add_link: "Crear evento"
+    add_title: "Crear evento"
     teasers:
       title: "Eventos"
+
+  events_list:
+    name_column: "Nombre"
+    value_column: "Puntos"
+    count_column: "Conteo"
+    badge_column: "Insignia"
+    activity_column: "Actividad"
+    app_column: "Aplicación"
+    actions_column: "Acciones"
+    more_link: "Ver"

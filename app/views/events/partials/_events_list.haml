@@ -1,0 +1,41 @@
+.col-md-12
+  .box
+    .box-header
+    .box-body.table-responsive-no-padding
+      - if !events.empty?
+        %table.table.table-hover
+          %tbody
+            %tr
+              %th
+                = t("events_list.name_column")
+              %th
+                = t("events_list.value_column")
+              %th
+                = t("events_list.count_column")
+              %th
+                = t("events_list.badge_column")
+              %th
+                = t("events_list.activity_column")  
+              %th
+                = t("events_list.app_column")
+              %th
+                = t("activities_list.actions_column")
+
+            - events.each_with_index do |event, index|
+              %tr
+                %td
+                  = event.name   
+                %td
+                  = event.value
+                %td
+                  = event.count
+                %td
+                  = event.badge.name
+                %td
+                  = event.activity.name
+                %td
+                  = event.activity.site.name
+                %td
+                  %a{:href => ""}
+                    %i.fa.fa-eye
+                    = t("events_list.more_link")

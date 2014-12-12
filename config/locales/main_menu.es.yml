@@ -6,9 +6,12 @@ es:
       title: "Aplicaciones"
     activities: 
       title: "Actividades"
+    events:
+      title: "Eventos"
     badges: 
       title: "Insignias" 
     users: 
       title: "Usuarios"  
+
 
 

@@ -1,0 +1,26 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      %i.fa.fa-gears
+      = t("events.title")
+      %small
+        %a{:href => ""}
+          =  t("events.add_link")
+    %ol.breadcrumb
+      %li
+        %a{:href => events_list_path}
+          %i.fa.fa-gears
+          = t("events.title")
+      %li.active 
+        = t("events.home_breadcrumb")
+
+  .content
+    .row
+      - flash.each do |name, msg|
+        = content_tag :div, msg, class: flash_class(name.to_s)
+    .row
+      .col-md-12
+        = paginate @events   
+    .row
+      =  render :partial => 'events/partials/events_list', :locals => { :events => @events }
