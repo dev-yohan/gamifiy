@@ -7,6 +7,18 @@ es:
     teasers:
       title: "Eventos"
 
+  create_event:
+    name_lbl: "Nombre del evento" 
+    value_lbl: "Valor (puntos)"  
+    count_lbl: "Conteo"
+    activity_lbl: "Actividad" 
+    activity_prompt: "Seleccione una opción"
+    badge_lbl: "Insignia" 
+    badge_prompt: "Seleccione una opción"
+    submit_btn: "Guardar" 
+    save_success: "Aplicación guardada éxitosamente"
+    save_error: "La aplicación no pudo ser guardada"    
+
   events_list:
     name_column: "Nombre"
     value_column: "Puntos"

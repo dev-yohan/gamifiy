@@ -9,4 +9,6 @@ class Event
   belongs_to :activity, :class_name => "Activity"
 
 
+  
+
 end

@@ -1,0 +1,44 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      %i.fa.fa-gears
+      = t("events.add_title")
+      
+    %ol.breadcrumb
+      %li
+        %a{:href => events_list_path}
+          %i.fa.fa-gears
+          = t("events.title")
+      %li.active 
+        = t("events.add_title")
+
+  .content
+    .row
+      .col-md-12
+        .box.box-primary
+          .box-header  
+          = form_for @event, :as => "event_data", :url => event_new_path, :html => { :multipart => true } do |f|
+            .box-body
+              .form-group
+                = f.label  t("create_event.name_lbl")
+                = f.text_field :name, autofocus: true, :class => "form-control", :placeholder => t("create_event.name_lbl"), :required => true
+
+              .form-group
+                = f.label  t("create_event.value_lbl")
+                = f.text_field :value,  :class => "form-control", :placeholder => t("create_event.value_lbl"), :required => true
+
+              .form-group
+                = f.label  t("create_event.count_lbl")
+                = f.text_field :count,  :class => "form-control", :placeholder => t("create_event.count_lbl"), :required => true
+
+              .form-group
+                = f.label  t("create_event.activity_lbl")
+                = select_tag :activity, options_from_collection_for_select(@activities, "id", "name"), :prompt => t("create_event.activity_prompt"), :class => "form-control", :required => true
+
+              .form-group
+                = f.label  t("create_event.badge_lbl")
+                = select_tag :badge, options_from_collection_for_select(@badges, "id", "name"), :prompt => t("create_event.badge_prompt"), :class => "form-control", :required => true  
+
+            .box-footer
+              = f.submit t('create_event.submit_btn'), :class => "btn btn-primary" 
