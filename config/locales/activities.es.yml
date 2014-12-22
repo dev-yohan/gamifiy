@@ -27,6 +27,8 @@ es:
     app_column: "Aplicación"
     actions_column: "Acciones"
     more_link: "Ver"
+    edit_link: "Editar"
+    delete_link: "Eliminar"
 
   activity_logs:
     last_title: "Últimos logs de actividad"  

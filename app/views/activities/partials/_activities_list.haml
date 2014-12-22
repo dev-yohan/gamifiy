@@ -29,6 +29,14 @@
                 %td
                   = activity.site.name
                 %td
-                  %a{:href => ""}
+                  %a{:href => activity_detail_path(activity.site, activity)}
                     %i.fa.fa-eye
                     = t("activities_list.more_link")
+                  \    
+                  %a{:href => ""}
+                    %i.fa.fa-edit
+                    = t("activities_list.edit_link")
+                  \
+                  %a{:href => ""}
+                    %i.fa.fa-trash-o
+                    = t("activities_list.delete_link")  

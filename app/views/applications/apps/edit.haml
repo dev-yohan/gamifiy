@@ -16,7 +16,7 @@
       .col-md-12
         .box.box-primary
           .box-header  
-          = form_for @app, :as => "app_data", :url => application_update_path(@app), :html => { :multipart => true }, :method => :POST do |f|
+          = form_for @app, :as => "app_data", :url => application_update_path(@app.id), :html => { :multipart => true }, :method => :POST do |f|
             .box-body
               .form-group
                 = f.label  t("create_app.name_lbl")
