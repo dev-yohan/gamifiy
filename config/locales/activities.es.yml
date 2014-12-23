@@ -5,6 +5,7 @@ es:
     home_breadcrumb: "Home"
     add_link: "Crear nueva"
     add_title: "Crear nueva actividad"
+    edit_title: "Editar actividad %{activity}"
 
   create_activity:
     name_lbl: "Nombre de la actividad" 
@@ -14,7 +15,13 @@ es:
     application_prompt: "Seleccione una opción"
     submit_btn: "Guardar" 
     save_success: "Actividad guardada éxitosamente"
-    save_error: "La actividad no pudo ser guardada"  
+    save_error: "La actividad no pudo ser guardada" 
+    current_site: "(Actual: %{site})" 
+
+  edit_activity:
+    title: "Editar %{activity}"  
+    edit_success: "Actividad editada éxitosamente"
+    edit_error: "La actividad no pudo ser editada"
 
   activity_teasers:
     title: "Porcentaje de actividades"   

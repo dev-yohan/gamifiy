@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   match 'activity/:app_id/:id' => 'activities/activity#show', :as => :activity_detail, :via => :get 
   match 'activity/create' => 'activities/activity#create', :as => :activity_create, :via => :get
   match 'activity/new' => 'activities/activity#new', :as => :activity_new, :via => :post
+  match 'activities/edit/:id' => 'activities/activity#edit', :as => :activity_edit, :via => :get
+  match 'activities/update/:id' => 'activities/activity#update', :as => :activity_update, :via => :post
   match 'activity-behavior/:id' => 'activities/activity#behavior_data', :as => :activity_behavior_data, :via => :get 
   match 'weekly-activity-behavior/(:id)' => 'activities/activity#weekly_behavior_data', :as => :weekly_activity_behavior_data, :via => :get
 

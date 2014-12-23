@@ -34,6 +34,34 @@ class Activities::ActivityController < ApplicationController
     end
   end
 
+
+  def edit
+   @activity = Activity.find(params[:id])
+   @sites = Sites::Site.where(user: current_user)
+  end  
+
+  def update
+    @activity = Activity.find(params[:id])
+
+    if !params[:activity_data][:name].nil?
+      @activity.name = params[:activity_data][:name]
+    end  
+    if !params[:activity_data][:description].nil?
+      @activity.description = params[:activity_data][:description]
+    end
+    
+    @activity.is_active = params[:activity_data][:is_active]
+    site = Sites::Site.find(params[:site])
+    @activity.site = site
+
+    if @activity.save
+      redirect_to activities_list_path, :flash => {:success => I18n.t("edit_activity.edit_success")}
+    else
+      redirect_to activities_list_path, :flash => {:error => I18n.t("edit_activity.edit_error")}
+    end    
+  end
+
+
   def behavior_data
     date_fetcher = DateFetcher.new
     activity_fetcher = ActivityFetcher.new
