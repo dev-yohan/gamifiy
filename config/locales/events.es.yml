@@ -17,7 +17,15 @@ es:
     badge_prompt: "Seleccione una opción"
     submit_btn: "Guardar" 
     save_success: "Aplicación guardada éxitosamente"
-    save_error: "La aplicación no pudo ser guardada"    
+    save_error: "La aplicación no pudo ser guardada"   
+
+  edit_event:
+    title: "Editar %{event}"  
+    current_activity: "(Actual: %{activity})" 
+    current_badge: "(Actual: %{badge})" 
+    edit_success: "Evento editado éxitosamente"
+    edit_error: "El evento no pudo ser editado" 
+
 
   events_list:
     name_column: "Nombre"
@@ -28,3 +36,5 @@ es:
     app_column: "Aplicación"
     actions_column: "Acciones"
     more_link: "Ver"
+    edit_link: "Editar"
+    delete_link: "Eliminar"

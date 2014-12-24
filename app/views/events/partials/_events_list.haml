@@ -39,3 +39,11 @@
                   %a{:href => ""}
                     %i.fa.fa-eye
                     = t("events_list.more_link")
+                  \    
+                  %a{:href => event_edit_path(event)}
+                    %i.fa.fa-edit
+                    = t("events_list.edit_link")
+                  \
+                  %a{:href => ""}
+                    %i.fa.fa-trash-o
+                    = t("events_list.delete_link")
