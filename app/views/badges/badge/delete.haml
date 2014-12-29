@@ -1,0 +1,25 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      %i.fa.fa-trophy
+      = t("delete_badge.title", :name => @badge.name)
+      
+    %ol.breadcrumb
+      %li
+        %a{:href => badges_list_path}
+          %i.fa.fa-trophy
+          = t("badges.title")
+      %li.active 
+        = t("delete_badge.title", :name => @badge.name)
+
+  .content
+    .row
+      .col-md-12
+        %p
+          = t("delete_badge.delete_message")
+        %a{:href => badge_destroy_path(@badge), :class => "btn btn-primary"}
+          = t("delete_badge.submit_btn")
+
+        %a{:href => badges_list_path, :class => "btn btn-primary"}
+          = t("delete_badge.cancel_btn")

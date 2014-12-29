@@ -21,6 +21,14 @@ es:
     edit_success: "Evento editado éxitosamente"
     edit_error: "El evento no pudo ser editado" 
 
+  delete_badge:
+    title: "Eliminar %{name}"  
+    delete_message: "Esta seguro de eliminar esta insignia?"
+    submit_btn: "Eliminar"
+    cancel_btn: "Cancelar"
+    delete_success: "Insignia eliminada éxitosamente"
+    delete_error: "La insignia no pudo ser eliminada"  
+
   badges_list:
     logo_column: "Logo"
     name_column: "Nombre"

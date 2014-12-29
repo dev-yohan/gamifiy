@@ -1,0 +1,23 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1 
+      = t("delete_activity.title", :name => @activity.name)
+    %ol.breadcrumb
+      %li
+        %a{:href => activities_list_path}
+          %i.fa.fa-code
+          = t("activities.title")
+      %li.active 
+        = t("delete_activity.title", :name => @activity.name)
+
+  .content
+    .row
+      .col-md-12
+        %p
+          = t("delete_activity.delete_message")
+        %a{:href => activity_destroy_path(@activity), :class => "btn btn-primary"}
+          = t("delete_activity.submit_btn")
+
+        %a{:href => activities_list_path, :class => "btn btn-primary"}
+          = t("delete_activity.cancel_btn")

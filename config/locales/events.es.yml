@@ -26,6 +26,14 @@ es:
     edit_success: "Evento editado éxitosamente"
     edit_error: "El evento no pudo ser editado" 
 
+  delete_event:
+    title: "Eliminar %{name}"  
+    delete_message: "Esta seguro de eliminar este evento?"
+    submit_btn: "Eliminar"
+    cancel_btn: "Cancelar"
+    delete_success: "Evento eliminado éxitosamente"
+    delete_error: "El evento no pudo ser eliminado"  
+    wrong_owner: "El evento no pudo ser eliminado dado que el usuario actual no es el dueño de la misma"  
 
   events_list:
     name_column: "Nombre"

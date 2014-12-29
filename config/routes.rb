@@ -17,13 +17,16 @@ Rails.application.routes.draw do
 
   #activities namespace
   match 'activities' => 'activities/activity#index', :as => :activities_list, :via => :get
-  match 'activity/:app_id/:id' => 'activities/activity#show', :as => :activity_detail, :via => :get 
+  match 'activity/show/:app_id/:id' => 'activities/activity#show', :as => :activity_detail, :via => :get 
   match 'activity/create' => 'activities/activity#create', :as => :activity_create, :via => :get
   match 'activity/new' => 'activities/activity#new', :as => :activity_new, :via => :post
   match 'activities/edit/:id' => 'activities/activity#edit', :as => :activity_edit, :via => :get
   match 'activities/update/:id' => 'activities/activity#update', :as => :activity_update, :via => :post
+  match 'activity/delete/:id' => 'activities/activity#delete', :as => :activity_delete, :via => :get
+  match 'activity/destroy/:id' => 'activities/activity#destroy', :as => :activity_destroy, :via => :get
   match 'activity-behavior/:id' => 'activities/activity#behavior_data', :as => :activity_behavior_data, :via => :get 
   match 'weekly-activity-behavior/(:id)' => 'activities/activity#weekly_behavior_data', :as => :weekly_activity_behavior_data, :via => :get
+
 
   #badges namespace
   match 'badges' => 'badges/badge#index', :as => :badges_list, :via => :get
@@ -31,6 +34,8 @@ Rails.application.routes.draw do
   match 'badges/new' => 'badges/badge#new', :as => :badge_new, :via => :post
   match 'badge/edit/:id' => 'badges/badge#edit', :as => :badge_edit, :via => :get
   match 'badge/update/:id' => 'badges/badge#update', :as => :badge_update, :via => :post
+  match 'badge/delete/:id' => 'badges/badge#delete', :as => :badge_delete, :via => :get
+  match 'badge/destroy/:id' => 'badges/badge#destroy', :as => :badge_destroy, :via => :get
 
   #events namespace
   match 'events' => 'events/event#index', :as => :events_list, :via => :get
@@ -38,6 +43,8 @@ Rails.application.routes.draw do
   match 'events/new' => 'events/event#new', :as => :event_new, :via => :post
   match 'event/edit/:id' => 'events/event#edit', :as => :event_edit, :via => :get
   match 'event/update/:id' => 'events/event#update', :as => :event_update, :via => :post
+  match 'event/delete/:id' => 'events/event#delete', :as => :event_delete, :via => :get
+  match 'event/destroy/:id' => 'events/event#destroy', :as => :event_destroy, :via => :get
   
   #subjects namespace
   match 'subjects' => 'subjects/subject#index', :as => :subjects_list, :via => :get

@@ -34,7 +34,6 @@ class Activities::ActivityController < ApplicationController
     end
   end
 
-
   def edit
    @activity = Activity.find(params[:id])
    @sites = Sites::Site.where(user: current_user)
@@ -61,6 +60,25 @@ class Activities::ActivityController < ApplicationController
     end    
   end
 
+
+  def delete
+    @activity = Activity.find(params[:id])  
+  end  
+
+  def destroy
+      @activity = Activity.find(params[:id])
+      @app = @activity.site
+
+      if @app.user == current_user
+          if @activity.delete
+             redirect_to activities_list_path, :flash => {:success => I18n.t("delete_activity.delete_success")}
+          else
+            redirect_to activities_list_path, :flash => {:success => I18n.t("delete_activity.delete_error")}
+          end  
+      else
+        redirect_to activities_list_path, :flash => {:success => I18n.t("delete_activity.wrong_owner")}
+      end  
+  end
 
   def behavior_data
     date_fetcher = DateFetcher.new

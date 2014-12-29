@@ -23,6 +23,15 @@ es:
     edit_success: "Actividad editada éxitosamente"
     edit_error: "La actividad no pudo ser editada"
 
+  delete_activity:
+    title: "Eliminar %{name}"  
+    delete_message: "Esta seguro de eliminar esta actividad?"
+    submit_btn: "Eliminar"
+    cancel_btn: "Cancelar"
+    delete_success: "Actividad eliminada éxitosamente"
+    delete_error: "La actividad no pudo ser eliminada"  
+    wrong_owner: "La actividad no pudo ser eliminada dado que el usuario actual no es el dueño de la misma"
+
   activity_teasers:
     title: "Porcentaje de actividades"   
 
