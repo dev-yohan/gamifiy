@@ -13,6 +13,8 @@ es:
     app_column: "Aplicación"
     actions_column: "Acciones"
     more_link: "Ver"
+    edit_link: "Editar"
+    delete_link: "Eliminar"
 
   create_subject:
     id_lbl: "ID externo"
@@ -23,3 +25,9 @@ es:
     application_prompt: "Seleccione una opción"
     save_success: "Usuario guardado éxitosamente"
     save_error: "El usuario no pudo ser guardado"
+
+  edit_subject:
+    title: "Editar %{subject}"  
+    current_site: "(Actual: %{site})"
+    edit_success: "Usuario editado éxitosamente"
+    edit_error: "El usuario no pudo ser editado"        

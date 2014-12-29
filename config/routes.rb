@@ -43,6 +43,8 @@ Rails.application.routes.draw do
   match 'subjects' => 'subjects/subject#index', :as => :subjects_list, :via => :get
   match 'subjects/create' => 'subjects/subject#create', :as => :subject_create, :via => :get
   match 'subjects/new' => 'subjects/subject#new', :as => :subject_new, :via => :post
+  match 'subject/edit/:id' => 'subjects/subject#edit', :as => :subject_edit, :via => :get
+  match 'subject/update/:id' => 'subjects/subject#update', :as => :subject_update, :via => :post
 
   #API V1
   match "api/v1/apps" => "api/v1/apps#index", :as => :api_v1_apps_list, :via => :get

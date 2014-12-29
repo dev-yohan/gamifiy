@@ -1,0 +1,41 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      = t("edit_subject.title", subject:@subject.external_email)
+    %ol.breadcrumb
+      %li
+        %a{:href => subjects_list_path}
+          %i.fa.fa-users
+          = t("subjects.title")
+      %li.active 
+        = t("edit_subject.title", subject:@subject.external_email)
+
+  .content
+    .row
+      .col-md-12
+        .box.box-primary
+          .box-header  
+          = form_for @subject, :as => "subject_data", :url => subject_update_path(@subject), :html => { :multipart => true }, :method => :POST do |f|
+            .box-body
+              .form-group
+                = f.label  t("create_subject.id_lbl")
+                = f.text_field :external_id, autofocus: true, :class => "form-control", :placeholder => t("create_subject.id_lbl"), :required => true
+
+              .form-group
+                = f.label  t("create_subject.email_lbl")
+                = f.text_field :external_email, autofocus: true, :class => "form-control", :placeholder => t("create_subject.email_lbl"), :required => true
+
+
+              .form-group
+                = f.label  t("create_subject.application_lbl")
+                %strong
+                  = t("edit_subject.current_site", site: @subject.site.name)
+                = select_tag :site, options_from_collection_for_select(@sites, "id", "name"), :prompt => t("create_subject.application_prompt"), :class => "form-control", :required => true    
+
+              .form-group
+                = f.label  t("create_subject.status_lbl")
+                = f.check_box :is_active
+
+            .box-footer
+              = f.submit t('create_subject.submit_btn'), :class => "btn btn-primary"

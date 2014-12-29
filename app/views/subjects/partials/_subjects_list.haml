@@ -33,3 +33,11 @@
                   %a{:href => ""}
                     %i.fa.fa-eye
                     = t("subjects_list.more_link")
+                  \    
+                  %a{:href => subject_edit_path(user)}
+                    %i.fa.fa-edit
+                    = t("subjects_list.edit_link")
+                  \
+                  %a{:href => ""}
+                    %i.fa.fa-trash-o
+                    = t("subjects_list.delete_link")

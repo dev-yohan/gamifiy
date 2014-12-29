@@ -43,9 +43,9 @@ class Badges::BadgeController < ApplicationController
     @badge.site = site
    
     if @badge.save
-      redirect_to badges_list_path, :flash => {:success => I18n.t("edit_badge.save_success")}
+      redirect_to badges_list_path, :flash => {:success => I18n.t("edit_badge.edit_success")}
     else
-      redirect_to badges_list_path, :flash => {:error => I18n.t("edit_badge.save_error")}
+      redirect_to badges_list_path, :flash => {:error => I18n.t("edit_badge.edit_error")}
     end  
   end  
 

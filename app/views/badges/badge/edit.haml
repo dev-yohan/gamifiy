@@ -30,6 +30,8 @@
 
                 .form-group
                   = f.label  t("create_badge.application_lbl")
+                  %strong
+                    = t("edit_badge.current_site", site: @badge.site.name)
                   = select_tag :site, options_from_collection_for_select(@sites, "id", "name"), :prompt => t("create_badge.application_prompt"), :class => "form-control", :required => true    
 
                 .form-group
