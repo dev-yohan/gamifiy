@@ -44,7 +44,7 @@ class Events::EventController < ApplicationController
   end
 
   def update
-    @event = Event.new()
+    @event = Event.find(params[:id])
     @event.name = params[:event_data][:name]
     @event.count = params[:event_data][:count]
     @event.value = params[:event_data][:value]
