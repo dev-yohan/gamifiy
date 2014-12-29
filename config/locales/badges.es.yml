@@ -15,6 +15,12 @@ es:
     save_success: "Insignia guardada éxitosamente"
     save_error: "La insignia no pudo ser guardada"
 
+  edit_badge:
+    title: "Editar %{badge}"  
+    current_site: "(Actual: %{site})"  
+    edit_success: "Evento editado éxitosamente"
+    edit_error: "El evento no pudo ser editado" 
+
   badges_list:
     logo_column: "Logo"
     name_column: "Nombre"
@@ -24,3 +30,5 @@ es:
     app_column: "Aplicación"
     actions_column: "Acciones"
     more_link: "Ver"
+    edit_link: "Editar"
+    delete_link: "Eliminar"

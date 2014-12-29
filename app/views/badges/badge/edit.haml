@@ -1,0 +1,40 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      = t("edit_badge.title", badge:@badge.name)
+    %ol.breadcrumb
+      %li
+        %a{:href => badges_list_path}
+          %i.fa.fa-trophy
+          = t("badges.title")
+      %li.active 
+        = t("edit_badge.title", badge:@badge.name)
+
+  .content
+    .row
+      .col-md-12
+        .box.box-primary
+          .box-header  
+            = form_for @badge, :as => "badge_data", :url => badge_update_path(@badge), :html => { :multipart => true }, :method => :POST do |f|
+              .box-body
+                .form-group
+                  = f.label  t("create_badge.name_lbl")
+                  = f.text_field :name, autofocus: true, :class => "form-control", :placeholder => t("create_badge.name_lbl"), :required => true
+
+                .form-group
+                  = f.label  t("create_badge.logo_lbl")  
+                  - unless @badge.image.nil?
+                    = cl_image_tag(@badge.image, :width => 50, :height => 50, :crop => :scale)
+                  = f.file_field :image,  :class => "form-control", :placeholder => t("create_badge.logo_lbl")
+
+                .form-group
+                  = f.label  t("create_badge.application_lbl")
+                  = select_tag :site, options_from_collection_for_select(@sites, "id", "name"), :prompt => t("create_badge.application_prompt"), :class => "form-control", :required => true    
+
+                .form-group
+                  = f.label  t("create_badge.status_lbl")
+                  = f.check_box :is_active
+
+              .box-footer
+                = f.submit t('create_badge.submit_btn'), :class => "btn btn-primary"

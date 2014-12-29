@@ -36,3 +36,11 @@
                   %a{:href => ""}
                     %i.fa.fa-eye
                     = t("badges_list.more_link")
+                  \    
+                  %a{:href => badge_edit_path(badge)}
+                    %i.fa.fa-edit
+                    = t("badges_list.edit_link")
+                  \
+                  %a{:href => ""}
+                    %i.fa.fa-trash-o
+                    = t("badges_list.delete_link")
