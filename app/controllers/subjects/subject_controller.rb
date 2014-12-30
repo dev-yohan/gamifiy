@@ -50,4 +50,22 @@ class Subjects::SubjectController < ApplicationController
     end 
   end
 
+  def delete
+    @subject = Subject.find(params[:id])
+  end
+
+  def destroy
+    @subject = Subject.find(params[:id])
+
+    if @subject.site.user == current_user  
+      if @subject.delete
+         redirect_to subjects_list_path, :flash => {:success => I18n.t("delete_subject.delete_success")}
+      else
+        redirect_to subjects_list_path, :flash => {:success => I18n.t("delete_subject.delete_error")}
+      end 
+    else
+        redirect_to applications_list_path, :flash => {:success => I18n.t("delete_app.wrong_owner")}
+    end   
+  end  
+
 end 

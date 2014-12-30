@@ -30,4 +30,12 @@ es:
     title: "Editar %{subject}"  
     current_site: "(Actual: %{site})"
     edit_success: "Usuario editado éxitosamente"
-    edit_error: "El usuario no pudo ser editado"        
+    edit_error: "El usuario no pudo ser editado"  
+
+  delete_subject:
+    title: "Eliminar %{name}"  
+    delete_message: "Esta seguro de eliminar este usuario?"
+    submit_btn: "Eliminar"
+    cancel_btn: "Cancelar"
+    delete_success: "Usuario eliminado éxitosamente"
+    delete_error: "El usuario no pudo ser eliminado"      
