@@ -40,8 +40,9 @@
 
               .form-group
                 = f.label  t("create_event.badge_lbl")
-                %strong
-                  = t("edit_event.current_badge", badge: @event.badge.name)
+                - unless @event.badge.nil?
+                  %strong
+                    = t("edit_event.current_badge", badge: @event.badge.name)
                 = select_tag :badge, options_from_collection_for_select(@badges, "id", "name"), :prompt => t("create_event.badge_prompt"), :class => "form-control", :required => true  
 
             .box-footer

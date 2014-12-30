@@ -30,7 +30,8 @@
                 %td
                   = event.count
                 %td
-                  = event.badge.name
+                  - unless event.badge.nil?
+                    = event.badge.name
                 %td
                   = event.activity.name
                 %td
