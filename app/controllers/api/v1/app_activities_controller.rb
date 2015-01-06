@@ -8,7 +8,7 @@ class Api::V1::AppActivitiesController < Api::ApiController
     begin
 
       app = Sites::Site.find(params[:id])
-      activities = Activity.where(:site => app).desc(:activity_logs_count)
+      activities = ::Activity.where(site: app).desc(:activity_logs_count)
 
       activities.each do |activity|
         json_data.push({:id => activity._id,

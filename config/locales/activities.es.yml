@@ -6,6 +6,15 @@ es:
     add_link: "Crear nueva"
     add_title: "Crear nueva actividad"
     edit_title: "Editar actividad %{activity}"
+    api:
+      error:
+        code_200: 
+          dev_message: "Activities not found"
+          friendly_message: "Activities not found"
+
+        code_201: 
+          dev_message: "Activity with id %{id} not found"
+          friendly_message: "Activity with id %{id} not found"
 
   create_activity:
     name_lbl: "Nombre de la actividad" 
@@ -58,4 +67,6 @@ es:
 
   activity_distrib_chart:
     title: "Distribución"
+
+  
 
