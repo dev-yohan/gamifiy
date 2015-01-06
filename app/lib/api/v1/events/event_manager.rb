@@ -1,14 +1,12 @@
 class Api::V1::Events::EventManager
 
   def events_by_activity(activity_id)
-
     json_data = Array.new
 
     begin
-
       activity = ::Activity.find(activity_id)
       events = ::Event.where(activity: activity)
-
+      
       events.each do |event|
 
         if !event.badge.nil?
@@ -27,16 +25,13 @@ class Api::V1::Events::EventManager
       status = 200
 
     rescue Mongoid::Errors::DocumentNotFound
-    
         json_data = {error_code: 201,
          dev_message: I18n.t("activities.api.error.code_201.dev_message", id: activity_id), 
          friendly_message: I18n.t("activities.api.error.code_201.friendly_message", id: activity_id)}
         status = 404
- 
     end
 
     return {json: json_data, status: status}   
-
   end  
 
 end  

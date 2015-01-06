@@ -58,6 +58,8 @@ Rails.application.routes.draw do
   #API V1
   match "api/v1/apps" => "api/v1/apps#index", :as => :api_v1_apps_list, :via => :get
   match "api/v1/apps/:id" => "api/v1/apps#show", :as => :api_v1_app_detail, :via => :get
+  #activities
+  match "api/v1/activities/:id" => "api/v1/activity/activity#show", :as => :api_v1_activity_detail, :via => :get
   #app activities
   match "api/v1/app_activities/:id" => "api/v1/app_activities#index", :as => :api_v1_app_activities, :via => :get
   #activity related events
