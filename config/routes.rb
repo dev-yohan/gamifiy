@@ -17,14 +17,14 @@ Rails.application.routes.draw do
 
   #activities namespace
   match 'activities' => 'activities/activity#index', :as => :activities_list, :via => :get
-  match 'activity/show/:app_id/:id' => 'activities/activity#show', :as => :activity_detail, :via => :get 
+  match 'activity/show/:app_id/:id' => 'activities/activity#show', :as => :activity_detail, :via => :get
   match 'activity/create' => 'activities/activity#create', :as => :activity_create, :via => :get
   match 'activity/new' => 'activities/activity#new', :as => :activity_new, :via => :post
   match 'activities/edit/:id' => 'activities/activity#edit', :as => :activity_edit, :via => :get
   match 'activities/update/:id' => 'activities/activity#update', :as => :activity_update, :via => :post
   match 'activity/delete/:id' => 'activities/activity#delete', :as => :activity_delete, :via => :get
   match 'activity/destroy/:id' => 'activities/activity#destroy', :as => :activity_destroy, :via => :get
-  match 'activity-behavior/:id' => 'activities/activity#behavior_data', :as => :activity_behavior_data, :via => :get 
+  match 'activity-behavior/:id' => 'activities/activity#behavior_data', :as => :activity_behavior_data, :via => :get
   match 'weekly-activity-behavior/(:id)' => 'activities/activity#weekly_behavior_data', :as => :weekly_activity_behavior_data, :via => :get
 
 
@@ -45,7 +45,7 @@ Rails.application.routes.draw do
   match 'event/update/:id' => 'events/event#update', :as => :event_update, :via => :post
   match 'event/delete/:id' => 'events/event#delete', :as => :event_delete, :via => :get
   match 'event/destroy/:id' => 'events/event#destroy', :as => :event_destroy, :via => :get
-  
+
   #subjects namespace
   match 'subjects' => 'subjects/subject#index', :as => :subjects_list, :via => :get
   match 'subjects/create' => 'subjects/subject#create', :as => :subject_create, :via => :get
@@ -65,11 +65,13 @@ Rails.application.routes.draw do
   #activity related events
   match "api/v1/activity_events/:id" => "api/v1/activity/activity_events#index", :as => :api_v1_activity_events, :via => :get
   #activity log
-  match "api/v1/activity_log/:id(/:page)(/:limit)" => "api/v1/activity/activity_log#index", :as => :api_v1_activity_log, :via => :get
+  match "api/v1/activity_logs/:id(/:page)(/:limit)" => "api/v1/activity/activity_log#index", :as => :api_v1_activity_log, :via => :get
   #events
   match "api/v1/events/:id" => "api/v1/event/event#show", :as => :api_v1_event_detail, :via => :get
   #badge
   match "api/v1/badges/:id" => "api/v1/badge/badge#show", :as => :api_v1_badge_detail, :via => :get
+  #subjects
+  match "api/v1/users/:id" => "api/v1/subject/subject#show", :as => :api_v1_subject_detail, :via => :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

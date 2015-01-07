@@ -1,9 +1,18 @@
-es: 
+es:
   subjects:
     title: "Usuarios"
     home_breadcrumb: "Home"
     add_link: "Crear nuevo"
     add_title: "Crear usuario nuevo"
+    api:
+      error:
+        code_500:
+          dev_message: "Users not found"
+          friendly_message: "Users not found"
+
+        code_501:
+          dev_message: "User with id %{id} not found"
+          friendly_message: "User with id %{id} not found"
 
   subjects_list:
     email_column: "Nombre"
@@ -18,24 +27,24 @@ es:
 
   create_subject:
     id_lbl: "ID externo"
-    email_lbl: "Correo electrónico" 
-    submit_btn: "Guardar" 
+    email_lbl: "Correo electrónico"
+    submit_btn: "Guardar"
     status_lbl: "Activo"
-    application_lbl: "Aplicación" 
+    application_lbl: "Aplicación"
     application_prompt: "Seleccione una opción"
     save_success: "Usuario guardado éxitosamente"
     save_error: "El usuario no pudo ser guardado"
 
   edit_subject:
-    title: "Editar %{subject}"  
+    title: "Editar %{subject}"
     current_site: "(Actual: %{site})"
     edit_success: "Usuario editado éxitosamente"
-    edit_error: "El usuario no pudo ser editado"  
+    edit_error: "El usuario no pudo ser editado"
 
   delete_subject:
-    title: "Eliminar %{name}"  
+    title: "Eliminar %{name}"
     delete_message: "Esta seguro de eliminar este usuario?"
     submit_btn: "Eliminar"
     cancel_btn: "Cancelar"
     delete_success: "Usuario eliminado éxitosamente"
-    delete_error: "El usuario no pudo ser eliminado"      
+    delete_error: "El usuario no pudo ser eliminado"
