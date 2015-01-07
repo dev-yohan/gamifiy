@@ -66,6 +66,8 @@ Rails.application.routes.draw do
   match "api/v1/activity_events/:id" => "api/v1/activity/activity_events#index", :as => :api_v1_activity_events, :via => :get
   #events
   match "api/v1/events/:id" => "api/v1/event/event#show", :as => :api_v1_event_detail, :via => :get
+  #badge
+  match "api/v1/badges/:id" => "api/v1/badge/badge#show", :as => :api_v1_badge_detail, :via => :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
