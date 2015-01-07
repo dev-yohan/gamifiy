@@ -6,6 +6,15 @@ es:
     add_title: "Crear evento"
     teasers:
       title: "Eventos"
+    api:
+      error:
+        code_300: 
+          dev_message: "Events not found"
+          friendly_message: "Events not found"
+
+        code_301: 
+          dev_message: "Event with id %{id} not found"
+          friendly_message: "Event with id %{id} not found"  
 
   create_event:
     name_lbl: "Nombre del evento" 

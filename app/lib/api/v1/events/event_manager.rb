@@ -1,26 +1,33 @@
 class Api::V1::Events::EventManager
 
+  #show event by id or slug
   def show_event(event_id)
     begin
-      activity = ::Activity.find(activity_id)
+      event = ::Event.find(event_id)
 
-      if !activity.site.nil?
-        site = {id: activity.site.id, name: activity.site.name}
+      if !event.activity.nil?
+        activity = {id: event.activity.id, name: event.activity.name}
       else
-        site = {}
+        activity = {}
       end
+
+      if !event.badge.nil?
+          badge_info = {id: event.badge._id, name: event.badge.name}  
+        else
+          badge_info = {}
+        end  
         
-      json_data = {id: activity._id,
-                        name: activity.name,
-                        description: activity.description,
-                        is_active:  activity.is_active,
-                        activity_logs_count: activity.activity_logs_count,
-                        site: site}
+      json_data = {id: event._id,
+                        name: event.name,
+                        value: event.value,
+                        count:  event.count,
+                        badge: badge_info,
+                        activity: activity}
 
     rescue Mongoid::Errors::DocumentNotFound
-        json_data = {error_code: 201,
-         dev_message: I18n.t("activities.api.error.code_201.dev_message", id: activity_id), 
-         friendly_message: I18n.t("activities.api.error.code_201.friendly_message", id: activity_id)}
+        json_data = {error_code: 301,
+         dev_message: I18n.t("events.api.error.code_301.dev_message", id: event_id), 
+         friendly_message: I18n.t("events.api.error.code_301.friendly_message", id: event_id)}
         status = 404
     end
 

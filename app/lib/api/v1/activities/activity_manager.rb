@@ -12,6 +12,7 @@ class Api::V1::Activities::ActivityManager
         
       json_data = {id: activity._id,
                         name: activity.name,
+                        slug: activity.slugs.first,
                         description: activity.description,
                         is_active:  activity.is_active,
                         activity_logs_count: activity.activity_logs_count,
