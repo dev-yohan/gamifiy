@@ -1,13 +1,13 @@
-@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic);
-@import url(//fonts.googleapis.com/css?family=Kaushan+Script);
-/*! 
- *   AdminLTE v1.2
- *   Author: AlmsaeedStudio.com
- *   License: Open source - MIT
- *           Please visit http://opensource.org/licenses/MIT for more information
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic);
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+/*!
+*   AdminLTE v1.2
+*   Author: AlmsaeedStudio.com
+*   License: Open source - MIT
+*           Please visit http://opensource.org/licenses/MIT for more information
 !*/
 /*
-    Core: General style
+Core: General style
 ----------------------------
 */
 html,
@@ -88,8 +88,8 @@ body > .header {
   }
 }
 /*
-    By default the layout is not fixed but if you add the class .fixed to the body element
-    the sidebar and the navbar will automatically become poisitioned fixed
+By default the layout is not fixed but if you add the class .fixed to the body element
+the sidebar and the navbar will automatically become poisitioned fixed
 */
 body.fixed > .header,
 body.fixed .left-side,
@@ -448,13 +448,13 @@ Gradient Background colors
   min-height: 100px;
 }
 /*---------------------------------------------------
-    LESS Elements 0.9
-  ---------------------------------------------------
-    A set of useful LESS mixins
-    More info at: http://lesselements.com
-  ---------------------------------------------------*/
+LESS Elements 0.9
+---------------------------------------------------
+A set of useful LESS mixins
+More info at: http://lesselements.com
+---------------------------------------------------*/
 /*
-    Components: navbar, logo and content header
+Components: navbar, logo and content header
 -------------------------------------------------
 */
 body > .header {
@@ -626,7 +626,7 @@ body > .header .logo .icon {
   }
 }
 /*
-    Component: Sidebar
+Component: Sidebar
 --------------------------
 */
 .sidebar {
@@ -713,10 +713,10 @@ body > .header .logo .icon {
   margin-right: 3px;
 }
 /*
- * Off Canvas
- * --------------------------------------------------
- *  Gives us the push menu effect
- */
+* Off Canvas
+* --------------------------------------------------
+*  Gives us the push menu effect
+*/
 @media screen and (max-width: 992px) {
   .relative {
     position: relative;
@@ -748,8 +748,8 @@ body > .header .logo .icon {
     left: 0px;
   }
 }
-/* 
-    Dropdown menus
+/*
+Dropdown menus
 ----------------------------
 */
 /*Dropdowns in general*/
@@ -773,7 +773,7 @@ body > .header .logo .icon {
   color: #444444;
 }
 /*
-    Navbar custom dropdown menu
+Navbar custom dropdown menu
 ------------------------------------
 */
 .navbar-nav > .notifications-menu > .dropdown-menu,
@@ -1126,8 +1126,8 @@ body > .header .logo .icon {
     left: auto;
   }
 }
-/* 
-   All form elements including input, select, textarea etc.
+/*
+All form elements including input, select, textarea etc.
 -----------------------------------------------------------------
 */
 .form-control {
@@ -1176,8 +1176,8 @@ body > .header .logo .icon {
 .radio {
   padding-left: 0;
 }
-/* 
-    Compenent: Progress bars
+/*
+Compenent: Progress bars
 --------------------------------
 */
 /* size variation */
@@ -1266,7 +1266,7 @@ body > .header .logo .icon {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 /*
-    Component: Small boxes
+Component: Small boxes
 */
 .small-box {
   position: relative;
@@ -1372,7 +1372,7 @@ body > .header .logo .icon {
   }
 }
 /*
-    component: Boxes
+component: Boxes
 -------------------------
 */
 .box {
@@ -1862,7 +1862,7 @@ Component: timeline
   top: 0;
 }
 /*
-    Component: Buttons
+Component: Buttons
 -------------------------
 */
 .btn {
@@ -2041,8 +2041,8 @@ Component: timeline
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
-/* 
-    Component: callout
+/*
+Component: callout
 ------------------------
 */
 .callout {
@@ -2081,8 +2081,8 @@ Component: timeline
 .callout.callout-info h4 {
   color: #3A87AD;
 }
-/* 
-    Component: alert
+/*
+Component: alert
 ------------------------
 */
 .alert {
@@ -2106,7 +2106,7 @@ Component: timeline
   border: inherit;
 }
 /*
-    Component: Navs
+Component: Navs
 */
 /* NAV PILLS */
 .nav.nav-pills > li > a {
@@ -2254,7 +2254,7 @@ Component: timeline
   border-radius: 0;
 }
 /*
-    Component: Mailbox
+Component: Mailbox
 */
 .mailbox .table-mailbox {
   border-left: 1px solid #ddd;
@@ -2303,7 +2303,7 @@ Component: timeline
   }
 }
 /*
-    Page: locked screen
+Page: locked screen
 */
 /* ADD THIS CLASS TO THE <HTML> TAG */
 .lockscreen {
@@ -2393,8 +2393,8 @@ Component: timeline
   margin-top: 30px;
   text-align: center;
 }
-/* 
-    Page: register and login
+/*
+Page: register and login
 */
 .form-box {
   width: 360px;
@@ -2458,8 +2458,8 @@ Component: timeline
     width: 90%;
   }
 }
-/* 
-    Page: 404 and 500 error pages
+/*
+Page: 404 and 500 error pages
 ------------------------------------
 */
 .error-page {
@@ -2508,8 +2508,8 @@ Component: timeline
 .error-page:after {
   clear: both;
 }
-/* 
-    Page: Invoice
+/*
+Page: Invoice
 */
 .invoice {
   position: relative;
@@ -2541,13 +2541,13 @@ Component: timeline
     white-space: normal!important;
   }
 }
-/* 
-    Skins
-    -----
+/*
+Skins
+-----
 */
-/* 
-    Skin Blue 
-    ---------
+/*
+Skin Blue
+---------
 */
 /* skin-blue navbar */
 .skin-blue .navbar {
@@ -2696,8 +2696,8 @@ Component: timeline
   border-bottom-left-radius: 0 !important;
 }
 /*
-    Skin Black
-    --------
+Skin Black
+--------
 */
 /* skin-black navbar */
 .skin-black .navbar {
@@ -2846,13 +2846,13 @@ Component: timeline
   border-left: 0;
 }
 /*!
- * iCheck v1.0.1, http://git.io/arlzeA
- * =================================
- * Powerful jQuery and Zepto plugin for checkboxes and radio buttons customization
- *
- * (c) 2013 Damir Sultanov, http://fronteed.com
- * MIT Licensed
- */
+* iCheck v1.0.1, http://git.io/arlzeA
+* =================================
+* Powerful jQuery and Zepto plugin for checkboxes and radio buttons customization
+*
+* (c) 2013 Damir Sultanov, http://fronteed.com
+* MIT Licensed
+*/
 /* iCheck plugin Minimal skin, black
 ----------------------------------- */
 .icheckbox_minimal,
@@ -2925,15 +2925,15 @@ Component: timeline
   display: none;
 }
 /*
- * Social Buttons for Bootstrap
- *
- * Copyright 2013-2014 Panayiotis Lipiridis
- * Licensed under the MIT License
- *
- * https://github.com/lipis/bootstrap-social
- *
- * Note: this file has been altered to work correctly with AdminLTE
- */
+* Social Buttons for Bootstrap
+*
+* Copyright 2013-2014 Panayiotis Lipiridis
+* Licensed under the MIT License
+*
+* https://github.com/lipis/bootstrap-social
+*
+* Note: this file has been altered to work correctly with AdminLTE
+*/
 .btn-social {
   position: relative;
   padding-left: 44px !important;
@@ -3541,26 +3541,26 @@ fieldset[disabled] .btn-vk.active {
 
 
 .form-control {
-display: block;
-width: 92%;
-height: 34px;
-padding: 6px 12px;
-font-size: 14px;
-line-height: 1.428571429;
-color: #555;
-vertical-align: middle;
-background-color: #fff;
-background-image: none;
-border: 1px solid #ccc;
-border-radius: 4px;
--webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
--webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  display: block;
+  width: 92%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
 .form-group {
-margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .btn-block {
@@ -3571,213 +3571,211 @@ margin-bottom: 15px;
 }
 
 .btn {
-display: inline-block;
-padding: 6px 12px;
-margin-bottom: 0;
-font-size: 14px;
-font-weight: normal;
-line-height: 1.428571429;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
-cursor: pointer;
-background-image: none;
-border: 1px solid transparent;
-border-radius: 4px;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
--o-user-select: none;
-user-select: none;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .sr-only {
-position: absolute;
-width: 1px;
-height: 1px;
-padding: 0;
-margin: -1px;
-overflow: hidden;
-clip: rect(0,0,0,0);
-border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 .navbar-right {
-float: right!important;
+  float: right!important;
 }
 
 .navbar-nav {
-float: left;
-margin: 0;
+  float: left;
+  margin: 0;
 }
 
 .navbar-nav {
-margin: 7.5px -15px;
+  margin: 7.5px -15px;
 }
 
 
 .navbar-nav>li {
-float: left;
+  float: left;
 }
 
 .nav>li {
-position: relative;
-display: block;
+  position: relative;
+  display: block;
 }
 
 .dropdown {
-position: relative;
+  position: relative;
 }
 
 .nav {
-padding-left: 0;
-/* margin-bottom: 0; */
-list-style: none;
+  padding-left: 0;
+  /* margin-bottom: 0; */
+  list-style: none;
 }
 
 .navbar-nav>li>a {
-padding-top: 15px;
-padding-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .navbar-nav>li>a {
-padding-top: 10px;
-padding-bottom: 10px;
-line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
 }
 .nav>li>a {
-position: relative;
-display: block;
-padding: 10px 15px;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
 }
 
 .navbar-nav {
-float: left;
-margin: 0;
+  float: left;
+  margin: 0;
 }
 
 .navbar-nav>li>a {
-padding-top: 15px;
-padding-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 a {
-color: #428bca;
-text-decoration: none;
+  color: #428bca;
+  text-decoration: none;
 }
 
 *, *:before, *:after {
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .navbar-nav>li>.dropdown-menu {
-margin-top: 0;
-border-top-right-radius: 0;
-border-top-left-radius: 0;
+  margin-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .navbar-right .dropdown-menu {
-right: 0;
-left: auto;
+  right: 0;
+  left: auto;
 }
 
 .dropdown-menu {
-position: absolute;
-top: 100%;
-left: 0;
-z-index: 1000;
-display: none;
-float: left;
-min-width: 160px;
-padding: 5px 0;
-margin: 2px 0 0;
-font-size: 14px;
-list-style: none;
-background-color: #fff;
-border: 1px solid #ccc;
-border: 1px solid rgba(0,0,0,0.15);
-border-radius: 4px;
--webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
-background-clip: padding-box;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+  background-clip: padding-box;
 }
 
 .glyphicon:empty {
-width: 1em;
+  width: 1em;
 }
 .glyphicon {
-position: relative;
-top: 1px;
-display: inline-block;
-font-family: 'Glyphicons Halflings';
--webkit-font-smoothing: antialiased;
-font-style: normal;
-font-weight: normal;
-line-height: 1;
--moz-osx-font-smoothing: grayscale;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .caret {
-display: inline-block;
-width: 0;
-height: 0;
-margin-left: 2px;
-vertical-align: middle;
-border-top: 4px solid;
-border-right: 4px solid transparent;
-border-left: 4px solid transparent;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
 }
 
 .fa {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-line-height: 1;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 element.style {
 }
 .sidebar .sidebar-menu > li > a > .fa, .sidebar .sidebar-menu > li > a > .glyphicon, .sidebar .sidebar-menu > li > a > .ion {
-width: 20px;
+  width: 20px;
 }
 
 .row {
-margin-right: -15px;
-margin-left: -15px;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .col-lg-3 {
-width: 25%;
+  width: 25%;
 }
 
 .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
-float: left;
+  float: left;
 }
 .col-xs-6 {
-width: 50%;
+  width: 50%;
 }
 
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
-float: left;
+  float: left;
 }
 
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-position: relative;
-min-height: 1px;
-padding-right: 15px;
-padding-left: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-position: relative;
-min-height: 1px;
-padding-right: 15px;
-padding-left: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
-
-
