@@ -4,6 +4,8 @@ es:
     home_breadcrumb: "Home"
     add_link: "Crear nuevo"
     add_title: "Crear usuario nuevo"
+    no_subjects_message: "No hay usuarios asociados"
+
     api:
       error:
         code_500:

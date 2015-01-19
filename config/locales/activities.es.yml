@@ -1,4 +1,4 @@
-es: 
+es:
   activities:
     title: "Actividades"
     description_title: "Descripción"
@@ -6,43 +6,45 @@ es:
     add_link: "Crear nueva"
     add_title: "Crear nueva actividad"
     edit_title: "Editar actividad %{activity}"
+    no_activities_message: "No hay actividades asociadas"
+
     api:
       error:
-        code_200: 
+        code_200:
           dev_message: "Activities not found"
           friendly_message: "Activities not found"
 
-        code_201: 
+        code_201:
           dev_message: "Activity with id %{id} not found"
           friendly_message: "Activity with id %{id} not found"
 
   create_activity:
-    name_lbl: "Nombre de la actividad" 
-    description_lbl: "Descripción de la actividad"  
+    name_lbl: "Nombre de la actividad"
+    description_lbl: "Descripción de la actividad"
     status_lbl: "Activa"
-    application_lbl: "Aplicación" 
+    application_lbl: "Aplicación"
     application_prompt: "Seleccione una opción"
-    submit_btn: "Guardar" 
+    submit_btn: "Guardar"
     save_success: "Actividad guardada éxitosamente"
-    save_error: "La actividad no pudo ser guardada" 
-    current_site: "(Actual: %{site})" 
+    save_error: "La actividad no pudo ser guardada"
+    current_site: "(Actual: %{site})"
 
   edit_activity:
-    title: "Editar %{activity}"  
+    title: "Editar %{activity}"
     edit_success: "Actividad editada éxitosamente"
     edit_error: "La actividad no pudo ser editada"
 
   delete_activity:
-    title: "Eliminar %{name}"  
+    title: "Eliminar %{name}"
     delete_message: "Esta seguro de eliminar esta actividad?"
     submit_btn: "Eliminar"
     cancel_btn: "Cancelar"
     delete_success: "Actividad eliminada éxitosamente"
-    delete_error: "La actividad no pudo ser eliminada"  
+    delete_error: "La actividad no pudo ser eliminada"
     wrong_owner: "La actividad no pudo ser eliminada dado que el usuario actual no es el dueño de la misma"
 
   activity_teasers:
-    title: "Porcentaje de actividades"   
+    title: "Porcentaje de actividades"
 
   activities_list:
     name_column: "Nombre"
@@ -56,17 +58,14 @@ es:
     delete_link: "Eliminar"
 
   activity_logs:
-    last_title: "Últimos logs de actividad"  
+    last_title: "Últimos logs de actividad"
     behavior_title: "Comportamiento"
     subject_column: "Sujeto"
     date_column: "Fecha"
     more_link: "Ver todo"
 
   activity_log_chart:
-    title: "Tasa de ejecución" 
+    title: "Tasa de ejecución"
 
   activity_distrib_chart:
     title: "Distribución"
-
-  
-

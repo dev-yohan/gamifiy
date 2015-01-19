@@ -1,7 +1,8 @@
+%h4
+  %i.fa.fa-rocket
+  = t("activity_teasers.title")
+
 - if !activities.empty?
-  %h4
-    %i.fa.fa-rocket
-    = t("activity_teasers.title")
   %ul.todo-list.ui-sortable
     - activities.each do |activity|
       %li
@@ -28,7 +29,7 @@
               %span.text
                 %a{:href => activity_detail_path(:app_id => activity.site.slugs, :id => activity.slugs)}
                   = activity.name
-              %a{:href => application_show_path(:id => activity.site.slugs)}   
+              %a{:href => application_show_path(:id => activity.site.slugs)}
                 %small.label.label-success
                   = activity.site.name
             .col-md-3
@@ -42,5 +43,9 @@
               - if !percentage.nan?
                 %span.badge.bg-light-blue
                   = "#{percentage.round(0)}%"
-
-
+- else
+  %p
+    = t("activities.no_activities_message")
+  %p
+    %a{:href => activity_create_path, :class => "btn btn-success"}
+      = t("activities.add_title")

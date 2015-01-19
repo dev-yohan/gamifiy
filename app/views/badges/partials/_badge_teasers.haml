@@ -1,16 +1,24 @@
 .box
+  .box-header
+    %h4.box-title
+      %i.fa.fa-trophy
+      = t("badges.title")
+
   - if !badges.empty?
-    .box-header
-      %h4.box-title
-        %i.fa.fa-trophy
-        = t("badges.title")
-    .box-body   
-      .row 
+    .box-body
+      .row
         - badges.each do |badge|
           .col-sm-6.col-md-3
             .thumbnail
               = cl_image_tag(badge.image, :width => 242, :height => 200, :crop => :scale)
               .caption
-                %strong 
+                %strong
                   = badge.name
-            
+
+  - else
+    .box-body
+      %p
+        = t("badges.no_badges_message")
+      %p
+        %a{:href => badge_create_path, :class => "btn btn-success"}
+          = t("badges.add_title")

@@ -1,42 +1,45 @@
-es: 
+es:
   badges:
     title: "Insignias"
     home_breadcrumb: "Home"
     add_link: "Crear nueva"
     add_title: "Crear nueva insignia"
+    no_badges_message: "No hay insignias asociadas"
+
+
     api:
       error:
-        code_400: 
+        code_400:
           dev_message: "Badges not found"
           friendly_message: "Badges not found"
 
-        code_401: 
+        code_401:
           dev_message: "Badge with id %{id} not found"
           friendly_message: "Badge with id %{id} not found"
 
   create_badge:
-    name_lbl: "Nombre de la insignia"   
+    name_lbl: "Nombre de la insignia"
     logo_lbl: "Logo"
     status_lbl: "Activa"
-    application_lbl: "Aplicación" 
+    application_lbl: "Aplicación"
     application_prompt: "Seleccione una opción"
-    submit_btn: "Guardar" 
+    submit_btn: "Guardar"
     save_success: "Insignia guardada éxitosamente"
     save_error: "La insignia no pudo ser guardada"
 
   edit_badge:
-    title: "Editar %{badge}"  
-    current_site: "(Actual: %{site})"  
+    title: "Editar %{badge}"
+    current_site: "(Actual: %{site})"
     edit_success: "Evento editado éxitosamente"
-    edit_error: "El evento no pudo ser editado" 
+    edit_error: "El evento no pudo ser editado"
 
   delete_badge:
-    title: "Eliminar %{name}"  
+    title: "Eliminar %{name}"
     delete_message: "Esta seguro de eliminar esta insignia?"
     submit_btn: "Eliminar"
     cancel_btn: "Cancelar"
     delete_success: "Insignia eliminada éxitosamente"
-    delete_error: "La insignia no pudo ser eliminada"  
+    delete_error: "La insignia no pudo ser eliminada"
 
   badges_list:
     logo_column: "Logo"

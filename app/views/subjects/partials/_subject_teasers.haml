@@ -1,11 +1,11 @@
 .box
+  .box-header
+    %h4.box-title
+      %i.fa.fa-users
+      = t("subjects.title")
   - if !users.empty?
-    .box-header
-      %h4.box-title
-        %i.fa.fa-users
-        = t("subjects.title")
-    .box-body   
-      %ul.todo-list.ui-sortable 
+    .box-body
+      %ul.todo-list.ui-sortable
         - users.each do |user|
           %li
             %span.text
@@ -13,4 +13,10 @@
             .tools
               %i.fa.fa-edit
               %i.fa.fa-trash-o
-          
+  - else
+    .box-body
+      %p
+        = t("subjects.no_subjects_message")
+      %p
+        %a{:href => subject_create_path, :class => "btn btn-success"}
+          = t("subjects.add_title")

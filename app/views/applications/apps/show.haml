@@ -2,14 +2,14 @@
 %aside.right-side
   .content-header
     %h1
-      = cl_image_tag(@app.logo, :width => 60, :height => 40, :crop => :scale) 
+      = cl_image_tag(@app.logo, :width => 60, :height => 40, :crop => :scale)
       = @app.name
     %ol.breadcrumb
       %li
         %a{:href => applications_list_path}
           %i.fa.fa-code
           = t("apps.title")
-      %li.active 
+      %li.active
         = @app.name
 
   .content
@@ -18,13 +18,14 @@
         .box
           .box-body
             %p
-              = @app.description   
-
+              = @app.description
+        .box
+          .box-body
             =  render :partial => 'activities/partials/activity_teasers', :locals => { :activities => @activities, :activities_count => @activities_count, :badgeable => false }
+            - if !@activities.empty?
+              =  render :partial => 'applications/apps/partials/activity_behavior', :locals => {:app => @app}
 
-            =  render :partial => 'applications/apps/partials/activity_behavior', :locals => {:app => @app}
 
       .col-md-6
         =  render :partial => 'badges/partials/badge_teasers', :locals => { :badges => @badges }
         =  render :partial => 'subjects/partials/subject_teasers', :locals => { :users => @users }
-              
