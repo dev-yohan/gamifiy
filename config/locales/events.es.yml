@@ -48,6 +48,7 @@ es:
 
   events_list:
     name_column: "Nombre"
+    logs_column: "Ocurrencia"
     value_column: "Puntos"
     count_column: "Conteo"
     badge_column: "Insignia"
@@ -57,3 +58,13 @@ es:
     more_link: "Ver"
     edit_link: "Editar"
     delete_link: "Eliminar"
+
+  event_logs:
+    title: "Log de eventos"
+
+  event_log_list:
+    date_column: "Nombre"
+    subject_column: "Puntos"
+    activity_column: "Actividad"
+    app_column: "Aplicación"
+    badge_column: "Insignia"

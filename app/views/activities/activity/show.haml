@@ -34,10 +34,11 @@
               = @activity.description
 
             .row
-              .col-md-6
+              .col-md-12
                 =  render :partial => 'activities/partials/last_logs', :locals => { :activity_logs => @activity_logs }
-
-              .col-md-6
+            %hr
+            .row
+              .col-md-12
                 - if  !@activity_logs.empty?
                   =  render :partial => 'activities/partials/logs_behavior', :locals => {:activity => @activity}
 

@@ -85,7 +85,7 @@ class Activities::ActivityController < ApplicationController
     activity_fetcher = ActivityFetcher.new
     @activity = Activity.find(params[:id])
 
-    behavior_array = activity_fetcher.get_hourly_behavior_data(date_fetcher.get_hourly_array(86400, 0, Date.today.to_time.to_i), @activity)
+    behavior_array = activity_fetcher.get_daily_activity_behavior_data(date_fetcher.get_daily_array(604800, 0, Date.today.to_time.to_i - 604800), @activity)
 
     render json: behavior_array
   end

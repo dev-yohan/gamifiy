@@ -11,6 +11,12 @@
               %span.text
                 %a{:href => event_show_path(event)}
                   = event.name
+                -if !event.event_logs_count.nil? && event.event_logs_count > 0
+                  %span.badge.bg-light-blue
+                    = event.event_logs_count
+                - else
+                  %span.badge.bg-light-blue
+                    0
               .tools
                 %a{:href => event_edit_path(event)}
                   %i.fa.fa-edit

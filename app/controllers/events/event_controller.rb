@@ -11,9 +11,9 @@ class Events::EventController < ApplicationController
 
   def show
     begin
-      page_size = 10
+      page_size = 20
       @event = Event.find(params[:id])
-      @event_logs = EventLog.where(event: @event).desc(:date).page(params[:page]).per(10)
+      @event_logs = EventLog.where(event: @event).desc(:date).page(params[:page]).per(page_size)
     rescue Mongoid::Errors::DocumentNotFound
       redirect_to events_list_path, :flash => {:error => I18n.t("events.api.error.code_300.friendly_message")}
     end

@@ -1,0 +1,36 @@
+.box
+  .box-header
+    %h4.box-title
+      = t("event_logs.title")
+  .box-body
+    = paginate event_logs
+
+    - if !event_logs.empty?
+      %table.table.table-hover
+        %tbody
+          %tr
+            %th
+              = t("event_log_list.date_column")
+            %th
+              = t("event_log_list.subject_column")
+            %th
+              = t("event_log_list.badge_column")
+            %th
+              = t("event_log_list.app_column")
+            %th
+              = t("event_log_list.activity_column")
+        - event_logs.each_with_index do |log|
+          %tr
+            %td
+              = log.date.strftime("%Y-%m-%d %H:%M")
+            %td
+              = log.subject.external_email
+            %td
+              = log.event.badge.name
+            %td
+              = log.event.activity.site.name
+            %td
+              = log.event.activity.name
+
+    - else
+      nothing left

@@ -12,7 +12,7 @@
      $.getJSON( results_url, function( json_data ) {
          console.log(json_data);
 
-         var chart_data = new Array(); 
+         var chart_data = new Array();
 
          $.each(json_data, function(key_name, value) {
             chart_data.push({hour: value.friendly_date , count: value.log_count})
@@ -29,4 +29,3 @@
      });
 
   });
-

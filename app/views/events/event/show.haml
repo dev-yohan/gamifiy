@@ -15,4 +15,7 @@
 
   .content
     .row
-      .col-md-12
+      .col-md-6
+        =  render :partial => 'events/partials/event_logs_list', :locals => { :event_logs => @event_logs }
+
+      .col-md-6
