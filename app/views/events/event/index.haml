@@ -12,7 +12,7 @@
         %a{:href => events_list_path}
           %i.fa.fa-gears
           = t("events.title")
-      %li.active 
+      %li.active
         = t("events.home_breadcrumb")
 
   .content
@@ -21,6 +21,9 @@
         = content_tag :div, msg, class: flash_class(name.to_s)
     .row
       .col-md-12
-        = paginate @events   
+        = paginate @events
     .row
       =  render :partial => 'events/partials/events_list', :locals => { :events => @events }
+    .row
+      .col-md-12
+        = paginate @events

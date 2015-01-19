@@ -4,45 +4,47 @@ es:
     home_breadcrumb: "Home"
     add_link: "Crear evento"
     add_title: "Crear evento"
+    no_events_message: "No hay eventos asociados"
     teasers:
       title: "Eventos"
     api:
       error:
-        code_300: 
+        code_300:
           dev_message: "Events not found"
           friendly_message: "Events not found"
 
-        code_301: 
+        code_301:
           dev_message: "Event with id %{id} not found"
-          friendly_message: "Event with id %{id} not found"  
+          friendly_message: "Event with id %{id} not found"
 
   create_event:
-    name_lbl: "Nombre del evento" 
-    value_lbl: "Valor (puntos)"  
+    name_lbl: "Nombre del evento"
+    value_lbl: "Valor (puntos)"
     count_lbl: "Conteo"
-    activity_lbl: "Actividad" 
+    activity_lbl: "Actividad"
     activity_prompt: "Seleccione una opción"
-    badge_lbl: "Insignia" 
+    badge_lbl: "Insignia"
     badge_prompt: "Seleccione una opción"
-    submit_btn: "Guardar" 
+    submit_btn: "Guardar"
+    cancel_btn: "Cancelar"
     save_success: "Aplicación guardada éxitosamente"
-    save_error: "La aplicación no pudo ser guardada"   
+    save_error: "La aplicación no pudo ser guardada"
 
   edit_event:
-    title: "Editar %{event}"  
-    current_activity: "(Actual: %{activity})" 
-    current_badge: "(Actual: %{badge})" 
+    title: "Editar %{event}"
+    current_activity: "(Actual: %{activity})"
+    current_badge: "(Actual: %{badge})"
     edit_success: "Evento editado éxitosamente"
-    edit_error: "El evento no pudo ser editado" 
+    edit_error: "El evento no pudo ser editado"
 
   delete_event:
-    title: "Eliminar %{name}"  
+    title: "Eliminar %{name}"
     delete_message: "Esta seguro de eliminar este evento?"
     submit_btn: "Eliminar"
     cancel_btn: "Cancelar"
     delete_success: "Evento eliminado éxitosamente"
-    delete_error: "El evento no pudo ser eliminado"  
-    wrong_owner: "El evento no pudo ser eliminado dado que el usuario actual no es el dueño de la misma"  
+    delete_error: "El evento no pudo ser eliminado"
+    wrong_owner: "El evento no pudo ser eliminado dado que el usuario actual no es el dueño de la misma"
 
   events_list:
     name_column: "Nombre"

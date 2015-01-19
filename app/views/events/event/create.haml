@@ -4,20 +4,20 @@
     %h1
       %i.fa.fa-gears
       = t("events.add_title")
-      
+
     %ol.breadcrumb
       %li
         %a{:href => events_list_path}
           %i.fa.fa-gears
           = t("events.title")
-      %li.active 
+      %li.active
         = t("events.add_title")
 
   .content
     .row
       .col-md-12
         .box.box-primary
-          .box-header  
+          .box-header
           = form_for @event, :as => "event_data", :url => event_new_path, :html => { :multipart => true } do |f|
             .box-body
               .form-group
@@ -38,7 +38,9 @@
 
               .form-group
                 = f.label  t("create_event.badge_lbl")
-                = select_tag :badge, options_from_collection_for_select(@badges, "id", "name"), :prompt => t("create_event.badge_prompt"), :class => "form-control", :required => true  
+                = select_tag :badge, options_from_collection_for_select(@badges, "id", "name"), :prompt => t("create_event.badge_prompt"), :class => "form-control", :required => true
 
             .box-footer
-              = f.submit t('create_event.submit_btn'), :class => "btn btn-primary" 
+              = f.submit t('create_event.submit_btn'), :class => "btn btn-success"
+              %a{:href => events_list_path, :class => "btn btn-danger"}
+                = t("create_event.cancel_btn")

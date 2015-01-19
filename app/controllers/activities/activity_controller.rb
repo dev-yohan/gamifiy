@@ -37,18 +37,18 @@ class Activities::ActivityController < ApplicationController
   def edit
    @activity = Activity.find(params[:id])
    @sites = Sites::Site.where(user: current_user)
-  end  
+  end
 
   def update
     @activity = Activity.find(params[:id])
 
     if !params[:activity_data][:name].nil?
       @activity.name = params[:activity_data][:name]
-    end  
+    end
     if !params[:activity_data][:description].nil?
       @activity.description = params[:activity_data][:description]
     end
-    
+
     @activity.is_active = params[:activity_data][:is_active]
     site = Sites::Site.find(params[:site])
     @activity.site = site
@@ -57,13 +57,13 @@ class Activities::ActivityController < ApplicationController
       redirect_to activities_list_path, :flash => {:success => I18n.t("edit_activity.edit_success")}
     else
       redirect_to activities_list_path, :flash => {:error => I18n.t("edit_activity.edit_error")}
-    end    
+    end
   end
 
 
   def delete
-    @activity = Activity.find(params[:id])  
-  end  
+    @activity = Activity.find(params[:id])
+  end
 
   def destroy
       @activity = Activity.find(params[:id])
@@ -74,10 +74,10 @@ class Activities::ActivityController < ApplicationController
              redirect_to activities_list_path, :flash => {:success => I18n.t("delete_activity.delete_success")}
           else
             redirect_to activities_list_path, :flash => {:success => I18n.t("delete_activity.delete_error")}
-          end  
+          end
       else
         redirect_to activities_list_path, :flash => {:success => I18n.t("delete_activity.wrong_owner")}
-      end  
+      end
   end
 
   def behavior_data

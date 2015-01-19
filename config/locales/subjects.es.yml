@@ -31,6 +31,7 @@ es:
     id_lbl: "ID externo"
     email_lbl: "Correo electrónico"
     submit_btn: "Guardar"
+    cancel_btn: "Cancelar"
     status_lbl: "Activo"
     application_lbl: "Aplicación"
     application_prompt: "Seleccione una opción"

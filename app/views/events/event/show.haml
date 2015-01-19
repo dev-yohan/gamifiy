@@ -1,0 +1,18 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      %i.fa.fa-gears
+      = @event.name
+
+    %ol.breadcrumb
+      %li
+        %a{:href => events_list_path}
+          %i.fa.fa-gears
+          = t("events.title")
+      %li.active
+        = @event.name
+
+  .content
+    .row
+      .col-md-12

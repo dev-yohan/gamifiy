@@ -15,7 +15,7 @@
               %th
                 = t("events_list.badge_column")
               %th
-                = t("events_list.activity_column")  
+                = t("events_list.activity_column")
               %th
                 = t("events_list.app_column")
               %th
@@ -24,7 +24,8 @@
             - events.each_with_index do |event, index|
               %tr
                 %td
-                  = event.name   
+                  %a{:href => event_show_path(event)}
+                    = event.name
                 %td
                   = event.value
                 %td
@@ -37,10 +38,10 @@
                 %td
                   = event.activity.site.name
                 %td
-                  %a{:href => ""}
+                  %a{:href => event_show_path(event)}
                     %i.fa.fa-eye
                     = t("events_list.more_link")
-                  \    
+                  \
                   %a{:href => event_edit_path(event)}
                     %i.fa.fa-edit
                     = t("events_list.edit_link")

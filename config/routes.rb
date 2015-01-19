@@ -41,6 +41,7 @@ Rails.application.routes.draw do
   match 'events' => 'events/event#index', :as => :events_list, :via => :get
   match 'events/create' => 'events/event#create', :as => :event_create, :via => :get
   match 'events/new' => 'events/event#new', :as => :event_new, :via => :post
+  match 'event/show/:id' => 'events/event#show', :as => :event_show, :via => :get
   match 'event/edit/:id' => 'events/event#edit', :as => :event_edit, :via => :get
   match 'event/update/:id' => 'events/event#update', :as => :event_update, :via => :post
   match 'event/delete/:id' => 'events/event#delete', :as => :event_delete, :via => :get

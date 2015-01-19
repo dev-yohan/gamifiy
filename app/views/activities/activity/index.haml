@@ -12,7 +12,7 @@
         %a{:href => activities_list_path}
           %i.fa.fa-rocket
           = t("activities.title")
-      %li.active 
+      %li.active
         = t("activities.home_breadcrumb")
 
   .content
@@ -21,7 +21,9 @@
         = content_tag :div, msg, class: flash_class(name.to_s)
     .row
       .col-md-12
-        = paginate @activities   
+        = paginate @activities
     .row
       =  render :partial => 'activities/partials/activities_list', :locals => { :activities => @activities }
-    
+    .row
+      .col-md-12
+        = paginate @activities

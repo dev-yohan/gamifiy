@@ -3,13 +3,22 @@
     %h4.box-title
       = t("events.teasers.title")
   .box-body
-    %ul.todo-list.ui-sortable
-      - if !events.empty?
-        - events.each_with_index do |event, index|
-          %li
-            %span.text
-              = event.name
-            .tools
-              %i.fa.fa-edit
-              %i.fa.fa-trash-o
-
+    - if !events.empty?
+      %ul.todo-list.ui-sortable
+        - if !events.empty?
+          - events.each_with_index do |event, index|
+            %li
+              %span.text
+                %a{:href => event_show_path(event)}
+                  = event.name
+              .tools
+                %a{:href => event_edit_path(event)}
+                  %i.fa.fa-edit
+                %a{:href => event_delete_path(event)}
+                  %i.fa.fa-trash-o
+    - else
+      %p
+        = t("events.no_events_message")
+      %p
+        %a{:href => event_create_path, :class => "btn btn-success"}
+          = t("events.add_title")

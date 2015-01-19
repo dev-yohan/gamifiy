@@ -8,31 +8,32 @@
         %a{:href => badges_list_path}
           %i.fa.fa-trophy
           = t("badges.title")
-      %li.active 
+      %li.active
         = t("badges.add_title")
 
   .content
     .row
       .col-md-12
         .box.box-primary
-          .box-header  
-            = form_for @badge, :as => "badge_data", :url => badge_new_path, :html => { :multipart => true } do |f|
-              .box-body
-                .form-group
-                  = f.label  t("create_badge.name_lbl")
-                  = f.text_field :name, autofocus: true, :class => "form-control", :placeholder => t("create_badge.name_lbl"), :required => true
+          = form_for @badge, :as => "badge_data", :url => badge_new_path, :html => { :multipart => true } do |f|
+            .box-body
+              .form-group
+                = f.label  t("create_badge.name_lbl")
+                = f.text_field :name, autofocus: true, :class => "form-control", :placeholder => t("create_badge.name_lbl"), :required => true
 
-                .form-group
-                  = f.label  t("create_badge.logo_lbl")  
-                  = f.file_field :image,  :class => "form-control", :placeholder => t("create_badge.logo_lbl"), :required => true
+              .form-group
+                = f.label  t("create_badge.logo_lbl")
+                = f.file_field :image,  :class => "form-control", :placeholder => t("create_badge.logo_lbl"), :required => true
 
-                .form-group
-                  = f.label  t("create_badge.application_lbl")
-                  = select_tag :site, options_from_collection_for_select(@sites, "id", "name"), :prompt => t("create_badge.application_prompt"), :class => "form-control", :required => true    
+              .form-group
+                = f.label  t("create_badge.application_lbl")
+                = select_tag :site, options_from_collection_for_select(@sites, "id", "name"), :prompt => t("create_badge.application_prompt"), :class => "form-control", :required => true
 
-                .form-group
-                  = f.label  t("create_badge.status_lbl")
-                  = f.check_box :is_active
+              .form-group
+                = f.label  t("create_badge.status_lbl")
+                = f.check_box :is_active
 
-              .box-footer
-                = f.submit t('create_badge.submit_btn'), :class => "btn btn-primary"         
+            .box-footer
+              = f.submit t('create_badge.submit_btn'), :class => "btn btn-success"
+              %a{:href => badges_list_path, :class => "btn btn-danger"}
+                = t("create_badge.cancel_btn")

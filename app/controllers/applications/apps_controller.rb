@@ -4,7 +4,7 @@ class Applications::AppsController < ApplicationController
 
   def index
 
-    page_size = 5
+    page_size = 10
 
     @user_sites = Sites::Site.where(:user => current_user).desc(:created_at).page(params[:page]).per(page_size)
 

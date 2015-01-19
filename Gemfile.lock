@@ -122,6 +122,8 @@ GEM
       mongoid (>= 3.0, < 5.0)
     mongoid_auto_increment (0.1.2)
       mongoid (>= 2.0)
+    mongoid_paranoia (0.1.2)
+      mongoid (> 3)
     mongoid_slug (3.2.1)
       mongoid (> 3.0)
       stringex (~> 2.0)
@@ -261,6 +263,7 @@ DEPENDENCIES
   mongo
   mongoid
   mongoid_auto_increment (= 0.1.2)
+  mongoid_paranoia
   mongoid_slug
   rails (= 4.1.6)
   rails_12factor

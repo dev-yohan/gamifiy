@@ -25,6 +25,7 @@ es:
     application_lbl: "Aplicación"
     application_prompt: "Seleccione una opción"
     submit_btn: "Guardar"
+    cancel_btn: "Cancelar"
     save_success: "Actividad guardada éxitosamente"
     save_error: "La actividad no pudo ser guardada"
     current_site: "(Actual: %{site})"
@@ -63,6 +64,7 @@ es:
     subject_column: "Sujeto"
     date_column: "Fecha"
     more_link: "Ver todo"
+    empty_logs: "No hay actividades registradas"
 
   activity_log_chart:
     title: "Tasa de ejecución"

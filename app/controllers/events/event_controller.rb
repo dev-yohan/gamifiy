@@ -7,7 +7,17 @@ class Events::EventController < ApplicationController
     sites_ids = Sites::Site.where(:user => current_user).only(:_id).map(&:_id)
     activity_ids = Activity.where(:site_id.in => sites_ids).only(:_id).map(&:_id)
     @events = Event.where(:activity_id.in => activity_ids).desc(:created_at).page(params[:page]).per(page_size)
-  end  
+  end
+
+  def show
+    begin
+      page_size = 10
+      @event = Event.find(params[:id])
+      @event_logs = EventLog.where(event: @event).desc(:date).page(params[:page]).per(10)
+    rescue Mongoid::Errors::DocumentNotFound
+      redirect_to events_list_path, :flash => {:error => I18n.t("events.api.error.code_300.friendly_message")}
+    end
+  end
 
   def create
     @sites = Sites::Site.where(:user => current_user)
@@ -15,7 +25,7 @@ class Events::EventController < ApplicationController
     @badges = Badge.where(:site_id.in => @sites.only(:_id).map(&:_id))
     @event = Event.new
   end
-  
+
 
   def new
     @event = Event.new()
@@ -28,13 +38,13 @@ class Events::EventController < ApplicationController
 
     badge = Badge.find(params[:badge])
     @event.badge = badge
-   
+
     if @event.save
       redirect_to events_list_path, :flash => {:success => I18n.t("create_event.save_success")}
     else
       redirect_to event_create_path, :flash => {:error => I18n.t("create_event.save_error")}
-    end  
-  end  
+    end
+  end
 
   def edit
    @sites = Sites::Site.where(:user => current_user)
@@ -54,16 +64,16 @@ class Events::EventController < ApplicationController
 
     badge = Badge.find(params[:badge])
     @event.badge = badge
-   
+
     if @event.save
       redirect_to events_list_path, :flash => {:success => I18n.t("edit_event.edit_success")}
     else
       redirect_to event_list_path, :flash => {:error => I18n.t("edit_event.edit_error")}
-    end  
-  end  
+    end
+  end
 
   def delete
-    @event = Event.find(params[:id])  
+    @event = Event.find(params[:id])
   end
 
   def destroy
@@ -75,10 +85,10 @@ class Events::EventController < ApplicationController
              redirect_to events_list_path, :flash => {:success => I18n.t("delete_event.delete_success")}
           else
             redirect_to events_list_path, :flash => {:success => I18n.t("delete_event.delete_error")}
-          end  
+          end
       else
         redirect_to events_list_path, :flash => {:success => I18n.t("delete_event.wrong_owner")}
-      end  
+      end
   end
 
-end 
+end

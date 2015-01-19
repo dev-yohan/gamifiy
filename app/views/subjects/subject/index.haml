@@ -12,7 +12,7 @@
         %a{:href => subjects_list_path}
           %i.fa.fa-users
           = t("subjects.title")
-      %li.active 
+      %li.active
         = t("subjects.home_breadcrumb")
 
   .content
@@ -21,6 +21,9 @@
         = content_tag :div, msg, class: flash_class(name.to_s)
     .row
       .col-md-12
-        = paginate @users   
+        = paginate @users
     .row
       =  render :partial => 'subjects/partials/subjects_list', :locals => { :users => @users }
+    .row
+      .col-md-12
+        = paginate @users

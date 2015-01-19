@@ -8,14 +8,14 @@
         %a{:href => activities_list_path}
           %i.fa.fa-rocket
           = t("activities.title")
-      %li.active 
+      %li.active
         = t("activities.add_title")
 
   .content
     .row
       .col-md-12
         .box.box-primary
-          .box-header  
+          .box-header
           = form_for @activity, :as => "activity_data", :url => activity_new_path, :html => { :multipart => true } do |f|
             .box-body
               .form-group
@@ -24,15 +24,17 @@
 
               .form-group
                 = f.label  t("create_activity.description_lbl")
-                = f.text_area :description,  :class => "form-control", :placeholder => t("create_activity.description_lbl"), :required => true  
+                = f.text_area :description,  :class => "form-control", :placeholder => t("create_activity.description_lbl"), :required => true
 
               .form-group
                 = f.label  t("create_activity.application_lbl")
-                = select_tag :site, options_from_collection_for_select(@sites, "id", "name"), :prompt => t("create_activity.application_prompt"), :class => "form-control", :required => true    
+                = select_tag :site, options_from_collection_for_select(@sites, "id", "name"), :prompt => t("create_activity.application_prompt"), :class => "form-control", :required => true
 
               .form-group
                 = f.label  t("create_activity.status_lbl")
                 = f.check_box :is_active
 
             .box-footer
-              = f.submit t('create_activity.submit_btn'), :class => "btn btn-primary"         
+              = f.submit t('create_activity.submit_btn'), :class => "btn btn-success"
+              %a{:href => activities_list_path, :class => "btn btn-danger"}
+                = t("create_activity.cancel_btn")

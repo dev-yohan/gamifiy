@@ -13,7 +13,7 @@ class Badges::BadgeController < ApplicationController
     @sites = Sites::Site.where(:user => current_user)
     @badge = Badge.new
   end
-  
+
   def new
     @badge = Badge.new()
     @badge.name = params[:badge_data][:name]
@@ -21,13 +21,13 @@ class Badges::BadgeController < ApplicationController
     @badge.image = params[:badge_data][:image]
     site = Sites::Site.find(params[:site])
     @badge.site = site
-   
+
     if @badge.save
       redirect_to badges_list_path, :flash => {:success => I18n.t("create_badge.save_success")}
     else
       redirect_to badge_create_path, :flash => {:error => I18n.t("create_badge.save_error")}
-    end  
-  end  
+    end
+  end
 
   def edit
    @sites = Sites::Site.where(:user => current_user)
@@ -41,26 +41,26 @@ class Badges::BadgeController < ApplicationController
     @badge.image = params[:badge_data][:image]
     site = Sites::Site.find(params[:site])
     @badge.site = site
-   
+
     if @badge.save
       redirect_to badges_list_path, :flash => {:success => I18n.t("edit_badge.edit_success")}
     else
       redirect_to badges_list_path, :flash => {:error => I18n.t("edit_badge.edit_error")}
-    end  
-  end  
+    end
+  end
 
   def delete
-    @badge = Badge.find(params[:id]) 
+    @badge = Badge.find(params[:id])
   end
 
   def destroy
       @badge = Badge.find(params[:id])
-      
+
       if @badge.delete
          redirect_to badges_list_path, :flash => {:success => I18n.t("delete_badge.delete_success")}
       else
         redirect_to badges_list_path, :flash => {:success => I18n.t("delete_badge.delete_error")}
-      end  
+      end
   end
 
 end

@@ -12,7 +12,7 @@
         %a{:href => applications_list_path}
           %i.fa.fa-trophy
           = t("badges.title")
-      %li.active 
+      %li.active
         = t("badges.home_breadcrumb")
 
   .content
@@ -21,8 +21,9 @@
         = content_tag :div, msg, class: flash_class(name.to_s)
     .row
       .col-md-12
-        = paginate @badges  
-      
+        = paginate @badges
     .row
       =  render :partial => 'badges/partials/badges_list', :locals => { :badges => @badges }
-      
+    .row
+      .col-md-12
+        = paginate @badges

@@ -24,6 +24,7 @@ es:
     application_lbl: "Aplicación"
     application_prompt: "Seleccione una opción"
     submit_btn: "Guardar"
+    cancel_btn: "Cancelar"
     save_success: "Insignia guardada éxitosamente"
     save_error: "La insignia no pudo ser guardada"
 

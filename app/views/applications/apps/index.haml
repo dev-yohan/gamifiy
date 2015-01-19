@@ -20,6 +20,9 @@
         = content_tag :div, msg, class: flash_class(name.to_s)
     .row
       .col-md-12
-        = paginate @user_sites    
+        = paginate @user_sites
     .row
       =  render :partial => 'applications/apps/partials/app_teasers', :locals => { :user_sites => @user_sites }
+    .row
+      .col-md-12
+        = paginate @user_sites
