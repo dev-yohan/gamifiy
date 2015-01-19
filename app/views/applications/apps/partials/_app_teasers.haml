@@ -1,10 +1,10 @@
 - if !user_sites.empty?
   - user_sites.each_with_index do |app,index|
     .col-md-4
-      .box
+      .box.app_box
         .box-header
           %a{:href => application_show_path(:id => app.slugs)}
-            %h3.box-title 
+            %h3.box-title
               = app.name
           .box-tools.pull-right
             %button.btn.btn-default.btn-sm{"data-original-title" => "Collapse", "data-toggle" => "tooltip", "data-widget" => "collapse", :title => ""}
@@ -18,7 +18,7 @@
 
         .box-body
           %center
-            = cl_image_tag(app.logo, :width => 300, :height => 220, :crop => :scale) 
+            = cl_image_tag(app.logo, :width => 250, :height => 200, :crop => :scale)
           %p{:style => "margin-top:10px"}
             = truncate(app.description,  length: 250, separator: '...')
         / /.box-body

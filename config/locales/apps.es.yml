@@ -1,4 +1,11 @@
-es: 
+es:
+  views:
+    pagination:
+      previous: "Anterior"
+      next: "Siguiente"
+      first: "Primero"
+      last: "Último"
+
   apps:
     title: "Aplicaciones"
     home_breadcrumb: "Home"
@@ -7,42 +14,40 @@ es:
 
     api:
       error:
-       code_100: 
+       code_100:
         dev_message: "Applications not found"
         friendly_message: "Applications not found"
 
-       code_101: 
+       code_101:
         dev_message: "Application with id %{id} not found"
         friendly_message: "Application with id %{id} not found"
 
 
   app_teaser:
-    more_link: "Ver más" 
+    more_link: "Ver más"
 
   app_detail:
     activity_count_title: "Tasa de ejecución de actividades"
 
   create_app:
-    name_lbl: "Nombre de la aplicación" 
-    description_lbl: "Descripción de la aplicación"  
+    name_lbl: "Nombre de la aplicación"
+    description_lbl: "Descripción de la aplicación"
     logo_lbl: "Logo"
-    submit_btn: "Guardar" 
+    submit_btn: "Guardar"
+    cancel_btn: "Cancelar"
     save_success: "Aplicación guardada éxitosamente"
     save_error: "La aplicación no pudo ser guardada"
 
   edit_app:
-    title: "Editar %{name}"  
+    title: "Editar %{name}"
     edit_success: "Aplicación editada éxitosamente"
     edit_error: "La aplicación no pudo ser editada"
 
   delete_app:
-    title: "Eliminar %{name}"  
+    title: "Eliminar %{name}"
     delete_message: "Esta seguro de eliminar esta aplicación?"
     submit_btn: "Eliminar"
     cancel_btn: "Cancelar"
     delete_success: "Aplicación eliminada éxitosamente"
-    delete_error: "La aplicación no pudo ser eliminada"  
+    delete_error: "La aplicación no pudo ser eliminada"
     wrong_owner: "La aplicación no pudo ser eliminada dado que el usuario actual no es el dueño de la misma"
-
-
-

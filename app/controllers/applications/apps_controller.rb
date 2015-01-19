@@ -3,19 +3,19 @@ class Applications::AppsController < ApplicationController
 
 
   def index
-    
-    page_size = 10
+
+    page_size = 5
 
     @user_sites = Sites::Site.where(:user => current_user).desc(:created_at).page(params[:page]).per(page_size)
-    
-  end 
+
+  end
 
   def show
 
-    page_size = 10 
-    badge_page_size = 10 
+    page_size = 10
+    badge_page_size = 10
     user_page_size = 10
-    activity_page_size = 5 
+    activity_page_size = 5
 
     @app = Sites::Site.find(params[:id])
     @activities_count = ActivityLog.where(:activity_id.in => Activity.where(:site => @app).all.only(:_id).map(&:_id)).count.to_f
@@ -23,13 +23,13 @@ class Applications::AppsController < ApplicationController
     @badges = Badge.where(:site => @app).desc(:created_at).page(1).per(badge_page_size)
     @users = Subject.where(:site => @app).desc(:created_at).page(1).per(user_page_size)
 
-  end  
+  end
 
   def create
 
     @app = Sites::Site.new
 
-  end  
+  end
 
   def new
 
@@ -38,28 +38,28 @@ class Applications::AppsController < ApplicationController
       @app.description = params[:app_data][:description]
       @app.logo = params[:app_data][:logo]
       @app.user = current_user
-     
+
       if @app.save
         redirect_to applications_list_path, :flash => {:success => I18n.t("create_app.save_success")}
       else
         redirect_to applications_list_path, :flash => {:error => I18n.t("create_app.save_error")}
-      end  
+      end
 
-  end  
+  end
 
   def edit
 
     @app = Sites::Site.find(params[:id])
 
-  end  
+  end
 
   def update
- 
+
     @app = Sites::Site.find(params[:id])
 
     if !params[:app_data][:name].nil?
       @app.name = params[:app_data][:name]
-    end  
+    end
     if !params[:app_data][:description].nil?
       @app.description = params[:app_data][:description]
     end
@@ -72,7 +72,7 @@ class Applications::AppsController < ApplicationController
       redirect_to applications_list_path, :flash => {:success => I18n.t("edit_app.edit_success")}
     else
       redirect_to applications_list_path, :flash => {:error => I18n.t("edit_app.edit_error")}
-    end    
+    end
 
   end
 
@@ -91,11 +91,11 @@ class Applications::AppsController < ApplicationController
              redirect_to applications_list_path, :flash => {:success => I18n.t("delete_app.delete_success")}
           else
             redirect_to applications_list_path, :flash => {:success => I18n.t("delete_app.delete_error")}
-          end  
+          end
       else
         redirect_to applications_list_path, :flash => {:success => I18n.t("delete_app.wrong_owner")}
-      end  
+      end
 
-  end  
+  end
 
 end
