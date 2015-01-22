@@ -17,8 +17,11 @@ es:
           friendly_message: "User with id %{id} not found"
 
   subjects_list:
-    email_column: "Nombre"
+    email_column: "Email"
+    first_name_column: "Nombres"
+    last_name_column: "Apellidos"
     status_column: "Estado"
+    badges_column: "Insignias"
     active_badge: "Activo"
     inactive_badge: "Inactivo"
     app_column: "Aplicación"
@@ -29,6 +32,9 @@ es:
 
   create_subject:
     id_lbl: "ID externo"
+    email_lbl: "Correo electrónico"
+    first_name_lbl: "Nombres"
+    last_name_lbl: "Apellidos"
     email_lbl: "Correo electrónico"
     submit_btn: "Guardar"
     cancel_btn: "Cancelar"

@@ -9,6 +9,8 @@
               %th
                 = t("activities_list.name_column")
               %th
+                = t("activities_list.logs_column")  
+              %th
                 = t("activities_list.status_column")
               %th
                 = t("activities_list.app_column")
@@ -19,6 +21,13 @@
               %tr
                 %td
                   = activity.name   
+                %td
+                  -if !activity.activity_logs_count.nil? && activity.activity_logs_count > 0
+                    %span.badge.bg-light-blue
+                      = activity.activity_logs_count
+                  - else
+                    %span.badge.bg-light-blue
+                      0  
                 %td
                   - if activity.is_active?
                     %span.badge.bg-green

@@ -26,6 +26,13 @@
                 = f.label  t("create_subject.email_lbl")
                 = f.text_field :external_email, autofocus: true, :class => "form-control", :placeholder => t("create_subject.email_lbl"), :required => true
 
+              .form-group
+                = f.label  t("create_subject.first_name_lbl")
+                = f.text_field :external_first_name, :class => "form-control", :placeholder => t("create_subject.first_name_lbl"), :required => true
+
+              .form-group
+                = f.label  t("create_subject.last_name_lbl")
+                = f.text_field :external_last_name, :class => "form-control", :placeholder => t("create_subject.last_name_lbl"), :required => true 
 
               .form-group
                 = f.label  t("create_subject.application_lbl")

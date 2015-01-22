@@ -49,6 +49,7 @@ es:
 
   activities_list:
     name_column: "Nombre"
+    logs_column: "Ocurrencia"
     status_column: "Estado"
     active_badge: "Activo"
     inactive_badge: "Inactivo"

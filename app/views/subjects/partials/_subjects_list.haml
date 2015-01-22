@@ -9,6 +9,12 @@
               %th
                 = t("subjects_list.email_column")
               %th
+                = t("subjects_list.first_name_column")
+              %th
+                = t("subjects_list.last_name_column")   
+              %th
+                = t("subjects_list.badges_column")    
+              %th
                 = t("subjects_list.status_column")  
               %th
                 = t("subjects_list.app_column")
@@ -20,13 +26,23 @@
                 %td
                   = user.external_email   
                 %td
+                  = user.external_first_name
+                %td
+                  = user.external_last_name    
+                %td
+                  - if !user.event_logs.nil? && user.event_logs.count > 0
+                    %span.badge.bg-green
+                      = user.event_logs.count
+                  - else
+                    %span.badge.bg-red
+                      = 0    
+                %td
                   - if user.is_active?
                     %span.badge.bg-green
                       = t("subjects_list.active_badge")
                   - else
                     %span.badge.bg-red
                       = t("subjects_list.inactive_badge")
-
                 %td
                   = user.site.name
                 %td

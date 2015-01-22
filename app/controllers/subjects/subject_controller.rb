@@ -16,6 +16,8 @@ class Subjects::SubjectController < ApplicationController
     @subject = Subject.new()
     @subject.external_id = params[:subject_data][:external_id]
     @subject.external_email = params[:subject_data][:external_email]
+    @subject.external_first_name = params[:subject_data][:external_first_name]
+    @subject.external_last_name = params[:subject_data][:external_last_name]
     @subject.is_active = params[:subject_data][:is_active]
 
     site = Sites::Site.find(params[:site])
@@ -38,6 +40,8 @@ class Subjects::SubjectController < ApplicationController
 
     @subject.external_id = params[:subject_data][:external_id]
     @subject.external_email = params[:subject_data][:external_email]
+    @subject.external_first_name = params[:subject_data][:external_first_name]
+    @subject.external_last_name = params[:subject_data][:external_last_name]
     @subject.is_active = params[:subject_data][:is_active]
 
     site = Sites::Site.find(params[:site])

@@ -64,7 +64,8 @@ es:
 
   event_log_list:
     date_column: "Nombre"
-    subject_column: "Puntos"
+    subject_column: "Usuario"
     activity_column: "Actividad"
     app_column: "Aplicación"
     badge_column: "Insignia"
+    no_data: "No hay logs disponibles"
