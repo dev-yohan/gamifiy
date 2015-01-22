@@ -51,6 +51,7 @@ Rails.application.routes.draw do
   match 'subjects' => 'subjects/subject#index', :as => :subjects_list, :via => :get
   match 'subjects/create' => 'subjects/subject#create', :as => :subject_create, :via => :get
   match 'subjects/new' => 'subjects/subject#new', :as => :subject_new, :via => :post
+  match 'subject/show/:id' => 'subjects/subject#show', :as => :subject_show, :via => :get
   match 'subject/edit/:id' => 'subjects/subject#edit', :as => :subject_edit, :via => :get
   match 'subject/update/:id' => 'subjects/subject#update', :as => :subject_update, :via => :post
   match 'subject/delete/:id' => 'subjects/subject#delete', :as => :subject_delete, :via => :get

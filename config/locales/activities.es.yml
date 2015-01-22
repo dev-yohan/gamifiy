@@ -62,7 +62,9 @@ es:
   activity_logs:
     last_title: "Últimos logs de actividad"
     behavior_title: "Comportamiento"
-    subject_column: "Sujeto"
+    app_column: "Aplicación"
+    activity_column: "Actividad"
+    subject_column: "Usuario"
     date_column: "Fecha"
     more_link: "Ver todo"
     empty_logs: "No hay actividades registradas"

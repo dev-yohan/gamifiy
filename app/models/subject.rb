@@ -10,9 +10,20 @@ class Subject
 
   belongs_to :site, :class_name => "Sites::Site"
   has_many :event_logs, :class_name => "EventLog"
+  has_many :activity_logs, :class_name => "ActivityLog"
   
   def name
     "#{external_first_name} #{external_last_name}"
   end
+
+  def points
+    current_points = 0
+
+    event_logs.each do |log|
+      current_points += log.event.value
+    end 
+
+    current_points 
+  end  
 
 end  

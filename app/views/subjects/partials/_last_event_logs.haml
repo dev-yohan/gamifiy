@@ -1,0 +1,38 @@
+.box
+  .box-header
+    %h4.box-title
+      = t("event_logs.last_title")
+  .box-body    
+    - if !event_logs.empty?
+      .table-responsive.no-padding
+        %table.table.table-hover
+          %tbody
+            %tr
+              %th
+                = t("event_logs.event_column")
+              %th
+                = t("event_logs.app_column")  
+              %th
+                = t("event_logs.points_column")  
+              %th
+                = t("activity_logs.date_column")
+
+            - event_logs.each_with_index do |log, index|
+              %tr
+                %td
+                  = log.event.name
+                %td
+                  %a{:href => application_show_path(:id => log.event.activity.site.slugs)}
+                    %small.label.label-success
+                      = log.event.activity.site.name  
+                %td
+                  = log.event.value 
+                %td
+                  = log.created_at.strftime("%d/%m/%y %H:%M:%S")
+    - else
+      %p
+        = t("event_logs.empty_logs")
+  .box-footer
+    %p              
+      %a.btn.btn-primary
+        = t("event_logs.more_link")      

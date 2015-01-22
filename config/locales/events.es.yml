@@ -61,6 +61,14 @@ es:
 
   event_logs:
     title: "Log de eventos"
+    last_title: "Últimos eventos"
+    event_column: "Evento"
+    app_column: "Aplicación"
+    subject_column: "Usuario"
+    points_column: "Puntos"
+    date_column: "Fecha"
+    more_link: "Ver todo"
+    empty_logs: "No hay eventos registrados"
 
   event_log_list:
     date_column: "Nombre"

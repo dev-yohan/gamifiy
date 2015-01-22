@@ -1,0 +1,40 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      = @subject.name
+    %ol.breadcrumb
+      %li
+        %a{:href => subjects_list_path}
+          %i.fa.fa-users
+          = t("subjects.title")
+      %li.active
+        = @subject.name
+
+  .content
+    .row
+      .col-md-6
+        .box
+          .box-body
+            %p
+              %strong
+                = "#{t('subjects_list.email_column')}:"
+              = @subject.external_email
+            %p
+              %strong
+                = "#{t('subjects_list.first_name_column')}:"
+              = @subject.external_first_name
+            %p
+              %strong
+                = "#{t('subjects_list.last_name_column')}:"
+              = @subject.external_last_name
+            %p
+              %strong
+                = "#{t('subjects_list.points_column')}:"
+              = @subject.points
+
+        =  render :partial => 'subjects/partials/last_logs', :locals => { :activity_logs => @activity_logs }      
+                
+      .col-md-6
+        =  render :partial => 'badges/partials/badge_teasers', :locals => { :badges => @badges }
+        =  render :partial => 'subjects/partials/last_event_logs', :locals => { :event_logs => @event_logs } 

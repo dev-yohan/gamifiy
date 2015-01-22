@@ -1,0 +1,34 @@
+.box
+  .box-header
+    %h4.box-title
+      = t("activity_logs.last_title")
+  .box-body    
+    - if !activity_logs.empty?
+      .table-responsive.no-padding
+        %table.table.table-hover
+          %tbody
+            %tr
+              %th
+                = t("activity_logs.activity_column")  
+              %th
+                = t("activity_logs.app_column")  
+              %th
+                = t("activity_logs.date_column")
+
+            - activity_logs.each_with_index do |log, index|
+              %tr
+                %td
+                  = log.activity.name  
+                %td
+                  %a{:href => application_show_path(:id => log.activity.site.slugs)}
+                    %small.label.label-success
+                      = log.activity.site.name  
+                %td
+                  = log.created_at.strftime("%d/%m/%y %H:%M:%S")
+    - else
+      %p
+        = t("activity_logs.empty_logs")
+  .box-footer
+    %p            
+      %a.btn.btn-primary
+        = t("activity_logs.more_link")      

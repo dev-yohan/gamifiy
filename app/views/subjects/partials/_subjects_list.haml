@@ -13,6 +13,8 @@
               %th
                 = t("subjects_list.last_name_column")   
               %th
+                = t("subjects_list.points_column")  
+              %th
                 = t("subjects_list.badges_column")    
               %th
                 = t("subjects_list.status_column")  
@@ -24,11 +26,14 @@
             - users.each_with_index do |user, index|
               %tr
                 %td
-                  = user.external_email   
+                  %a{:href => subject_show_path(user)}
+                    = user.external_email   
                 %td
                   = user.external_first_name
                 %td
-                  = user.external_last_name    
+                  = user.external_last_name   
+                %td
+                  = user.points    
                 %td
                   - if !user.event_logs.nil? && user.event_logs.count > 0
                     %span.badge.bg-green
@@ -46,7 +51,7 @@
                 %td
                   = user.site.name
                 %td
-                  %a{:href => ""}
+                  %a{:href => subject_show_path(user)}
                     %i.fa.fa-eye
                     = t("subjects_list.more_link")
                   \    

@@ -7,6 +7,14 @@ class Subjects::SubjectController < ApplicationController
     @users = Subject.where(:site_id.in => sites_ids).desc(:created_at).page(params[:page]).per(page_size)
   end
 
+  def show
+    @subject = Subject.find(params[:id])
+    @event_logs = EventLog.where(subject: @subject)
+    @badges = SubjectManager.get_badges(@subject, 1, 10)
+    @activity_logs = SubjectManager.get_activity_logs(@subject, 1, 10)
+    @event_logs = SubjectManager.get_event_logs(@subject, 1, 10)
+  end  
+
   def create
       @sites = Sites::Site.where(:user => current_user)
       @subject = Subject.new
