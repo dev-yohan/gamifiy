@@ -46,6 +46,7 @@ Rails.application.routes.draw do
   match 'event/update/:id' => 'events/event#update', :as => :event_update, :via => :post
   match 'event/delete/:id' => 'events/event#delete', :as => :event_delete, :via => :get
   match 'event/destroy/:id' => 'events/event#destroy', :as => :event_destroy, :via => :get
+  match 'weekly-event-behavior/(:id)' => 'events/event#weekly_behavior_data', :as => :weekly_event_behavior_data, :via => :get
 
   #subjects namespace
   match 'subjects' => 'subjects/subject#index', :as => :subjects_list, :via => :get

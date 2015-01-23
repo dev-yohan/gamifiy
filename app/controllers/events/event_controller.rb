@@ -91,4 +91,21 @@ class Events::EventController < ApplicationController
       end
   end
 
+  def weekly_behavior_data
+    date_fetcher = DateFetcher.new
+    event_fetcher = EventFetcher.new
+    if params[:id].nil?
+      sites_ids = Sites::Site.where(user: current_user).only(:_id).map(&:_id)
+    else
+      sites_ids = Sites::Site.where(user: current_user, _id: params[:id]).only(:_id).map(&:_id)
+    end
+
+    activities = Activity.where(:site_id.in => sites_ids).only(:_id).map(&:_id)
+    @events = Event.where(:activity_id.in => activities).only(:_id).map(&:_id)
+
+    behavior_array = event_fetcher.get_daily_behavior_data(date_fetcher.get_daily_array(604800, 1, Date.today.at_beginning_of_week.to_time.to_i), @events)
+
+    render json: behavior_array
+  end
+
 end

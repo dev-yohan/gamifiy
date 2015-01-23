@@ -1,0 +1,54 @@
+.box
+  .box-header        
+    %h4.box-title
+      %i.fa.fa-gears
+      = t("event_teasers.title")
+
+  .box-body
+    - if !events.empty?
+      %ul.todo-list.ui-sortable
+        - events.each do |event|
+          %li
+            .row
+              - if badgeable == false
+                .col-md-5
+                  %span.text
+                    %a{:href => event_show_path(event)}
+                      = event.name
+                .col-md-5
+                  .progress.xs
+                    = #activities_count
+                    - log_count = EventLog.where(:event => event).count.to_f
+                    - percentage = ((log_count/events_count).to_f * 100)
+                    = #(log_count / activities_count).to_f
+                    .progress-bar.progress-bar-primary{:style => "width: #{percentage}%"}
+                .col-md-2
+                  - if !percentage.nan?
+                    %span.badge.bg-light-blue
+                      = "#{percentage.round(0)}%"
+
+              - else
+                .col-md-7
+                  %span.text
+                    %a{:href => event_show_path(event)}
+                      = event.name
+                  %a{:href => application_show_path(:id => event.activity.site.slugs)}
+                    %small.label.label-success
+                      = event.activity.site.name
+                .col-md-3
+                  .progress.xs
+                    = #activities_count
+                    - log_count = EventLog.where(:event => event).count.to_f
+                    - percentage = ((log_count/events_count).to_f * 100)
+                    = #(log_count / activities_count).to_f
+                    .progress-bar.progress-bar-primary{:style => "width: #{percentage}%"}
+                .col-md-2
+                  - if !percentage.nan?
+                    %span.badge.bg-light-blue
+                      = "#{percentage.round(0)}%"
+    - else
+      %p
+        = t("events.no_events_message")
+      %p
+        %a{:href => event_create_path, :class => "btn btn-success"}
+          = t("events.add_title")

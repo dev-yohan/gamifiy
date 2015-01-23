@@ -77,3 +77,13 @@ es:
     app_column: "Aplicación"
     badge_column: "Insignia"
     no_data: "No hay logs disponibles"
+
+  event_log_chart:
+    title: "Tasa de ejecución"
+
+  event_distrib_chart:
+    title: "Distribución"  
+
+  event_teasers:
+    title: "Porcentaje de eventos"
+  

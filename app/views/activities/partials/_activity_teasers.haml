@@ -1,51 +1,54 @@
-%h4
-  %i.fa.fa-rocket
-  = t("activity_teasers.title")
+.box
+  .box-header        
+    %h4.box-title
+      %i.fa.fa-rocket
+      = t("activity_teasers.title")
 
-- if !activities.empty?
-  %ul.todo-list.ui-sortable
-    - activities.each do |activity|
-      %li
-        .row
-          - if badgeable == false
-            .col-md-5
-              %span.text
-                %a{:href => activity_detail_path(:app_id => activity.site.slugs, :id => activity.slugs)}
-                  = activity.name
-            .col-md-5
-              .progress.xs
-                = #activities_count
-                - log_count = ActivityLog.where(:activity => activity).count.to_f
-                - percentage = ((log_count/activities_count).to_f * 100)
-                = #(log_count / activities_count).to_f
-                .progress-bar.progress-bar-primary{:style => "width: #{percentage}%"}
-            .col-md-2
-              - if !percentage.nan?
-                %span.badge.bg-light-blue
-                  = "#{percentage.round(0)}%"
+  .box-body
+    - if !activities.empty?
+      %ul.todo-list.ui-sortable
+        - activities.each do |activity|
+          %li
+            .row
+              - if badgeable == false
+                .col-md-5
+                  %span.text
+                    %a{:href => activity_detail_path(:app_id => activity.site.slugs, :id => activity.slugs)}
+                      = activity.name
+                .col-md-5
+                  .progress.xs
+                    = #activities_count
+                    - log_count = ActivityLog.where(:activity => activity).count.to_f
+                    - percentage = ((log_count/activities_count).to_f * 100)
+                    = #(log_count / activities_count).to_f
+                    .progress-bar.progress-bar-primary{:style => "width: #{percentage}%"}
+                .col-md-2
+                  - if !percentage.nan?
+                    %span.badge.bg-light-blue
+                      = "#{percentage.round(0)}%"
 
-          - else
-            .col-md-7
-              %span.text
-                %a{:href => activity_detail_path(:app_id => activity.site.slugs, :id => activity.slugs)}
-                  = activity.name
-              %a{:href => application_show_path(:id => activity.site.slugs)}
-                %small.label.label-success
-                  = activity.site.name
-            .col-md-3
-              .progress.xs
-                = #activities_count
-                - log_count = ActivityLog.where(:activity => activity).count.to_f
-                - percentage = ((log_count/activities_count).to_f * 100)
-                = #(log_count / activities_count).to_f
-                .progress-bar.progress-bar-primary{:style => "width: #{percentage}%"}
-            .col-md-2
-              - if !percentage.nan?
-                %span.badge.bg-light-blue
-                  = "#{percentage.round(0)}%"
-- else
-  %p
-    = t("activities.no_activities_message")
-  %p
-    %a{:href => activity_create_path, :class => "btn btn-success"}
-      = t("activities.add_title")
+              - else
+                .col-md-7
+                  %span.text
+                    %a{:href => activity_detail_path(:app_id => activity.site.slugs, :id => activity.slugs)}
+                      = activity.name
+                  %a{:href => application_show_path(:id => activity.site.slugs)}
+                    %small.label.label-success
+                      = activity.site.name
+                .col-md-3
+                  .progress.xs
+                    = #activities_count
+                    - log_count = ActivityLog.where(:activity => activity).count.to_f
+                    - percentage = ((log_count/activities_count).to_f * 100)
+                    = #(log_count / activities_count).to_f
+                    .progress-bar.progress-bar-primary{:style => "width: #{percentage}%"}
+                .col-md-2
+                  - if !percentage.nan?
+                    %span.badge.bg-light-blue
+                      = "#{percentage.round(0)}%"
+    - else
+      %p
+        = t("activities.no_activities_message")
+      %p
+        %a{:href => activity_create_path, :class => "btn btn-success"}
+          = t("activities.add_title")

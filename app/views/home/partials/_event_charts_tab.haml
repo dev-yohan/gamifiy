@@ -1,0 +1,44 @@
+.nav-tabs-custom{:style => "cursor: move;"}
+  %ul.nav.nav-tabs.pull-right
+    %li.active
+      %a{"data-toggle" => "tab", :href => "#event-logs-chart"} 
+        = t("event_log_chart.title")
+    %li
+      %a{"data-toggle" => "tab", :href => "#event-distribution-chart"}
+        = t("event_distrib_chart.title")
+    %li.pull-left.header
+      %i.fa.fa-bar-chart-o
+      = t("main_menu.events.title")
+
+  .tab-content.no-padding
+    #event-logs-chart.chart.tab-pane.active
+      #weekly-event-behavior
+    #event-distribution-chart.chart.tab-pane
+      mundo
+
+:javascript
+
+  $( document ).ready(function() {
+
+      var results_url = "/weekly-event-behavior/";
+
+     $.getJSON( results_url, function( json_data ) {
+         console.log(json_data);
+
+         var chart_data = new Array(); 
+
+         $.each(json_data, function(key_name, value) {
+            chart_data.push({hour: value.friendly_date , count: value.log_count})
+         });
+
+          Morris.Area({
+            element: 'weekly-event-behavior',
+            data: chart_data,
+            xkey: 'hour',
+            ykeys: ['count'],
+            labels: ['Registros']
+          });
+
+     });
+
+  });

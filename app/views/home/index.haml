@@ -14,14 +14,19 @@
 
   %section.content
     .row
-      =  render :partial => 'home/partials/quick_launcher', :locals => { :user_sites => @user_sites, :user_activities => @user_activities, :user_badges => @user_badges, :user_subjects => @user_subjects } 
+      =  render :partial => 'home/partials/quick_launcher', :locals => { :user_sites => @user_sites, :user_activities => @user_activities, :user_badges => @user_badges, :user_subjects => @user_subjects, :events_count => @events_count.to_i } 
     .row
       %section.col-md-7.connectedSortable.ui-sortable
         =  render :partial => 'home/partials/charts_tab' 
       %section.col-md-5.connectedSortable.ui-sortable
-        .box
-          .box-body
-            =  render :partial => 'activities/partials/activity_teasers', :locals => { :activities => @activities, :activities_count => @activities_count, :badgeable => true } 
+        =  render :partial => 'activities/partials/activity_teasers', :locals => { :activities => @activities, :activities_count => @activities_count, :badgeable => true } 
+
+    .row
+      %section.col-md-7.connectedSortable.ui-sortable
+        =  render :partial => 'home/partials/event_charts_tab' 
+      %section.col-md-5.connectedSortable.ui-sortable
+        =  render :partial => 'events/partials/event_home_teasers', :locals => { :events => @events, :events_count => @events_count, :badgeable => true }  
+              
 
         
     

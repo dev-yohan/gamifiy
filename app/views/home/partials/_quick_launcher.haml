@@ -1,5 +1,5 @@
 
-.col-lg-3.col-xs-6
+.col-lg-2.col-xs-6
   .small-box.bg-aqua
     .inner
       %h3
@@ -10,7 +10,7 @@
       = t("home.quick_launch.more_info")
       %i.fa.fa-arrow-circle-right
 
-.col-lg-3.col-xs-6
+.col-lg-2.col-xs-6
   .small-box.bg-green
     .inner
       %h3
@@ -21,7 +21,18 @@
       = t("home.quick_launch.more_info")
       %i.fa.fa-arrow-circle-right
 
-.col-lg-3.col-xs-6
+.col-lg-2.col-xs-6
+  .small-box.bg-blue
+    .inner
+      %h3
+        = events_count
+      %p
+        = t("home.quick_launch.events_count")    
+    %a.small-box-footer{:href => events_list_path}
+      = t("home.quick_launch.more_info")
+      %i.fa.fa-arrow-circle-right      
+
+.col-lg-2.col-xs-6
   .small-box.bg-yellow
     .inner
       %h3
@@ -32,7 +43,7 @@
       = t("home.quick_launch.more_info")
       %i.fa.fa-arrow-circle-right
 
-.col-lg-3.col-xs-6
+.col-lg-4.col-xs-6
   .small-box.bg-red   
     .inner
       %h3
