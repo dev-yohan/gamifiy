@@ -15,10 +15,9 @@
             %td
               = log.subject.external_email
             %td
-              = log.created_at.strftime("%d/%m/%y %H:%M:%S")
+              = log.date.strftime("%d/%m/%y %H:%M:%S")
 
-  %a.btn.btn-default
-    %i.fa.fa-arrow-circle-right
+  %a.btn.btn-primary
     = t("activity_logs.more_link")
 - else
   %p
