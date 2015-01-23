@@ -91,6 +91,16 @@ class Events::EventController < ApplicationController
       end
   end
 
+  def behavior_data
+    date_fetcher = DateFetcher.new
+    event_fetcher = EventFetcher.new
+    @event = Event.find(params[:id])
+
+    behavior_array = event_fetcher.get_daily_event_behavior_data(date_fetcher.get_daily_array(604800, 0, Date.today.to_time.to_i - 604800), @event)
+
+    render json: behavior_array
+  end
+
   def weekly_behavior_data
     date_fetcher = DateFetcher.new
     event_fetcher = EventFetcher.new

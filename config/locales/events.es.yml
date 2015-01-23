@@ -61,6 +61,7 @@ es:
 
   event_logs:
     title: "Log de eventos"
+    behavior_title: "Comportamiento"
     last_title: "Últimos eventos"
     event_column: "Evento"
     app_column: "Aplicación"
@@ -82,8 +83,7 @@ es:
     title: "Tasa de ejecución"
 
   event_distrib_chart:
-    title: "Distribución"  
+    title: "Distribución"
 
   event_teasers:
     title: "Porcentaje de eventos"
-  
