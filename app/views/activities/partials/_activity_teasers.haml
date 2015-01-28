@@ -46,9 +46,18 @@
                   - if !percentage.nan?
                     %span.badge.bg-light-blue
                       = "#{percentage.round(0)}%"
+
     - else
       %p
         = t("activities.no_activities_message")
       %p
         %a{:href => activity_create_path, :class => "btn btn-success"}
           = t("activities.add_title")
+  .box-footer
+    - if badgeable == true
+      %a.btn.btn-primary{href: activities_list_path}
+        = t("activity_teasers.more_link")
+    - else
+      - if !activities.empty?
+        %a.btn.btn-primary{href: application_activities_path(activities.first.site)}
+          = t("activity_teasers.more_link")              

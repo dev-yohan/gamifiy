@@ -29,3 +29,4 @@
       .col-md-6
         =  render :partial => 'badges/partials/badge_teasers', :locals => { :badges => @badges }
         =  render :partial => 'subjects/partials/subject_teasers', :locals => { :users => @users }
+        =  render :partial => 'events/partials/event_teasers', :locals => { :events => @events, :events_count => @events_count, :badgeable => true }  

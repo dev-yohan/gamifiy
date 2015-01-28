@@ -46,6 +46,7 @@ es:
 
   activity_teasers:
     title: "Porcentaje de actividades"
+    more_link: "Ver todo"
 
   activities_list:
     name_column: "Nombre"

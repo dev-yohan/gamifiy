@@ -34,7 +34,7 @@
 
               .form-group
                 = f.label  t("create_event.activity_lbl")
-                = select_tag :activity, options_from_collection_for_select(@activities, "id", "name"), :prompt => t("create_event.activity_prompt"), :class => "form-control", :required => true
+                = select_tag :activity, options_from_collection_for_select(@activities, "id", "name_app"), :prompt => t("create_event.activity_prompt"), :class => "form-control", :required => true
 
               .form-group
                 = f.label  t("create_event.badge_lbl")

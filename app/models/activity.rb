@@ -14,5 +14,9 @@ class Activity
 
   field :activity_logs_count, type: Integer
 
+  def name_app
+     "#{name} - #{site.name}"
+  end  
+
 
 end

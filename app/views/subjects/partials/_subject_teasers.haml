@@ -12,8 +12,10 @@
               %a{:href => subject_show_path(user)}
                 = user.external_email
             .tools
-              %i.fa.fa-edit
-              %i.fa.fa-trash-o
+              %a{:href => subject_show_path(user)}
+                %i.fa.fa-edit
+              %a{:href => subject_delete_path(user)}  
+                %i.fa.fa-trash-o
   - else
     .box-body
       %p

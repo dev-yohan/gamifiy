@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   match 'applications/update/:id' => 'applications/apps#update', :as => :application_update, :via => :post
   match 'applications/delete/:id' => 'applications/apps#delete', :as => :application_delete, :via => :get
   match 'applications/destroy/:id' => 'applications/apps#destroy', :as => :application_destroy, :via => :get
+  match 'applications/activities/:id' => 'applications/apps#show_activities', :as => :application_activities, :via => :get
+  match 'applications/events/:id' => 'applications/apps#show_events', :as => :application_events, :via => :get
 
   #activities namespace
   match 'activities' => 'activities/activity#index', :as => :activities_list, :via => :get
