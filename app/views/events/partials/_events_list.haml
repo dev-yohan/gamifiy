@@ -60,3 +60,10 @@
                   %a{:href => event_delete_path(event)}
                     %i.fa.fa-trash-o
                     = t("events_list.delete_link")
+
+      - else
+        %p
+          = t("events.no_events_message")
+        %p
+          %a{:href => event_create_path, :class => "btn btn-success"}
+            = t("events.add_title")

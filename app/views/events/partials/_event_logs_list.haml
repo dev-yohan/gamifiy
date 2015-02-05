@@ -24,13 +24,16 @@
             %td
               = log.date.strftime("%Y-%m-%d %H:%M")
             %td
-              = log.subject.external_email
+              %a{href: subject_show_path(log.subject)}
+                = log.subject.external_email
             %td
               = log.event.badge.name
             %td
-              = log.event.activity.site.name
+              %a{href: application_show_path(log.event.activity.site)}
+                = log.event.activity.site.name
             %td
-              = log.event.activity.name
+              %a{href: activity_detail_path(log.event.activity.site, log.event.activity)}
+                = log.event.activity.name
 
     - else
       %p

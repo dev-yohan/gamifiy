@@ -9,9 +9,9 @@
               %th
                 = t("badges_list.logo_column")
               %th
-                = t("badges_list.name_column")  
+                = t("badges_list.name_column")
               %th
-                = t("badges_list.status_column")  
+                = t("badges_list.status_column")
               %th
                 = t("badges_list.app_column")
               %th
@@ -22,7 +22,7 @@
                 %td
                   = cl_image_tag(badge.image, :width => 50, :height => 50, :crop => :scale)
                 %td
-                  = badge.name    
+                  = badge.name
                 %td
                   - if badge.is_active?
                     %span.badge.bg-green
@@ -36,7 +36,7 @@
                   %a{:href => ""}
                     %i.fa.fa-eye
                     = t("badges_list.more_link")
-                  \    
+                  \
                   %a{:href => badge_edit_path(badge)}
                     %i.fa.fa-edit
                     = t("badges_list.edit_link")
@@ -44,3 +44,10 @@
                   %a{:href => badge_delete_path(badge)}
                     %i.fa.fa-trash-o
                     = t("badges_list.delete_link")
+
+      - else
+        %p
+          = t("badges.no_badges_message")
+        %p
+          %a{:href => badge_create_path, :class => "btn btn-success"}
+            = t("badges.add_title")

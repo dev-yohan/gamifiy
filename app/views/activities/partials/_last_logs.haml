@@ -13,7 +13,8 @@
         - activity_logs.each_with_index do |log, index|
           %tr
             %td
-              = log.subject.external_email
+              %a{href: subject_show_path(log.subject)}
+                = log.subject.external_email
             %td
               = log.date.strftime("%d/%m/%y %H:%M:%S")
 

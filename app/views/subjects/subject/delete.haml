@@ -9,7 +9,7 @@
         %a{:href => subjects_list_path}
           %i.fa.fa-users
           = t("subjects.title")
-      %li.active 
+      %li.active
         = t("delete_subject.title", name:@subject.external_email)
 
   .content
@@ -17,8 +17,8 @@
       .col-md-12
         %p
           = t("delete_subject.delete_message")
-        %a{:href => subject_destroy_path(@subject), :class => "btn btn-primary"}
+        %a{:href => subject_destroy_path(@subject), :class => "btn btn-success"}
           = t("delete_subject.submit_btn")
 
-        %a{:href => subjects_list_path, :class => "btn btn-primary"}
+        %a{:href => subjects_list_path, :class => "btn btn-danger"}
           = t("delete_subject.cancel_btn")

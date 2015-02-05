@@ -11,6 +11,7 @@ es:
     home_breadcrumb: "Home"
     add_link: "Crear nueva"
     add_title: "Crear nueva aplicación"
+    no_apps_message: "No hay aplicaciones creadas"
 
     api:
       error:

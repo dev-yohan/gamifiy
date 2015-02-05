@@ -11,13 +11,13 @@
               %th
                 = t("subjects_list.first_name_column")
               %th
-                = t("subjects_list.last_name_column")   
+                = t("subjects_list.last_name_column")
               %th
-                = t("subjects_list.points_column")  
+                = t("subjects_list.points_column")
               %th
-                = t("subjects_list.badges_column")    
+                = t("subjects_list.badges_column")
               %th
-                = t("subjects_list.status_column")  
+                = t("subjects_list.status_column")
               %th
                 = t("subjects_list.app_column")
               %th
@@ -27,20 +27,20 @@
               %tr
                 %td
                   %a{:href => subject_show_path(user)}
-                    = user.external_email   
+                    = user.external_email
                 %td
                   = user.external_first_name
                 %td
-                  = user.external_last_name   
+                  = user.external_last_name
                 %td
-                  = user.points    
+                  = user.points
                 %td
                   - if !user.event_logs.nil? && user.event_logs.count > 0
                     %span.badge.bg-green
                       = user.event_logs.count
                   - else
                     %span.badge.bg-red
-                      = 0    
+                      = 0
                 %td
                   - if user.is_active?
                     %span.badge.bg-green
@@ -54,11 +54,18 @@
                   %a{:href => subject_show_path(user)}
                     %i.fa.fa-eye
                     = t("subjects_list.more_link")
-                  \    
+                  \
                   %a{:href => subject_edit_path(user)}
                     %i.fa.fa-edit
                     = t("subjects_list.edit_link")
                   \
                   %a{:href => subject_delete_path(user)}
                     %i.fa.fa-trash-o
-                    = t("subjects_list.delete_link")
+                      = t("subjects_list.delete_link")
+
+      - else
+        %p
+          = t("subjects.no_subjects_message")
+        %p
+          %a{:href => subject_create_path, :class => "btn btn-success"}
+            = t("subjects.add_title")

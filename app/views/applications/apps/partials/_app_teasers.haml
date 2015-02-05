@@ -25,3 +25,10 @@
         .box-footer
           %a.btn.btn-primary{:href => application_show_path(:id => app.slugs)}
             Ver mas
+- else
+  .col-md-12
+    %p
+      = t("apps.no_apps_message")
+    %p
+      %a{:href => application_create_path, :class => "btn btn-success"}
+        = t("apps.add_title")

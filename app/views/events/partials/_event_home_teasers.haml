@@ -1,5 +1,5 @@
 .box
-  .box-header        
+  .box-header
     %h4.box-title
       %i.fa.fa-gears
       = t("event_teasers.title")
@@ -52,6 +52,7 @@
       %p
         %a{:href => event_create_path, :class => "btn btn-success"}
           = t("events.add_title")
-  .box-footer     
-    %a.btn.btn-primary{href: events_list_path}
-      = t("event_teasers.more_link")         
+  .box-footer
+    - if !events.empty?
+      %a.btn.btn-primary{href: events_list_path}
+        = t("event_teasers.more_link")         

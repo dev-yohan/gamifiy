@@ -9,7 +9,7 @@
               %th
                 = t("activities_list.name_column")
               %th
-                = t("activities_list.logs_column")  
+                = t("activities_list.logs_column")
               %th
                 = t("activities_list.status_column")
               %th
@@ -20,32 +20,39 @@
             - activities.each_with_index do |activity, index|
               %tr
                 %td
-                  = activity.name   
+                  = activity.name
                 %td
                   -if !activity.activity_logs_count.nil? && activity.activity_logs_count > 0
                     %span.badge.bg-light-blue
                       = activity.activity_logs_count
                   - else
                     %span.badge.bg-light-blue
-                      0  
+                      0
                 %td
                   - if activity.is_active?
                     %span.badge.bg-green
                       = t("activities_list.active_badge")
                   - else
                     %span.badge.bg-red
-                      = t("activities_list.inactive_badge") 
+                      = t("activities_list.inactive_badge")
                 %td
                   = activity.site.name
                 %td
                   %a{:href => activity_detail_path(activity.site, activity)}
                     %i.fa.fa-eye
                     = t("activities_list.more_link")
-                  \    
+                  \
                   %a{:href => activity_edit_path(activity)}
                     %i.fa.fa-edit
                     = t("activities_list.edit_link")
                   \
                   %a{:href => activity_delete_path(activity)}
                     %i.fa.fa-trash-o
-                    = t("activities_list.delete_link")  
+                    = t("activities_list.delete_link")
+                    
+      - else
+        %p
+          = t("activities.no_activities_message")
+        %p
+          %a{:href => activity_create_path, :class => "btn btn-success"}
+            = t("activities.add_title")

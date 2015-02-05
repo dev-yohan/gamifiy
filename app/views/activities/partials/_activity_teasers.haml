@@ -1,5 +1,5 @@
 .box
-  .box-header        
+  .box-header
     %h4.box-title
       %i.fa.fa-rocket
       = t("activity_teasers.title")
@@ -54,10 +54,10 @@
         %a{:href => activity_create_path, :class => "btn btn-success"}
           = t("activities.add_title")
   .box-footer
-    - if badgeable == true
+    - if badgeable == true && !activities.empty?
       %a.btn.btn-primary{href: activities_list_path}
         = t("activity_teasers.more_link")
     - else
       - if !activities.empty?
         %a.btn.btn-primary{href: application_activities_path(activities.first.site)}
-          = t("activity_teasers.more_link")              
+          = t("activity_teasers.more_link")
