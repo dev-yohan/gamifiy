@@ -1,0 +1,30 @@
+es:
+  admin:
+    sign_in:
+      title: "Iniciar sesión"
+      email_field: "Correo electrónico"
+      password_field: "Contraseña"
+      remember_field: "Recordarme"
+      submit_field: "Ingresar"
+
+
+    sign_up:
+      title: "Registrarse"
+      email_field: "Correo electrónico"
+      password_field: "Contraseña"
+      password_confirmation_field: "Confirmar contraseña"
+      submit_field: "Ingresar"
+
+    edit_profile:
+      title: "Editar perfil"
+      leave_blank: "Dejar en blanco si no se quiere editar"
+      current_password: "Contraseña actual para confirmar los cambios"
+      current_password_field: "Contraseña actual"
+      submit_field: "Actualizar"
+      back_link: "Regresar"
+
+    shared:
+      sign_up: "Registrarse"
+      sign_in: "Iniciar sesión"
+      forgot_password: "Olvido su contraseña"
+      confirmation: "No ha recibido las instrucciones de confirmación?"

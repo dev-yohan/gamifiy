@@ -16,6 +16,6 @@
       .form-group
         = f.password_field :password_confirmation, autocomplete: "off", :class => "form-control", :placeholder => t("user.sign_up.password_confirmation_field")
 
-    .footer 
+    .footer
       = f.submit t("user.sign_up.submit_field"), :class => "btn bg-olive btn-block"
       = render "users/shared/links"

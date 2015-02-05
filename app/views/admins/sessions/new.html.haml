@@ -1,16 +1,16 @@
-%h2 Log in admin
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  %div
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  %div
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  - if devise_mapping.rememberable?
-    %div
-      = f.check_box :remember_me
-      = f.label :remember_me
-  %div= f.submit "Log in"
-= render "admins/shared/links"
+#login-box.form-box
+  .header
+    = t("admin.sign_in.title")
+  = form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "new_user"}) do |f|
+    .body.bg-gray
+      .form-group
+        = f.email_field :email, autofocus: true, :class => "form-control", :placeholder => t("admin.sign_in.email_field")
+      .form-group
+        = f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => t("admin.sign_in.password_field")
+      - if devise_mapping.rememberable?
+        .form-group
+          = f.check_box :remember_me
+          = f.label t("admin.sign_in.remember_field")
+    .footer
+      = f.submit t("admin.sign_in.submit_field"), :class => "btn bg-olive btn-block"
+      = render "admins/shared/links"
