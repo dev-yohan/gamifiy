@@ -50,6 +50,7 @@ es:
     inactive_badge: "Inactivo"
     app_column: "Aplicación"
     actions_column: "Acciones"
+    logs_column: "Redenciones"
     more_link: "Ver"
     edit_link: "Editar"
     delete_link: "Eliminar"

@@ -20,7 +20,8 @@
             - activities.each_with_index do |activity, index|
               %tr
                 %td
-                  = activity.name
+                  %a{:href => activity_detail_path(activity.site, activity)}
+                    = activity.name
                 %td
                   -if !activity.activity_logs_count.nil? && activity.activity_logs_count > 0
                     %span.badge.bg-light-blue
@@ -36,7 +37,8 @@
                     %span.badge.bg-red
                       = t("activities_list.inactive_badge")
                 %td
-                  = activity.site.name
+                  %a{:href => application_show_path(:id => activity.site.slugs)}
+                    = activity.site.name
                 %td
                   %a{:href => activity_detail_path(activity.site, activity)}
                     %i.fa.fa-eye
@@ -49,7 +51,7 @@
                   %a{:href => activity_delete_path(activity)}
                     %i.fa.fa-trash-o
                     = t("activities_list.delete_link")
-                    
+
       - else
         %p
           = t("activities.no_activities_message")

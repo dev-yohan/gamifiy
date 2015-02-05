@@ -17,9 +17,9 @@
                 = log.subject.external_email
             %td
               = log.date.strftime("%d/%m/%y %H:%M:%S")
-
-  %a.btn.btn-primary
-    = t("activity_logs.more_link")
+  %p
+    %a.btn.btn-primary
+      = t("activity_logs.more_link")
 - else
   %p
     = t("activity_logs.empty_logs")

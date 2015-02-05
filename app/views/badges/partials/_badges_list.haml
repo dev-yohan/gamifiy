@@ -11,6 +11,8 @@
               %th
                 = t("badges_list.name_column")
               %th
+                = t("badges_list.logs_column")
+              %th
                 = t("badges_list.status_column")
               %th
                 = t("badges_list.app_column")
@@ -23,6 +25,17 @@
                   = cl_image_tag(badge.image, :width => 50, :height => 50, :crop => :scale)
                 %td
                   = badge.name
+                %td
+                  - if !badge.events.empty?
+                    - if !badge.events.first.event_logs_count.nil? && badge.events.first.event_logs_count > 0
+                      %span.badge.bg-light-blue
+                        = badge.events.first.event_logs_count
+                    - else
+                      %span.badge.bg-light-blue
+                        0
+                  - else
+                    %span.badge.bg-light-blue
+                      0
                 %td
                   - if badge.is_active?
                     %span.badge.bg-green

@@ -96,7 +96,7 @@ class Events::EventController < ApplicationController
     event_fetcher = EventFetcher.new
     @event = Event.find(params[:id])
 
-    behavior_array = event_fetcher.get_daily_event_behavior_data(date_fetcher.get_daily_array(604800, 0, Date.today.to_time.to_i - 604800), @event)
+    behavior_array = event_fetcher.get_daily_event_behavior_data(date_fetcher.get_daily_array(604800, 0, Date.today.at_beginning_of_week.to_time.to_i), @event)
 
     render json: behavior_array
   end
@@ -113,7 +113,7 @@ class Events::EventController < ApplicationController
     activities = Activity.where(:site_id.in => sites_ids).only(:_id).map(&:_id)
     @events = Event.where(:activity_id.in => activities).only(:_id).map(&:_id)
 
-    behavior_array = event_fetcher.get_daily_behavior_data(date_fetcher.get_daily_array(604800, 1, Date.today.at_beginning_of_week.to_time.to_i), @events)
+    behavior_array = event_fetcher.get_daily_behavior_data(date_fetcher.get_daily_array(604800, 0, Date.today.at_beginning_of_week.to_time.to_i), @events)
 
     render json: behavior_array
   end

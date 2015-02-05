@@ -85,7 +85,7 @@ class Activities::ActivityController < ApplicationController
     activity_fetcher = ActivityFetcher.new
     @activity = Activity.find(params[:id])
 
-    behavior_array = activity_fetcher.get_daily_activity_behavior_data(date_fetcher.get_daily_array(604800, 0, Date.today.to_time.to_i - 604800), @activity)
+    behavior_array = activity_fetcher.get_daily_activity_behavior_data(date_fetcher.get_daily_array(604800, 0, Date.today.at_beginning_of_week.to_time.to_i), @activity)
 
     render json: behavior_array
   end
@@ -101,7 +101,7 @@ class Activities::ActivityController < ApplicationController
 
     @activities = Activity.where(:site_id.in => sites_ids).only(:_id).map(&:_id)
 
-    behavior_array = activity_fetcher.get_daily_behavior_data(date_fetcher.get_daily_array(604800, 1, Date.today.at_beginning_of_week.to_time.to_i), @activities)
+    behavior_array = activity_fetcher.get_daily_behavior_data(date_fetcher.get_daily_array(604800, 0, Date.today.at_beginning_of_week.to_time.to_i), @activities)
 
     render json: behavior_array
   end
