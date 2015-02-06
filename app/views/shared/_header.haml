@@ -11,17 +11,14 @@
       %span.icon-bar
       %span.icon-bar
 
-    .navbar-right  
+    .navbar-right
       %ul.nav.navbar-nav
         - if !current_user.nil?
           %li
             %a{:href => "/users/edit"}
               %span
-                = t("shared.user.welcome", :user => current_user.email)
+                = t("shared.user.welcome", :user => current_user.name)
           %li
             %a{:href => "/users/sign_out"}
               %span
                 = t("shared.user.sign_out")
-              
-
-        

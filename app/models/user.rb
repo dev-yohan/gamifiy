@@ -8,6 +8,8 @@ class User
   ## Database authenticatable
   field :email,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
+  field :first_name,    type: String
+  field :last_name,    type: String
 
   ## Recoverable
   field :reset_password_token,   type: String
@@ -35,7 +37,11 @@ class User
   # field :locked_at,       type: Time
 
   def name
-    email
+    if !first_name.nil? && !last_name.nil?
+      first_name + last_name
+    else
+      email
+    end
   end
 
 
@@ -45,5 +51,5 @@ class User
       record if record && record.authenticatable_salt == salt
     end
   end
-  
+
 end

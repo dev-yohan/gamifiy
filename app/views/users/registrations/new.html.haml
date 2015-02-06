@@ -8,6 +8,10 @@
       .form-group
         = f.email_field :email, :class => "form-control", :placeholder => t("user.sign_up.email_field")
       .form-group
+        = f.text_field :first_name, :class => "form-control", :placeholder => t("user.sign_up.first_name_field")
+      .form-group
+        = f.text_field :last_name, :class => "form-control", :placeholder => t("user.sign_up.last_name_field")
+      .form-group
         - if @validatable
           %i
             (#{@minimum_password_length} caracteres mínimo)

@@ -8,15 +8,17 @@ es:
       submit_field: "Ingresar"
 
 
-    sign_up:  
+    sign_up:
       title: "Registrarse"
       email_field: "Correo electrónico"
       password_field: "Contraseña"
       password_confirmation_field: "Confirmar contraseña"
-      submit_field: "Ingresar"
+      first_name_field: "Nombres"
+      last_name_field: "Apellidos"
+      submit_field: "Registrarse"
 
     edit_profile:
-      title: "Editar perfil"  
+      title: "Editar perfil"
       leave_blank: "Dejar en blanco si no se quiere editar"
       current_password: "Contraseña actual para confirmar los cambios"
       current_password_field: "Contraseña actual"
@@ -24,7 +26,7 @@ es:
       back_link: "Regresar"
 
     shared:
-      sign_up: "Registrarse" 
+      sign_up: "Registrarse"
       sign_in: "Iniciar sesión"
-      forgot_password: "Olvido su contraseña" 
+      forgot_password: "Olvido su contraseña"
       confirmation: "No ha recibido las instrucciones de confirmación?"
