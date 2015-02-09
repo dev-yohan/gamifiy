@@ -31,6 +31,11 @@ es:
     edit_link: "Editar"
     delete_link: "Eliminar"
 
+  subject_teasers:
+    more_link: "Ver todo"
+    badges: "%{badges} insignias"
+    points: "%{points} puntos"
+
   create_subject:
     id_lbl: "ID externo"
     email_lbl: "Correo electrónico"

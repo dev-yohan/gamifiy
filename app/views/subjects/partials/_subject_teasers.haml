@@ -10,12 +10,26 @@
           %li
             %span.text
               %a{:href => subject_show_path(user)}
-                = user.external_email
+                = user.name
+            - if !user.event_logs.nil? && user.event_logs.count > 0
+              %span.badge.bg-blue
+                = t("subject_teasers.points", points: user.points)
+
+            - if !user.event_logs.nil? && user.event_logs.count > 0
+              %span.badge.bg-green
+                = t("subject_teasers.badges", badges: user.event_logs.count)
+            - else
+              %span.badge.bg-red
+                = t("subject_teasers.badges", badges: 0)
             .tools
               %a{:href => subject_show_path(user)}
                 %i.fa.fa-edit
-              %a{:href => subject_delete_path(user)}  
+              %a{:href => subject_delete_path(user)}
                 %i.fa.fa-trash-o
+    .box-footer
+      %a.btn.btn-primary{href: ""}
+        = t("subject_teasers.more_link")
+
   - else
     .box-body
       %p

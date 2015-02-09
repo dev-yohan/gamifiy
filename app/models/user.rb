@@ -38,7 +38,7 @@ class User
 
   def name
     if !first_name.nil? && !last_name.nil?
-      first_name + last_name
+      "#{first_name} #{last_name}"
     else
       email
     end
