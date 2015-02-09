@@ -1,0 +1,25 @@
+= render "shared/main_menu"
+%aside.right-side
+  .content-header
+    %h1
+      = cl_image_tag(@app.logo, :width => 60, :height => 40, :crop => :scale)
+      = "#{@app.name} - #{t('badges.title')}"
+    %ol.breadcrumb
+      %li
+        %a{:href => applications_list_path}
+          %i.fa.fa-code
+          = t("apps.title")
+      %li
+        %a{href: application_show_path(@app)}
+          = @app.name
+      %li.active
+        = t("badges.title")
+  .content
+    .row
+      .col-md-12
+        = paginate @badges
+    .row
+      =  render :partial => 'badges/partials/badges_list', :locals => { :badges => @badges }
+    .row
+      .col-md-12
+        = paginate @badges

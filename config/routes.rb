@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   match 'applications/destroy/:id' => 'applications/apps#destroy', :as => :application_destroy, :via => :get
   match 'applications/activities/:id' => 'applications/apps#show_activities', :as => :application_activities, :via => :get
   match 'applications/events/:id' => 'applications/apps#show_events', :as => :application_events, :via => :get
+  match 'applications/badges/:id' => 'applications/apps#show_badges', :as => :application_badges, :via => :get
+  match 'applications/subjects/:id' => 'applications/apps#show_subjects', :as => :application_subjects, :via => :get
 
   #activities namespace
   match 'activities' => 'activities/activity#index', :as => :activities_list, :via => :get

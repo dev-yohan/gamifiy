@@ -26,8 +26,9 @@
                 %i.fa.fa-edit
               %a{:href => subject_delete_path(user)}
                 %i.fa.fa-trash-o
+
     .box-footer
-      %a.btn.btn-primary{href: ""}
+      %a.btn.btn-primary{href: application_subjects_path}
         = t("subject_teasers.more_link")
 
   - else

@@ -105,13 +105,25 @@ class Applications::AppsController < ApplicationController
     activity_page_size = 10
     @app = Sites::Site.find(params[:id])
     @activities = Activity.where(:site => @app).desc(:activity_logs_count).page(params[:page]).per(activity_page_size)
-  end 
+  end
 
   def show_events
     event_page_size = 10
     @app = Sites::Site.find(params[:id])
     @activities = Activity.where(:site => @app).desc(:activity_logs_count)
-    @events = Event.where(:activity_id.in => @activities.only(:_id).map(&:_id)).desc(:event_logs_count).page(1).per(event_page_size)
-  end 
+    @events = Event.where(:activity_id.in => @activities.only(:_id).map(&:_id)).desc(:event_logs_count).page(params[:page]).per(event_page_size)
+  end
+
+  def show_badges
+    badge_page_size = 10
+    @app = Sites::Site.find(params[:id])
+    @badges = Badge.where(site: @app).page(params[:page]).per(badge_page_size)
+  end
+
+  def show_subjects
+    subject_page_size = 10
+    @app = Sites::Site.find(params[:id])
+    @users = Subject.where(site: @app).page(params[:page]).per(subject_page_size)
+  end
 
 end
