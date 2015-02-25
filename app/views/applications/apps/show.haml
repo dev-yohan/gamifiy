@@ -19,6 +19,12 @@
           .box-body
             %p
               = @app.description
+            .alert.alert-info
+              %strong
+                = t("app_detail.access_token")
+              %br
+              %p  
+                = @app.access_token  
         =  render :partial => 'activities/partials/activity_teasers', :locals => { :activities => @activities, :activities_count => @activities_count, :badgeable => false }
         - if !@activities.empty?
           =  render :partial => 'applications/apps/partials/activity_behavior', :locals => {:app => @app}
