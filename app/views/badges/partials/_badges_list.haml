@@ -11,6 +11,8 @@
               %th
                 = t("badges_list.name_column")
               %th
+                = t("badges_list.event_column")  
+              %th
                 = t("badges_list.logs_column")
               %th
                 = t("badges_list.status_column")
@@ -25,6 +27,10 @@
                   = cl_image_tag(badge.image, :width => 50, :height => 50, :crop => :scale)
                 %td
                   = badge.name
+                %td
+                  - if !badge.events.nil? && badge.events.count > 0
+                    %a{:href => event_show_path(badge.events.first)}
+                      = badge.events.first.name   
                 %td
                   - if !badge.events.empty?
                     - if !badge.events.first.event_logs_count.nil? && badge.events.first.event_logs_count > 0
@@ -44,7 +50,8 @@
                     %span.badge.bg-red
                       = t("badges_list.inactive_badge")
                 %td
-                  = badge.site.name
+                  %a{:href => application_show_path(badge.site)}
+                    = badge.site.name
                 %td
                   %a{:href => ""}
                     %i.fa.fa-eye

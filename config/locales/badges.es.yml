@@ -45,6 +45,7 @@ es:
   badges_list:
     logo_column: "Logo"
     name_column: "Nombre"
+    event_column: "Evento"
     status_column: "Estado"
     active_badge: "Activo"
     inactive_badge: "Inactivo"
