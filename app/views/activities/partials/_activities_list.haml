@@ -13,6 +13,8 @@
               %th
                 = t("activities_list.status_column")
               %th
+                = t("activities_list.events_column")  
+              %th
                 = t("activities_list.app_column")
               %th
                 = t("activities_list.actions_column")
@@ -36,6 +38,10 @@
                   - else
                     %span.badge.bg-red
                       = t("activities_list.inactive_badge")
+                %td
+                  %a{:href => ""}
+                    %span.badge.bg-light-blue
+                      = activity.events.count      
                 %td
                   %a{:href => application_show_path(:id => activity.site.slugs)}
                     = activity.site.name

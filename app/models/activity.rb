@@ -9,6 +9,8 @@ class Activity
   field :description, type: String
   field :is_active, type: Boolean
 
+  has_many :events, :class_name => "Event"
+
   belongs_to :site, :class_name => "Sites::Site"
   has_many :activity_logs, :class_name => "ActivityLog"
 

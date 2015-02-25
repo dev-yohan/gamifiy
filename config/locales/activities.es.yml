@@ -54,6 +54,7 @@ es:
     status_column: "Estado"
     active_badge: "Activo"
     inactive_badge: "Inactivo"
+    events_column: "Eventos asociados"
     app_column: "Aplicación"
     actions_column: "Acciones"
     more_link: "Ver"
