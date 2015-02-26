@@ -55,6 +55,7 @@ es:
     activity_column: "Actividad"
     app_column: "Aplicación"
     actions_column: "Acciones"
+    empty_badge: "No asociada"
     more_link: "Ver"
     edit_link: "Editar"
     delete_link: "Eliminar"

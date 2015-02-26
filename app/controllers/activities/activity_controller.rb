@@ -70,7 +70,7 @@ class Activities::ActivityController < ApplicationController
       @app = @activity.site
 
       if @app.user == current_user
-          if @activity.delete
+          if @activity.destroy
              redirect_to activities_list_path, :flash => {:success => I18n.t("delete_activity.delete_success")}
           else
             redirect_to activities_list_path, :flash => {:success => I18n.t("delete_activity.delete_error")}

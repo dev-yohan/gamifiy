@@ -37,7 +37,7 @@ es:
 
   delete_activity:
     title: "Eliminar %{name}"
-    delete_message: "Esta seguro de eliminar esta actividad?"
+    delete_message: "Esta seguro de eliminar esta actividad? eliminará los eventos asociados y los puntos generados por cada evento"
     submit_btn: "Eliminar"
     cancel_btn: "Cancelar"
     delete_success: "Actividad eliminada éxitosamente"

@@ -21,7 +21,7 @@
               %th
                 = t("events_list.app_column")
               %th
-                = t("activities_list.actions_column")
+                = t("events_list.actions_column")
 
             - events.each_with_index do |event, index|
               %tr
@@ -40,10 +40,13 @@
                 %td
                   = event.count
                 %td
-                  - unless event.badge.nil?
+                  - if !event.badge.nil?
                     = cl_image_tag(event.badge.image, :width => 50, :height => 50, :crop => :scale)
                     %br
                     = event.badge.name
+                  - else
+                    %span.badge.bg-red
+                      = t("events_list.empty_badge")    
                 %td
                   = event.activity.name
                 %td

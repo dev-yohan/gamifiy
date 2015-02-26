@@ -36,7 +36,7 @@ es:
 
   delete_badge:
     title: "Eliminar %{name}"
-    delete_message: "Esta seguro de eliminar esta insignia? eliminará el evento, los logs de eventos y los puntos  de los usuarios asociados a cada evento"
+    delete_message: "Esta seguro de eliminar esta insignia?"
     submit_btn: "Eliminar"
     cancel_btn: "Cancelar"
     delete_success: "Insignia eliminada éxitosamente"

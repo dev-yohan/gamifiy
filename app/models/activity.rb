@@ -20,5 +20,14 @@ class Activity
      "#{name} - #{site.name}"
   end  
 
+  before_destroy :destroy_activity_logs, :destroy_events
+
+  def destroy_activity_logs  
+    self.activity_logs.destroy
+  end
+
+  def destroy_events
+     self.events.destroy
+  end  
 
 end
