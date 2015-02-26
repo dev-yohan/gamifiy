@@ -15,11 +15,11 @@
 
   .content
     .row
-      .col-md-8
+      .col-md-7
         #event_name{:style => "display:none"}
           = @event.id
         =  render :partial => 'events/partials/event_logs_list', :locals => { :event_logs => @event_logs }
+
+      .col-md-5
         - if  !@event_logs.empty?
           =  render :partial => 'events/partials/logs_behavior', :locals => {:event => @event}
-
-      .col-md-4

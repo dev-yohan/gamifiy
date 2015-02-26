@@ -81,7 +81,7 @@ class Events::EventController < ApplicationController
       @app = @event.activity.site
 
       if @app.user == current_user
-          if @event.delete
+          if @event.destroy
              redirect_to events_list_path, :flash => {:success => I18n.t("delete_event.delete_success")}
           else
             redirect_to events_list_path, :flash => {:success => I18n.t("delete_event.delete_error")}

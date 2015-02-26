@@ -30,7 +30,10 @@
                 %td
                   - if !badge.events.nil? && badge.events.count > 0
                     %a{:href => event_show_path(badge.events.first)}
-                      = badge.events.first.name   
+                      = badge.events.first.name  
+                  - else
+                    %span.badge.bg-red
+                      = t("badges_list.empty_event")       
                 %td
                   - if !badge.events.empty?
                     - if !badge.events.first.event_logs_count.nil? && badge.events.first.event_logs_count > 0
@@ -53,9 +56,11 @@
                   %a{:href => application_show_path(badge.site)}
                     = badge.site.name
                 %td
-                  %a{:href => ""}
-                    %i.fa.fa-eye
-                    = t("badges_list.more_link")
+                  - if !badge.events.nil? && badge.events.count > 0
+                    %a{:href => event_show_path(badge.events.first)}
+                      %i.fa.fa-eye
+                      = t("badges_list.more_link")
+                      
                   \
                   %a{:href => badge_edit_path(badge)}
                     %i.fa.fa-edit

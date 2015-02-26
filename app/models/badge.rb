@@ -14,4 +14,12 @@ class Badge
   has_many :events, :class_name => "Event"
   belongs_to :site, :class_name => "Sites::Site"
 
+  before_destroy :destroy_events
+
+  def destroy_events
+    if !self.events.nil? && self.events.count > 0
+      self.events.destroy
+    end  
+  end
+
 end

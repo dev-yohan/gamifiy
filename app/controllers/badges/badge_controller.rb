@@ -56,7 +56,7 @@ class Badges::BadgeController < ApplicationController
   def destroy
       @badge = Badge.find(params[:id])
 
-      if @badge.delete
+      if @badge.destroy
          redirect_to badges_list_path, :flash => {:success => I18n.t("delete_badge.delete_success")}
       else
         redirect_to badges_list_path, :flash => {:success => I18n.t("delete_badge.delete_error")}

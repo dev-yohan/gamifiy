@@ -20,7 +20,9 @@ class Subject
     current_points = 0
 
     event_logs.each do |log|
-      current_points += log.event.value
+      unless log.event.nil?
+        current_points += log.event.value
+      end  
     end 
 
     current_points 

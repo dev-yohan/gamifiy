@@ -39,7 +39,7 @@ es:
 
   delete_event:
     title: "Eliminar %{name}"
-    delete_message: "Esta seguro de eliminar este evento?"
+    delete_message: "Esta seguro de eliminar este evento? eliminará los logs de eventos asociados (con sus respectivos puntos)"
     submit_btn: "Eliminar"
     cancel_btn: "Cancelar"
     delete_success: "Evento eliminado éxitosamente"

@@ -10,6 +10,11 @@ class Event
   has_many :event_logs, :class_name => "EventLog"
 
   field :event_logs_count, type: Integer
+  
+  before_destroy :destroy_event_logs
 
+  def destroy_event_logs  
+    self.event_logs.destroy
+  end
 
 end
