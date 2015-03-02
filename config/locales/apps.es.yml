@@ -39,6 +39,7 @@ es:
     cancel_btn: "Cancelar"
     save_success: "Aplicación guardada éxitosamente"
     save_error: "La aplicación no pudo ser guardada"
+    too_many_apps: "Ha superado el límite de apps permitido, debes hacer un upgrade tu plan"
 
   edit_app:
     title: "Editar %{name}"

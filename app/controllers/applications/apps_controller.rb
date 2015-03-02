@@ -42,10 +42,16 @@ class Applications::AppsController < ApplicationController
       @app.logo = params[:app_data][:logo]
       @app.user = current_user
 
-      if @app.save
-        redirect_to applications_list_path, :flash => {:success => I18n.t("create_app.save_success")}
+      if current_user.apps.count < current_user.plan.apps_available
+
+        if @app.save
+          redirect_to applications_list_path, :flash => {:success => I18n.t("create_app.save_success")}
+        else
+          redirect_to applications_list_path, :flash => {:error => I18n.t("create_app.save_error")}
+        end
+
       else
-        redirect_to applications_list_path, :flash => {:error => I18n.t("create_app.save_error")}
+        redirect_to applications_list_path, :flash => {:error => I18n.t("create_app.too_many_apps")}
       end
 
   end

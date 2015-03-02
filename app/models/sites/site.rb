@@ -20,7 +20,7 @@ class Sites::Site
 
   private
 
-    def generate_access_token
+   def generate_access_token
       self.access_token = loop do
         random_token = SecureRandom.urlsafe_base64(nil, false)
         break random_token unless self.class.where(access_token: random_token).nil?
