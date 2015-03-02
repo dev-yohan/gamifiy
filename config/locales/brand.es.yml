@@ -1,0 +1,6 @@
+es:
+  branding:
+    home:
+      pricing:
+       title: "Precios"
+       app_limit: "%{number} apps"

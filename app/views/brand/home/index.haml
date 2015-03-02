@@ -1,1 +1,4 @@
 = render "shared/brand/main_menu"
+.content-wrapper
+  %section.content
+    =  render :partial => 'brand/home/partials/pricing', locals: { plans: @plans }

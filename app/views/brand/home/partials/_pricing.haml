@@ -1,0 +1,24 @@
+.box
+  .box-header.with-border
+    %h3.box-title
+      = t("branding.home.pricing.title")
+  .box-body
+    .row
+      - if !plans.empty?
+        - plans.each_with_index do |plan, index|
+          .col-md-3
+            = #(index + 1) % 4
+            - if (index + 1) % 4 != 0
+              .description-block.border-right
+                %span.description-percentage.text-green
+                  =  t("branding.home.pricing.app_limit", number: plan.apps_available)
+                %br
+                %span.description-text
+                  = plan.name
+            - else
+              .description-block
+                %span.description-percentage.text-green
+                  =  t("branding.home.pricing.app_limit", number: plan.apps_available)
+                %br
+                %span.description-text
+                  = plan.name

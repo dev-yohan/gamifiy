@@ -4,4 +4,5 @@ es:
     user:
       welcome: "Bienvenido %{user}"
       plan: "Plan actual: %{plan}"
+      dashboard: "Panel de Control"
       sign_out: "Cerrar sesión"
