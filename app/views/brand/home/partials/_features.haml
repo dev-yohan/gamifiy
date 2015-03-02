@@ -1,0 +1,15 @@
+.box
+  .box-header.with-border
+    %h3.box-title
+      = t("branding.home.features.title")
+  .box-body
+    .row
+      - if !features.empty?
+        - features.each_with_index do |feature, index|
+          .col-md-3
+            .description-block
+              %h4.description-text
+                = feature.title
+              = cl_image_tag(feature.logo, :width => 150, :height => 150, :crop => :thumb, :gravity => :face, :radius => :max)
+              %p
+                = feature.description

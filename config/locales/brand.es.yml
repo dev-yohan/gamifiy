@@ -4,3 +4,6 @@ es:
       pricing:
        title: "Precios"
        app_limit: "%{number} apps"
+
+      features:
+       title: "Características"

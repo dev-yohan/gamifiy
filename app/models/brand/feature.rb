@@ -7,7 +7,8 @@ class Brand::Feature
   field :description, type: String
   field :published, type: Boolean
 
-     
+  field :logo, type: String
+  mount_uploader :logo, SiteImageUploader   
 
 
 end

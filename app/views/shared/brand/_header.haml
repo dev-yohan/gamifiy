@@ -43,3 +43,12 @@
             %a{:href => "/users/sign_out"}
               %span
                 = t("shared.user.sign_out")
+        - else
+          %li
+            %a{:href => "/users/sign_in"}
+              %span
+                = t("shared.user.sign_in")
+          %li
+            %a{:href => "/users/sign_up"}
+              %span
+                = t("shared.user.sign_up")

@@ -6,3 +6,5 @@ es:
       plan: "Plan actual: %{plan}"
       dashboard: "Panel de Control"
       sign_out: "Cerrar sesión"
+      sign_in: "Iniciar sesión"
+      sign_up: "Registrarse"

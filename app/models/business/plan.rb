@@ -13,6 +13,7 @@ class Business::Plan
   field :logo, type: String
   mount_uploader :logo, SiteImageUploader
 
+  field :monthly_price, type: Money
 
   has_many :users, :class_name => "User"
 
