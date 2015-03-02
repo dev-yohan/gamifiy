@@ -19,6 +19,10 @@
               %span
                 = t("shared.user.welcome", :user => current_user.name)
           %li
+            %a{:href => ""}
+              %span
+                = t("shared.user.plan", :plan => current_user.plan.name)
+          %li
             %a{:href => "/users/sign_out"}
               %span
                 = t("shared.user.sign_out")
