@@ -7,13 +7,13 @@
             %h3.box-title
               = app.name
           .box-tools.pull-right
-            %button.btn.btn-default.btn-sm{"data-original-title" => "Collapse", "data-toggle" => "tooltip", "data-widget" => "collapse", :title => ""}
+            %button.btn.btn-box-tool{"data-original-title" => "Collapse", "data-toggle" => "tooltip", "data-widget" => "collapse", :title => ""}
               %i.fa.fa-minus
 
-            %a.btn.btn-default.btn-sm{:href => application_edit_path(app)}
+            %a.btn.btn.btn-box-tool{:href => application_edit_path(app)}
               %i.fa.fa-edit
 
-            %a.btn.btn-default.btn-sm{ :href => application_delete_path(app) }
+            %a.btn.btn.btn-box-tool{ :href => application_delete_path(app) }
               %i.fa.fa-trash-o
 
         .box-body

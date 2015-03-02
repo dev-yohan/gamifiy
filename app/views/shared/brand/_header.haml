@@ -1,5 +1,5 @@
 %header.main-header
-  %a.logo{:href => dashboard_path}
+  %a.logo{:href => "/"}
     / Add the class icon to your logo image or logo icon to add the margining
     = t("shared.brand")
   / Header Navbar: style can be found in header.less
@@ -13,12 +13,15 @@
 
     .navbar-right
       %ul.nav.navbar-nav
-        - if !current_user.nil?
-          %li
-            %a{:href => "/users/edit"}
-              %span
-                = t("shared.user.welcome", :user => current_user.name)
-          %li
-            %a{:href => "/users/sign_out"}
-              %span
-                = t("shared.user.sign_out")
+        %li
+          %a{:href => "/"}
+            %span
+              = t("brand_main_menu.home.title")
+        %li
+          %a{:href => ""}
+            %span
+              = t("brand_main_menu.features.title")
+        %li
+          %a{:href => ""}
+            %span
+              = t("brand_main_menu.pricing.title")

@@ -1,8 +1,8 @@
-%aside.left-side.sidebar-offcanvas
+%aside.main-sidebar
   %section.sidebar
     %ul.sidebar-menu
       %li
-        %a{:href => "/"}
+        %a{:href => dashboard_path}
           %i.fa.fa-dashboard
           %span
             = t("main_menu.dashboard.title")
@@ -29,10 +29,10 @@
         %a{:href => badges_list_path}
           %i.fa.fa-trophy
           %span
-            = t("main_menu.badges.title") 
+            = t("main_menu.badges.title")
 
       %li
         %a{:href => subjects_list_path}
           %i.fa.fa-users
           %span
-            = t("main_menu.users.title")     
+            = t("main_menu.users.title")

@@ -1,5 +1,5 @@
 = render "shared/main_menu"
-%aside.right-side
+.content-wrapper
   .content-header
     %h1
       = cl_image_tag(@app.logo, :width => 60, :height => 40, :crop => :scale)
@@ -12,7 +12,7 @@
       %li
         %a{href: application_show_path(@app)}
           = @app.name
-      %li.active  
+      %li.active
         = t("activities.title")
   .content
     .row
