@@ -3,15 +3,16 @@
   %head
     %title Gamification
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = stylesheet_link_tag    '/assets/stylesheets/AdminLTE.css', media: 'all', 'data-turbolinks-track' => true
-    = stylesheet_link_tag    '/assets/stylesheets/bootstrap.min', media: 'all', 'data-turbolinks-track' => true
+    = #stylesheet_link_tag    '/assets/stylesheets/AdminLTE.css', media: 'all', 'data-turbolinks-track' => true
+    = #stylesheet_link_tag    '/assets/skins/_all-skins.css', media: 'all'
+    = #stylesheet_link_tag    '/assets/stylesheets/skins/skin-black.css', media: 'all'
+    = #stylesheet_link_tag    '/assets/stylesheets/bootstrap.min', media: 'all', 'data-turbolinks-track' => true
     %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"}
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     %script{:src => "http://cdn.oesmith.co.uk/morris-0.4.1.min.js"}
     %link{:href => "http://fonts.googleapis.com/css?family=Source+Sans+Pro", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "http://fonts.googleapis.com/css?family=Kaushan+Script", :rel => "stylesheet", :type => "text/css"}
     = csrf_meta_tags
-  %body.skin-black.wysihtml5-supported.pace-done
+  %body.skin-black
     = render "shared/header"
-    .wrapper.row-offcanvas.row-offcanvas-left
-      = yield
+    = yield

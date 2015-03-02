@@ -1,0 +1,27 @@
+%header.main-header
+  %a.logo{:href => "/"}
+    / Add the class icon to your logo image or logo icon to add the margining
+    = t("shared.brand")
+  / Header Navbar: style can be found in header.less
+  %nav.navbar.navbar-static-top{:role => "navigation"}
+    / Sidebar toggle button
+    %a.sidebar-toggle{"data-toggle" => "offcanvas", :href => "#", :role => "button"}
+      %span.sr-only Toggle navigation
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+
+    .navbar-right
+      %ul.nav.navbar-nav
+        %li
+          %a{:href => "/"}
+            %span
+              = t("brand_main_menu.home.title")
+        %li
+          %a{:href => ""}
+            %span
+              = t("brand_main_menu.features.title")
+        %li
+          %a{:href => ""}
+            %span
+              = t("brand_main_menu.pricing.title")

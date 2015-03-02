@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/dashboard', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/admin_dashboard', as: 'rails_admin'
   devise_for :admins
   devise_for :users
 
-  root 'home#index'
+  root 'brand/home#index'
+
+  match 'dashboard' => 'home#index', :as => :dashboard , :via => :get
 
   #apps namespace
   match 'applications' => 'applications/apps#index', :as => :applications_list, :via => :get

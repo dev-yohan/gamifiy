@@ -1,11 +1,11 @@
-%header.header
-  %a.logo{:href => "/"}
+%header.main-header
+  %a.logo{:href => dashboard_path}
     / Add the class icon to your logo image or logo icon to add the margining
     = t("shared.brand")
   / Header Navbar: style can be found in header.less
   %nav.navbar.navbar-static-top{:role => "navigation"}
     / Sidebar toggle button
-    %a.navbar-btn.sidebar-toggle{"data-toggle" => "offcanvas", :href => "#", :role => "button"}
+    %a.sidebar-toggle{"data-toggle" => "offcanvas", :href => "#", :role => "button"}
       %span.sr-only Toggle navigation
       %span.icon-bar
       %span.icon-bar
@@ -18,6 +18,10 @@
             %a{:href => "/users/edit"}
               %span
                 = t("shared.user.welcome", :user => current_user.name)
+          %li
+            %a{:href => ""}
+              %span
+                = t("shared.user.plan", :plan => current_user.plan.name)
           %li
             %a{:href => "/users/sign_out"}
               %span

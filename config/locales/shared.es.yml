@@ -3,4 +3,5 @@ es:
     brand: "Gamify"
     user:
       welcome: "Bienvenido %{user}"
+      plan: "Plan actual: %{plan}"
       sign_out: "Cerrar sesión"
