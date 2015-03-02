@@ -2,8 +2,11 @@ es:
   branding:
     home:
       pricing:
-       title: "Precios"
-       app_limit: "%{number} apps"
+        title: "Precios"
+        app_limit: "%{number} apps"
 
       features:
-       title: "Características"
+        title: "Características"
+
+      screenshots:
+        title: "Capturas de pantalla"
