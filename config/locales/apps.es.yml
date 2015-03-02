@@ -29,7 +29,7 @@ es:
 
   app_detail:
     activity_count_title: "Tasa de ejecución de actividades"
-    access_token: "Your access token:"
+    access_token: "Token de acceso:"
 
   create_app:
     name_lbl: "Nombre de la aplicación"
