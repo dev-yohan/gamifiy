@@ -29,6 +29,7 @@ es:
 
   app_detail:
     activity_count_title: "Tasa de ejecución de actividades"
+    app_id: "ID de aplicación:"
     access_token: "Token de acceso:"
 
   create_app:

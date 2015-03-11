@@ -5,8 +5,9 @@
       .col-md-12
         =  render :partial => 'brand/home/partials/features', locals: { features: @features }
     .row
-      .col-md-6
-        =  render :partial => 'brand/home/partials/screenshots', locals: { screenshots: @screenshots }
+      .col-md-12
+        = # render :partial => 'brand/home/partials/screenshots', locals: { screenshots: @screenshots }
+      
     .row
       .col-md-12
         =  render :partial => 'brand/home/partials/pricing', locals: { plans: @plans }

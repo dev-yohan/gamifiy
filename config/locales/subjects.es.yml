@@ -16,6 +16,10 @@ es:
           dev_message: "User with id %{id} not found"
           friendly_message: "User with id %{id} not found"
 
+        code_502:
+          dev_message: "User can't be created"
+          friendly_message: "User can't be created"
+
   subjects_list:
     email_column: "Email"
     first_name_column: "Nombres"
