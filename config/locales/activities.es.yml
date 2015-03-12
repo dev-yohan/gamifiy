@@ -18,6 +18,11 @@ es:
           dev_message: "Activity with id %{id} not found"
           friendly_message: "Activity with id %{id} not found"
 
+        code_202:
+          dev_message: "Activity log can't be created"
+          friendly_message: "Activity log can't be created"  
+
+
   create_activity:
     name_lbl: "Nombre de la actividad"
     description_lbl: "Descripción de la actividad"

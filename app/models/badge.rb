@@ -19,7 +19,11 @@ class Badge
   def destroy_events
     if !self.events.nil? && self.events.count > 0
       self.events.destroy
-    end  
+    end
+  end
+
+  def name_badge
+     "#{name} - #{site.name}"
   end
 
 end

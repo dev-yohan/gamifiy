@@ -6,14 +6,16 @@ class Api::V1::Subjects::SubjectManager
       subject = ::Subject.find(subject_id)
 
       if !subject.site.nil?
-        site = {id: subject.site.id, name: subject.site.name}
+        site = subject.site.id.to_s
       else
         site = {}
       end
 
-      json_data = {id: subject._id,
+      json_data = {id: subject.id.to_s,
         external_id: subject.external_id,
         external_email: subject.external_email,
+        external_first_name: subject.external_first_name,
+        external_last_name: subject.external_last_name,
         is_active: subject.is_active,
         site: site}
 
@@ -29,11 +31,11 @@ class Api::V1::Subjects::SubjectManager
 
   #create new subject
   def create_subject(app_id, external_id, external_email, external_first_name, external_last_name, is_active)
-    site = Sites::Site.where(id: app_id).first
+    site = ::Sites::Site.where(id: app_id).first
 
     if !site.nil?
 
-      subject = Subject.new()
+      subject = ::Subject.new()
       subject.external_id = external_id
       subject.external_email = external_email
       subject.external_first_name = external_first_name

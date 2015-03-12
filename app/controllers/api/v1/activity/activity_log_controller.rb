@@ -17,4 +17,9 @@ class Api::V1::Activity::ActivityLogController < Api::ApiController
     render log_manager.show_by_activity(params[:id], page, limit)
   end
 
+  def new
+    log_manager = Api::V1::Activities::ActivityLogManager.new
+    render log_manager.create_activity_log(params[:id], params[:external_id])
+  end
+
 end

@@ -1,5 +1,48 @@
 class Api::V1::Activities::ActivityLogManager
 
+  def create_activity_log(activity_id, subject_external_id)
+    begin
+      json_data = Array.new
+      activity = ::Activity.find(activity_id)
+
+      subject = ::Subject.where(external_id: subject_external_id).first
+
+      if !subject.nil?
+        activity_log = ::ActivityLog.new(activity: activity, subject: subject, date: DateTime.now)
+
+        if activity_log.save
+          json_data = {
+               id: activity_log.id,
+               subject: activity_log.subject.id,
+               date: activity_log.date,
+               friendly_date: activity_log.date.strftime("%Y-%m-%d %H:%M")
+            }
+          status = 200
+        else
+          json_data = {error_code: 202,
+            dev_message: I18n.t("activities.api.error.code_202.dev_message", id: activity_id),
+            friendly_message: I18n.t("activities.api.error.code_202.friendly_message", id: activity_id)}
+            status = 500
+        end
+
+      else
+          json_data = {error_code: 501,
+             dev_message: I18n.t("subjects.api.error.code_501.dev_message", id: subject_id),
+             friendly_message: I18n.t("subjects.api.error.code_501.friendly_message", id: subject_id)}
+          status = 404
+      end
+    rescue Mongoid::Errors::DocumentNotFound
+
+      json_data = {error_code: 201,
+        dev_message: I18n.t("activities.api.error.code_201.dev_message", id: activity_id),
+        friendly_message: I18n.t("activities.api.error.code_201.friendly_message", id: activity_id)}
+        status = 404
+
+    end
+
+      {json: json_data, status: status}
+  end
+
   def show_by_activity(activity_id, page, limit)
     begin
       json_data = Array.new
