@@ -1,4 +1,8 @@
 es:
+
+  activity_detail:
+    id: "ID: %{id}"
+
   activities:
     title: "Actividades"
     description_title: "Descripción"
@@ -7,6 +11,7 @@ es:
     add_title: "Crear nueva actividad"
     edit_title: "Editar actividad %{activity}"
     no_activities_message: "No hay actividades asociadas"
+
 
     api:
       error:
@@ -20,7 +25,7 @@ es:
 
         code_202:
           dev_message: "Activity log can't be created"
-          friendly_message: "Activity log can't be created"  
+          friendly_message: "Activity log can't be created"
 
 
   create_activity:

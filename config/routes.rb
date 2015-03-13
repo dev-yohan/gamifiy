@@ -81,6 +81,7 @@ Rails.application.routes.draw do
   match "api/v1/events/:id" => "api/v1/event/event#show", :as => :api_v1_event_detail, :via => :get
   #badge
   match "api/v1/badges/:id" => "api/v1/badge/badge#show", :as => :api_v1_badge_detail, :via => :get
+  match "api/v1/user_badges/:app_id/:external_id" => "api/v1/badge/user_badges#index", :as => :api_v1_user_badges, :via => :get
   #subjects
   match "api/v1/users/:id" => "api/v1/subject/subject#show", :as => :api_v1_subject_detail, :via => :get
   match "api/v1/users" => "api/v1/subject/subject#new", :as => :api_v1_subject_create, :via => :post

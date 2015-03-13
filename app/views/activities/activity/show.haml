@@ -32,6 +32,9 @@
               = @activity.slugs.first
             %p
               = @activity.description
+            .alert.alert-info
+              %strong
+                = t("activity_detail.id", id: @activity.id)
 
             .row
               .col-md-12
