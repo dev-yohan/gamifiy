@@ -27,6 +27,8 @@ class Api::V1::Badges::BadgeManager
     return {json: json_data, status: status}
   end
 
+
+  ## Show user badges
   def show_badges_by_user(app_id, external_id, page, limit)
     site = ::Sites::Site.where(id: app_id).first
 

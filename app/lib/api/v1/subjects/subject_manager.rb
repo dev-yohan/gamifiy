@@ -71,4 +71,40 @@ class Api::V1::Subjects::SubjectManager
     return {json: json_data, status: status}
   end
 
+  def subject_ranking(app_id, page, limit)
+    site = ::Sites::Site.where(id: app_id).first
+
+    if !site.nil?
+      json_data = Array.new
+      subjects = ::Subject.where(site: site).desc(:points).page(page).per(limit)
+
+      subjects.each do |subject|
+
+        json_data.push({
+          id: subject.id.to_s,
+            external_id: subject.external_id,
+            external_email: subject.external_email,
+            external_first_name: subject.external_first_name,
+            external_last_name: subject.external_last_name,
+            is_active: subject.is_active,
+            points: subject.points,
+            badges: subject.event_logs.count,
+            site: site.id.to_s})
+
+       end
+
+      status = 200
+
+    else
+
+      json_data = {:error_code => 100,
+       :dev_message => I18n.t("apps.api.error.code_100.dev_message"),
+       :friendly_message => I18n.t("apps.api.error.code_100.friendly_message")}
+      status = 404
+
+    end
+
+    return {json: json_data, status: status}
+  end
+
 end

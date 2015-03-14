@@ -85,7 +85,7 @@ Rails.application.routes.draw do
   #subjects
   match "api/v1/users/:id" => "api/v1/subject/subject#show", :as => :api_v1_subject_detail, :via => :get
   match "api/v1/users" => "api/v1/subject/subject#new", :as => :api_v1_subject_create, :via => :post
-
+  match "api/v1/user_ranking/:id(/:page)(/:limit)" => "api/v1/subject/subject#ranking", :as => :api_v1_subject_ranking, :via => :get
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
