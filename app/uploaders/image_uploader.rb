@@ -4,12 +4,11 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   version :standard do
     process :eager => true
-    process :resize_to_fill => [100, 150, :north]          
+    process :resize_to_fill => [100, 150, :north]
   end
-  
+
   version :thumbnail do
-    eager
-    resize_to_fit(50, 50)
+    process :resize_to_fill => [150, 150]
   end
 
   def public_id

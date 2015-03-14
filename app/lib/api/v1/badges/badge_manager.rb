@@ -14,7 +14,7 @@ class Api::V1::Badges::BadgeManager
       json_data = {id: badge._id,
                     name: badge.name,
                     slug: badge.slugs.first,
-                    image: badge.image.url,
+                    image: badge.image.thumbnail.url,
                     site: site}
 
     rescue Mongoid::Errors::DocumentNotFound
@@ -41,8 +41,9 @@ class Api::V1::Badges::BadgeManager
           id: badge.id.to_s,
           name: badge.name,
           slug: badge.slugs.first,
-          image: badge.image.url,
-          site: badge.site.id.to_s
+          image: badge.image.thumbnail.url,
+          site: badge.site.id.to_s,
+          points: badge.events.first.value
           })
 
       end
