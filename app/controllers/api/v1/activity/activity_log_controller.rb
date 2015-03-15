@@ -22,4 +22,22 @@ class Api::V1::Activity::ActivityLogController < Api::ApiController
     render log_manager.create_activity_log(params[:id], params[:external_id])
   end
 
+  def user_activity_logs
+    log_manager = Api::V1::Activities::ActivityLogManager.new
+
+    if params[:page].nil?
+      page = 1
+    else
+      page = params[:page]
+    end
+    if params[:limit].nil?
+      limit = 10
+    else
+      limit = params[:limit]
+    end
+
+    render log_manager.show_activity_logs_by_user(params[:external_id], page, limit)
+
+  end
+
 end
