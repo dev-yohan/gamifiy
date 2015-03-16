@@ -35,22 +35,37 @@ class Api::V1::Badges::BadgeManager
     if !site.nil?
       json_data = Array.new
 
-      badges = ::Badge.where(site: site).page(page).per(limit)
+        subject = ::Subject.where(external_id: external_id).first
 
-      badges.each do |badge|
+        if !subject.nil?
 
-        json_data.push({
-          id: badge.id.to_s,
-          name: badge.name,
-          slug: badge.slugs.first,
-          image: badge.image.thumbnail.url,
-          site: badge.site.id.to_s,
-          points: badge.events.first.value
-          })
+            event_logs = ::EventLog.where(subject: subject).page(page).per(limit)
 
-      end
+            badges = ::Badge.where(site: site)
 
-      status = 200
+            event_logs.each do |log|
+
+              if log.event.badge.site.id == site.id
+
+                json_data.push({
+                  id: log.event.badge.id.to_s,
+                  name: log.event.badge.name,
+                  slug: log.event.badge.slugs.first,
+                  image: log.event.badge.image.thumbnail.url,
+                  site: log.event.badge.site.id.to_s,
+                  points: log.event.badge.events.first.value
+                  })
+              end
+
+            end
+
+            status = 200
+        else
+          json_data = {error_code: 501,
+            dev_message: I18n.t("subjects.api.error.code_501.dev_message", id: subject_id),
+            friendly_message: I18n.t("subjects.api.error.code_501.friendly_message", id: subject_id)}
+            status = 404
+        end
 
     else
 

@@ -5,8 +5,6 @@ class Api::V1::Subjects::SubjectManager
     begin
       subject = ::Subject.find(subject_id)
 
-
-
       rescue Mongoid::Errors::DocumentNotFound
         json_data = {error_code: 501,
           dev_message: I18n.t("subjects.api.error.code_501.dev_message", id: subject_id),
