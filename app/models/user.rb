@@ -47,6 +47,16 @@ class User
     end
   end
 
+  def after_confirmation
+    plan = Business::Plan.where(name: "Free").first
+    if !plan.nil?
+       self.plan = plan
+       self.save
+       puts "PLAN UPDATED!!!"
+    else
+      puts "NO PLAN!!!"
+    end
+  end
 
   class << self
     def serialize_from_session(key, salt)

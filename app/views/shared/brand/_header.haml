@@ -34,7 +34,8 @@
           %li
             %a{:href => ""}
               %span
-                = t("shared.user.plan", :plan => current_user.plan.name)
+                - if !current_user.plan.nil?
+                  = t("shared.user.plan", :plan => current_user.plan.name)
           %li
             %a{:href => dashboard_path}
               %span
