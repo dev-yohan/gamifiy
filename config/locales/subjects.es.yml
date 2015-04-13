@@ -20,6 +20,10 @@ es:
           dev_message: "User can't be created"
           friendly_message: "User can't be created"
 
+        code_503:
+          dev_message: "User already exists"
+          friendly_message: "User already exists"
+
   subjects_list:
     email_column: "Email"
     first_name_column: "Nombres"

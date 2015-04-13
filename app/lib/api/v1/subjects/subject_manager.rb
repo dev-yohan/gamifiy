@@ -35,28 +35,38 @@ class Api::V1::Subjects::SubjectManager
 
     if !site.nil?
 
-      subject = ::Subject.new()
-      subject.external_id = external_id
-      subject.external_email = external_email
-      subject.external_first_name = external_first_name
-      subject.external_last_name = external_last_name
-      subject.is_active = is_active
+      subject = ::Subject.where(site: site, external_email: external_email).first
 
-      subject.site = site
+      if subject.nil?
 
-      if subject.save
-        json_data = {id: subject._id,
-          external_id: subject.external_id,
-          external_email: subject.external_email,
-          is_active: subject.is_active,
-          site: site}
+          subject = ::Subject.new()
+          subject.external_id = external_id
+          subject.external_email = external_email
+          subject.external_first_name = external_first_name
+          subject.external_last_name = external_last_name
+          subject.is_active = is_active
 
-          status = 200
+          subject.site = site
+
+          if subject.save
+            json_data = {id: subject._id,
+              external_id: subject.external_id,
+              external_email: subject.external_email,
+              is_active: subject.is_active,
+              site: site}
+
+              status = 200
+          else
+            json_data = {error_code: 500,
+              dev_message: I18n.t("subjects.api.error.code_502.dev_message"),
+              friendly_message: I18n.t("subjects.api.error.code_502.friendly_message")}
+              status = 502
+          end
       else
-        json_data = {error_code: 502,
-          dev_message: I18n.t("subjects.api.error.code_502.dev_message"),
-          friendly_message: I18n.t("subjects.api.error.code_502.friendly_message")}
-          status = 502
+        json_data = {error_code: 503,
+          dev_message: I18n.t("subjects.api.error.code_503.dev_message"),
+          friendly_message: I18n.t("subjects.api.error.code_503.friendly_message")}
+          status = 403
       end
 
     else

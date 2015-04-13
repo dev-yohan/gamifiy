@@ -27,8 +27,8 @@ class Api::V1::Activities::ActivityLogManager
 
       else
           json_data = {error_code: 501,
-             dev_message: I18n.t("subjects.api.error.code_501.dev_message", id: subject_id),
-             friendly_message: I18n.t("subjects.api.error.code_501.friendly_message", id: subject_id)}
+             dev_message: I18n.t("subjects.api.error.code_501.dev_message"),
+             friendly_message: I18n.t("subjects.api.error.code_501.friendly_message")}
           status = 404
       end
     rescue Mongoid::Errors::DocumentNotFound
