@@ -73,3 +73,6 @@ gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-ra
 
 #code quality
 gem 'rubocop', require: false
+
+#gem to manage config values by environment
+gem "figaro"
