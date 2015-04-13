@@ -52,9 +52,9 @@ class User
     if !plan.nil?
        self.plan = plan
        self.save
-       puts "PLAN UPDATED!!!"
+
     else
-      puts "NO PLAN!!!"
+  
     end
   end
 
