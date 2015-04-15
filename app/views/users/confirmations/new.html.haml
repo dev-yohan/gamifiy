@@ -1,9 +1,11 @@
-%h2 Resend confirmation instructions
-= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
-  = devise_error_messages!
-  %div
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  %div= f.submit "Resend confirmation instructions"
-= render "users/shared/links"
+.login-box
+  .login-logo
+    = t("user.confirmation_instructions.title")
+  .login-box-body
+    = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+      = devise_error_messages!
+      .form-group
+        = f.email_field :email, :class => "form-control", :placeholder => t("user.confirmation_instructions.email_field"), autofocus: true
+      .footer
+        = f.submit t("user.confirmation_instructions.submit_field"), :class => "btn btn-block btn-primary btn-flat"
+        = render "users/shared/links"

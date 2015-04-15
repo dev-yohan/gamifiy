@@ -7,7 +7,6 @@ es:
       remember_field: "Recordarme"
       submit_field: "Ingresar"
 
-
     sign_up:
       title: "Registrarse"
       email_field: "Correo electrónico"
@@ -16,6 +15,16 @@ es:
       first_name_field: "Nombres"
       last_name_field: "Apellidos"
       submit_field: "Registrarse"
+
+    recover_password:
+      title: "Olvido su contraseña"
+      email_field: "Correo electrónico"
+      submit_field: "Enviar"
+
+    confirmation_instructions:
+      title: "Reenviar instrucciones de confirmación"
+      email_field: "Correo electrónico"
+      submit_field: "Enviar"
 
     edit_profile:
       title: "Editar perfil"
