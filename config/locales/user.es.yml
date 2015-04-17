@@ -21,6 +21,11 @@ es:
       email_field: "Correo electrónico"
       submit_field: "Enviar"
 
+    change_password:
+      title: "Cambiar su contraseña"
+      email_field: "Correo electrónico"
+      submit_field: "Enviar"
+
     confirmation_instructions:
       title: "Reenviar instrucciones de confirmación"
       email_field: "Correo electrónico"
