@@ -20,6 +20,18 @@
         = content_tag :div, msg, class: flash_class(name.to_s)
     .row
       .col-md-12
+        .progress-group
+          %span.progress-text
+            = t("apps.available_apps")
+          %span.progress-number
+            %strong
+              = @user_sites.count
+            = "/#{current_user.plan.apps_available}"
+          .progress.sm
+            - percentage = ((@user_sites.count.to_f/current_user.plan.apps_available).to_f * 100)
+            .progress-bar.progress-bar-green{style: "width:#{percentage}%"}
+      .row
+      .col-md-12
         = paginate @user_sites
     .row
       =  render :partial => 'applications/apps/partials/app_teasers', :locals => { :user_sites => @user_sites }

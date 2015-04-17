@@ -12,6 +12,7 @@ es:
     add_link: "Crear nueva"
     add_title: "Crear nueva aplicación"
     no_apps_message: "No hay aplicaciones creadas"
+    available_apps: "Apps en uso"
 
     api:
       error:
@@ -40,7 +41,7 @@ es:
     cancel_btn: "Cancelar"
     save_success: "Aplicación guardada éxitosamente"
     save_error: "La aplicación no pudo ser guardada"
-    too_many_apps: "Ha superado el límite de apps permitido, debes hacer un upgrade tu plan"
+    too_many_apps: "Ha superado el límite de apps permitido, debes hacer un upgrade de tu plan"
 
   edit_app:
     title: "Editar %{name}"
