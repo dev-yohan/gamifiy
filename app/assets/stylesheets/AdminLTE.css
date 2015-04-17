@@ -4051,3 +4051,8 @@ Gradient Background colors
   opacity: 1;
   filter: alpha(opacity=100);
 }
+
+.app_box {
+  min-height: 460px;
+  max-height: 460px;
+}
