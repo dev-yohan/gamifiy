@@ -40,6 +40,7 @@ module Gamification
       Devise::ConfirmationsController.layout "login"
       Devise::UnlocksController.layout "login"
       Devise::PasswordsController.layout "login"
+      Devise::Mailer.layout "mailer"
     end
 
   end

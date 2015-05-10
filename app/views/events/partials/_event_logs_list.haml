@@ -24,8 +24,9 @@
             %td
               = log.date.strftime("%Y-%m-%d %H:%M")
             %td
-              %a{href: subject_show_path(log.subject)}
-                = log.subject.external_email
+              - if !log.subject.nil?
+                %a{href: subject_show_path(log.subject)}
+                  = log.subject.external_email
             %td
               = log.event.badge.name
             %td
