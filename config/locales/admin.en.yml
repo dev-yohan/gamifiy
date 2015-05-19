@@ -1,0 +1,30 @@
+en:
+  admin:
+    sign_in:
+      title: "Log in"
+      email_field: "Email"
+      password_field: "Password"
+      remember_field: "Remember me"
+      submit_field: "Log in"
+
+
+    sign_up:
+      title: "Sign up"
+      email_field: "Email"
+      password_field: "Password"
+      password_confirmation_field: "Confirm password"
+      submit_field: "Sign up"
+
+    edit_profile:
+      title: "Edit profile"
+      leave_blank: "Leave blank if you does not want to edit"
+      current_password: "Current password to confirm changes"
+      current_password_field: "Current password"
+      submit_field: "Update"
+      back_link: "Back"
+
+    shared:
+      sign_up: "Sign up"
+      sign_in: "Sign in"
+      forgot_password: "Forget yout password?"
+      confirmation: "Resend confirmation instructions"

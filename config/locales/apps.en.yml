@@ -1,0 +1,58 @@
+es:
+  views:
+    pagination:
+      previous: "Previous"
+      next: "Next"
+      first: "First"
+      last: "Last"
+
+  apps:
+    title: "Applications"
+    home_breadcrumb: "Home"
+    add_link: "Create new"
+    add_title: "Create new application"
+    no_apps_message: "No applications available"
+    available_apps: "Used apps"
+
+    api:
+      error:
+       code_100:
+        dev_message: "Applications not found"
+        friendly_message: "Applications not found"
+
+       code_101:
+        dev_message: "Application with id %{id} not found"
+        friendly_message: "Application with id %{id} not found"
+
+
+  app_teaser:
+    more_link: "More"
+
+  app_detail:
+    activity_count_title: "Activity execution rate"
+    app_id: "Application ID:"
+    access_token: "Access Token:"
+
+  create_app:
+    name_lbl: "Application name"
+    description_lbl: "Application description"
+    logo_lbl: "Logo"
+    submit_btn: "Save"
+    cancel_btn: "Cancel"
+    save_success: "Application saved successfully"
+    save_error: "Application can't be saved"
+    too_many_apps: "You have exceeded the limit of allowed apps, you need to upgrade your plan"
+
+  edit_app:
+    title: "Edit %{name}"
+    edit_success: "Application edited successfully"
+    edit_error: "Application can't be edited"
+
+  delete_app:
+    title: "Delete %{name}"
+    delete_message: "Really remove this application?"
+    submit_btn: "Delete"
+    cancel_btn: "Cancel"
+    delete_success: "Application deleted successfully"
+    delete_error: "Application can't be deleted"
+    wrong_owner: "Application can't be deleted because you are not the owner"

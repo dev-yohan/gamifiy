@@ -1,0 +1,58 @@
+en:
+  badges:
+    title: "Badges"
+    home_breadcrumb: "Home"
+    add_link: "Create new"
+    add_title: "Create new badge"
+    no_badges_message: "No associated badges"
+
+
+    api:
+      error:
+        code_400:
+          dev_message: "Badges not found"
+          friendly_message: "Badges not found"
+
+        code_401:
+          dev_message: "Badge with id %{id} not found"
+          friendly_message: "Badge with id %{id} not found"
+
+  create_badge:
+    name_lbl: "Badge name"
+    logo_lbl: "Logo"
+    status_lbl: "Active"
+    application_lbl: "Application"
+    application_prompt: "Select an option"
+    submit_btn: "Save"
+    cancel_btn: "Cancel"
+    save_success: "Badge saved successfully"
+    save_error: "Badge can't be saved"
+
+  edit_badge:
+    title: "Edit %{badge}"
+    current_site: "(Current: %{site})"
+    edit_success: "Badge edited successfully"
+    edit_error: "Badge can't be edited"
+
+  delete_badge:
+    title: "Delete %{name}"
+    delete_message: "Are you sure?"
+    submit_btn: "Delete"
+    cancel_btn: "Cancel"
+    delete_success: "Badge deleted successfully"
+    delete_error: "Badge can't be deleted"
+
+  badges_list:
+    logo_column: "Logo"
+    name_column: "Name"
+    event_column: "Event"
+    status_column: "Status"
+    active_badge: "Active"
+    inactive_badge: "Inactive"
+    empty_event: "No assigned"
+    app_column: "Application"
+    actions_column: "Actions"
+    logs_column: "Redemptions"
+    more_link: "See more"
+    edit_link: "Edit"
+    delete_link: "Delete"

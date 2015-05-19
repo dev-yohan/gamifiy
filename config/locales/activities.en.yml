@@ -1,0 +1,88 @@
+en:
+
+  activity_detail:
+    id: "ID: %{id}"
+
+  activities:
+    title: "Activities"
+    description_title: "Descriptio"
+    home_breadcrumb: "Home"
+    add_link: "Create new"
+    add_title: "Create new activity"
+    edit_title: "Edit activity %{activity}"
+    no_activities_message: "No associated activities"
+
+
+    api:
+      error:
+        code_200:
+          dev_message: "Activities not found"
+          friendly_message: "Activities not found"
+
+        code_201:
+          dev_message: "Activity with id %{id} not found"
+          friendly_message: "Activity with id %{id} not found"
+
+        code_202:
+          dev_message: "Activity log can't be created"
+          friendly_message: "Activity log can't be created"
+
+
+  create_activity:
+    name_lbl: "Activity name"
+    description_lbl: "Activity description"
+    status_lbl: "Active"
+    application_lbl: "Aplicación"
+    application_prompt: "Select an option"
+    submit_btn: "Save"
+    cancel_btn: "Cancel"
+    save_success: "Activity successfully saved"
+    save_error: "Acitivity can't be saved"
+    current_site: "(Actual: %{site})"
+
+  edit_activity:
+    title: "Edit %{activity}"
+    edit_success: "Activity successfully edited"
+    edit_error: "Activity can't be edited"
+
+  delete_activity:
+    title: "Delete %{name}"
+    delete_message: "Are you sure? you are going to delete the associated events and the related points of each event"
+    submit_btn: "Delete"
+    cancel_btn: "Cancel"
+    delete_success: "Activity successfully deleted"
+    delete_error: "Activity can't be deleted"
+    wrong_owner: "Activity can't be deleted because current user isn't the activity owner"
+
+  activity_teasers:
+    title: "Percentage of activity"
+    more_link: "See all"
+
+  activities_list:
+    name_column: "Name"
+    logs_column: "Occurrence"
+    status_column: "Status"
+    active_badge: "Active"
+    inactive_badge: "Inactive"
+    events_column: "Related events"
+    app_column: "Application"
+    actions_column: "Actions"
+    more_link: "Show"
+    edit_link: "Edit"
+    delete_link: "Delete"
+
+  activity_logs:
+    last_title: "Last activity logs"
+    behavior_title: "Behavior"
+    app_column: "Application"
+    activity_column: "Activity"
+    subject_column: "User"
+    date_column: "Date"
+    more_link: "See all"
+    empty_logs: "There is not activities"
+
+  activity_log_chart:
+    title: "Execution rate"
+
+  activity_distrib_chart:
+    title: "Distribution"
