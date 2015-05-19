@@ -7,7 +7,8 @@
     .row
       .col-md-12
         = # render :partial => 'brand/home/partials/screenshots', locals: { screenshots: @screenshots }
-      
-    .row
-      .col-md-12
-        =  render :partial => 'brand/home/partials/pricing', locals: { plans: @plans }
+
+    - if !ENV["show_pricing"]
+      .row
+        .col-md-12
+          =  render :partial => 'brand/home/partials/pricing', locals: { plans: @plans }

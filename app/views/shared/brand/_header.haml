@@ -21,10 +21,12 @@
           %a{:href => ""}
             %span
               = t("brand_main_menu.features.title")
-        %li
-          %a{:href => ""}
-            %span
-              = t("brand_main_menu.pricing.title")
+
+        - if !ENV["show_pricing"]
+          %li
+            %a{:href => ""}
+              %span
+                = t("brand_main_menu.pricing.title")
 
         - if !current_user.nil?
           %li
