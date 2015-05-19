@@ -4056,3 +4056,8 @@ Gradient Background colors
   min-height: 460px;
   max-height: 460px;
 }
+
+.screenshot_box {
+  min-height: 330px !important;
+  max-height: 330px;
+}
