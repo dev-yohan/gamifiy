@@ -1,11 +1,17 @@
 - if !screenshots.empty?
-  - screenshots.each_with_index do |screenshot, index|
-    .col-md-6.screenshot_box
+  .box
+    .box-header.with-border
+      %h2.box-title
+        = t("branding.home.screenshots.title")
+    .box-body
       .row
-        .col-md-7
-          = cl_image_tag(screenshot.image, :width => 450, :height => 300)
-        .col-md-5
-          %h3
-            = screenshot.title
-          %p
-            = screenshot.description
+        - screenshots.each_with_index do |screenshot, index|
+          .col-md-6.screenshot_box
+            .row
+              .col-md-7
+                = cl_image_tag(screenshot.image, :width => 450, :height => 300)
+              .col-md-5
+                %h4
+                  = screenshot.title
+                %p
+                  = screenshot.description
