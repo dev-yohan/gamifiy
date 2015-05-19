@@ -76,3 +76,5 @@ gem 'rubocop', require: false
 
 #gem to manage config values by environment
 gem "figaro"
+
+gem 'rollbar', '~> 1.5.1'
