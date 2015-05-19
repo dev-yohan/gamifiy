@@ -1,0 +1,14 @@
+en:
+  main_menu:
+    dashboard:
+      title: "Dashboard"
+    applications:
+      title: "Applications"
+    activities:
+      title: "Activities"
+    events:
+      title: "Events"
+    badges:
+      title: "Badges"
+    users:
+      title: "Users"  

@@ -1,0 +1,12 @@
+en:
+  branding:
+    home:
+      pricing:
+        title: "Pricing"
+        app_limit: "%{number} apps"
+
+      features:
+        title: "Features"
+
+      screenshots:
+        title: "Screenshots"

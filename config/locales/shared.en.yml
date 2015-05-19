@@ -1,0 +1,10 @@
+en:
+  shared:
+    brand: "Gamify"
+    user:
+      welcome: "Welcome %{user}"
+      plan: "Current plan: %{plan}"
+      dashboard: "Control panel"
+      sign_out: "Log out"
+      sign_in: "Log in"
+      sign_up: "Sign up"

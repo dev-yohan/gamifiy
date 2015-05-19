@@ -1,0 +1,12 @@
+en:
+  home:
+    title: "Control Panel"
+    home_breadcrumb: "Home"
+    quick_launch:
+      more_info: "More"
+      user_available_sites: "Available apps"
+      user_sites: "Used apps"
+      user_activities: "Activities"
+      user_badges: "Badges"
+      user_subjects: "Users"
+      events_count: "Events"

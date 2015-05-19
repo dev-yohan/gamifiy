@@ -1,0 +1,72 @@
+en:
+  subjects:
+    title: "Users"
+    home_breadcrumb: "Home"
+    add_link: "Create new"
+    add_title: "Create new user"
+    no_subjects_message: "No associates users"
+
+    api:
+      error:
+        code_500:
+          dev_message: "Users not found"
+          friendly_message: "Users not found"
+
+        code_501:
+          dev_message: "User with id %{id} not found"
+          friendly_message: "User with id %{id} not found"
+
+        code_502:
+          dev_message: "User can't be created"
+          friendly_message: "User can't be created"
+
+        code_503:
+          dev_message: "User already exists"
+          friendly_message: "User already exists"
+
+  subjects_list:
+    email_column: "Email"
+    first_name_column: "First name"
+    last_name_column: "Last name"
+    status_column: "Status"
+    badges_column: "Badges"
+    active_badge: "Active"
+    inactive_badge: "Inactive"
+    app_column: "Application"
+    actions_column: "Actions"
+    points_column: "Points"
+    more_link: "More"
+    edit_link: "Edit"
+    delete_link: "Delete"
+
+  subject_teasers:
+    more_link: "More"
+    badges: "%{badges} badges"
+    points: "%{points} points"
+
+  create_subject:
+    id_lbl: "External ID"
+    email_lbl: "Email"
+    first_name_lbl: "First name"
+    last_name_lbl: "Last name"
+    submit_btn: "Save"
+    cancel_btn: "Cancel"
+    status_lbl: "Active"
+    application_lbl: "Application"
+    application_prompt: "Select an option"
+    save_success: "User saved successfully"
+    save_error: "User can't be saved"
+
+  edit_subject:
+    title: "Edit %{subject}"
+    current_site: "(Current: %{site})"
+    edit_success: "User edited successfully"
+    edit_error: "User can't be edited"
+
+  delete_subject:
+    title: "Delete %{name}"
+    delete_message: "Are you sure?"
+    submit_btn: "Delete"
+    cancel_btn: "Cancel"
+    delete_success: "User deleted successfully"
+    delete_error: "User can't be deleted"

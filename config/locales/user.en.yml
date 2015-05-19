@@ -1,0 +1,46 @@
+en:
+  user:
+    sign_in:
+      title: "Log in"
+      email_field: "Email"
+      password_field: "Password"
+      remember_field: "Remember me"
+      submit_field: "Log in"
+
+    sign_up:
+      title: "Sign up"
+      email_field: "Email"
+      password_field: "Password"
+      password_confirmation_field: "Confirm Password"
+      first_name_field: "First name"
+      last_name_field: "Last name"
+      submit_field: "Sign up"
+
+    recover_password:
+      title: "Forgot your password"
+      email_field: "Email"
+      submit_field: "Submit"
+
+    change_password:
+      title: "Change your password"
+      email_field: "Email"
+      submit_field: "Submit"
+
+    confirmation_instructions:
+      title: "Forward confirmation instructions"
+      email_field: "Email"
+      submit_field: "Submit"
+
+    edit_profile:
+      title: "Edit profile"
+      leave_blank: "Leave blank if you do not want to edit"
+      current_password: "Current password"
+      current_password_field: "Current password"
+      submit_field: "Update"
+      back_link: "Back"
+
+    shared:
+      sign_up: "Sign up"
+      sign_in: "Log in"
+      forgot_password: "Forgot your password"
+      confirmation: "Forward confirmation instructions"

@@ -1,0 +1,91 @@
+en:
+  events:
+    title: "Events"
+    home_breadcrumb: "Home"
+    add_link: "Create event"
+    add_title: "Create event"
+    no_events_message: "No associated events"
+    teasers:
+      title: "Events"
+    api:
+      error:
+        code_300:
+          dev_message: "Events not found"
+          friendly_message: "Events not found"
+
+        code_301:
+          dev_message: "Event with id %{id} not found"
+          friendly_message: "Event with id %{id} not found"
+
+  create_event:
+    name_lbl: "Event name"
+    value_lbl: "Value (points)"
+    count_lbl: "Count"
+    activity_lbl: "Activity"
+    activity_prompt: "Select an option"
+    badge_lbl: "Badge"
+    badge_prompt: "Select an option"
+    submit_btn: "Save"
+    cancel_btn: "Cancel"
+    save_success: "Event saved successfully"
+    save_error: "Event can't be saved"
+
+  edit_event:
+    title: "Edit %{event}"
+    current_activity: "(Current: %{activity})"
+    current_badge: "(Current: %{badge})"
+    edit_success: "Event edited successfully"
+    edit_error: "Event can't be edited"
+
+  delete_event:
+    title: "Delete %{name}"
+    delete_message: "Are you sure?"
+    submit_btn: "Delete"
+    cancel_btn: "Cancel"
+    delete_success: "Event deleted successfully"
+    delete_error: "Event can't be deleted"
+    wrong_owner: "Event can't be deleted because you are not the owner"
+
+  events_list:
+    name_column: "Name"
+    logs_column: "Occurrence"
+    value_column: "Points"
+    count_column: "Count"
+    badge_column: "Badge"
+    activity_column: "Activity"
+    app_column: "Application"
+    actions_column: "Actions"
+    empty_badge: "No associated"
+    more_link: "See more"
+    edit_link: "Edit"
+    delete_link: "Delete"
+
+  event_logs:
+    title: "Event log"
+    behavior_title: "Behavior"
+    last_title: "Last events"
+    event_column: "Event"
+    app_column: "Application"
+    subject_column: "User"
+    points_column: "Points"
+    date_column: "Date"
+    more_link: "See more"
+    empty_logs: "No recorded events"
+
+  event_log_list:
+    date_column: "Name"
+    subject_column: "User"
+    activity_column: "Activity"
+    app_column: "Application"
+    badge_column: "Badge"
+    no_data: "No logs available"
+
+  event_log_chart:
+    title: "Execution rate"
+
+  event_distrib_chart:
+    title: "Distribution"
+
+  event_teasers:
+    title: "Event percentage"
+    more_link: "See more"
